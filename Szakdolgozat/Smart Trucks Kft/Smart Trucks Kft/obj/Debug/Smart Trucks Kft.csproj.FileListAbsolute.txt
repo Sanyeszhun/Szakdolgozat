@@ -1,0 +1,20 @@
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe.config
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.pdb
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csprojAssemblyReference.cache
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Properties.Resources.resources
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
+C:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
+c:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Form1.resources
+c:\Users\Sanyesz\source\repos\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.login.resources
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe.config
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.pdb
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csprojAssemblyReference.cache
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Form1.resources
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.login.resources
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Properties.Resources.resources
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
+e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
