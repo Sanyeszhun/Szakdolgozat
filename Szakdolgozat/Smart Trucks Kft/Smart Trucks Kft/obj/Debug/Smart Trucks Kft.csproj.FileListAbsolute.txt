@@ -18,3 +18,14 @@ e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Pro
 e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
 e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
 e:\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe.config
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.pdb
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csprojAssemblyReference.cache
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Form1.resources
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.login.resources
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Properties.Resources.resources
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.CoreCompileInputs.cache
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
+C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
