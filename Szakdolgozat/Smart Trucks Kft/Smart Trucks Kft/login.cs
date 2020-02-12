@@ -30,7 +30,7 @@ namespace Smart_Trucks_Kft
         private void buttonlogin_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            asdasd
+            
             f1.ShowDialog();
         }
     }
