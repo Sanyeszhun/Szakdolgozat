@@ -31,7 +31,7 @@ namespace Smart_Trucks_Kft.Modell
             this.motor = motor;
             this.uzemanyag = uzemanyag;
             this.suly = suly;
-            this.hajtas = hajtas;
+            this.hajtas = hajta;
 
 
 
