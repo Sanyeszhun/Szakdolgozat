@@ -71,8 +71,8 @@ namespace Smart_Trucks_Kft.Repository
         public void deleteTableKamion()
         {
             string query =
-                "USE kmion; " +
-                "DROP TABLE kmionok;";
+                "USE kamion; " +
+                "DROP TABLE kamionok;";
 
             MySqlConnection connection =
                 new MySqlConnection(connectionString);
@@ -88,6 +88,24 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Close();
                 Debug.WriteLine(e.Message);
                 throw new RepositoryException("Tábla törlése nem sikerült.");
+            }
+        }
+
+        public void deleteDataFromKamionTable()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = Kamion.getSQLCommandDeleteAllRecord();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                connection.Close();
+                Debug.WriteLine(e.Message);
+                throw new RepositoryException("Tesztadatok törlése sikertelen.");
             }
         }
 

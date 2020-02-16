@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    class Kamion
+   partial class Kamion
     {
 
         private int tid;
