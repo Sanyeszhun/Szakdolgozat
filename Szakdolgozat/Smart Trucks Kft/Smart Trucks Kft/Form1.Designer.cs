@@ -51,9 +51,13 @@
             this.buttonBetolt = new System.Windows.Forms.Button();
             this.dataGridViewDolgozok = new System.Windows.Forms.DataGridView();
             this.tabPageKamion = new System.Windows.Forms.TabPage();
-            this.tabPageUtvonal = new System.Windows.Forms.TabPage();
-            this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -67,12 +71,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
+            this.tabPageUtvonal = new System.Windows.Forms.TabPage();
             this.dataGridViewUtvonal = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,9 +92,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDolgozok)).BeginInit();
             this.tabPageKamion.SuspendLayout();
-            this.tabPageUtvonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).BeginInit();
+            this.tabPageUtvonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvonal)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -293,6 +293,7 @@
             this.buttonBetolt.TabIndex = 1;
             this.buttonBetolt.Text = "Betölt";
             this.buttonBetolt.UseVisualStyleBackColor = true;
+            this.buttonBetolt.Click += new System.EventHandler(this.buttonBetolt_Click);
             // 
             // dataGridViewDolgozok
             // 
@@ -319,25 +320,6 @@
             this.tabPageKamion.Text = "Kamionok";
             this.tabPageKamion.UseVisualStyleBackColor = true;
             // 
-            // tabPageUtvonal
-            // 
-            this.tabPageUtvonal.Controls.Add(this.dataGridViewUtvonal);
-            this.tabPageUtvonal.Location = new System.Drawing.Point(4, 22);
-            this.tabPageUtvonal.Name = "tabPageUtvonal";
-            this.tabPageUtvonal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageUtvonal.Size = new System.Drawing.Size(793, 305);
-            this.tabPageUtvonal.TabIndex = 2;
-            this.tabPageUtvonal.Text = "Utvonal";
-            this.tabPageUtvonal.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewKamionok
-            // 
-            this.dataGridViewKamionok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKamionok.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewKamionok.Name = "dataGridViewKamionok";
-            this.dataGridViewKamionok.Size = new System.Drawing.Size(425, 302);
-            this.dataGridViewKamionok.TabIndex = 1;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.textBox9);
@@ -358,6 +340,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 229);
             this.panel2.TabIndex = 13;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(141, 197);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 15;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(141, 168);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(23, 197);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Hajtás:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 168);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Súly:";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.AllowDrop = true;
+            this.maskedTextBox2.Location = new System.Drawing.Point(141, 75);
+            this.maskedTextBox2.Mask = "AAA-000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox2.TabIndex = 11;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.AllowDrop = true;
+            this.maskedTextBox1.Location = new System.Drawing.Point(141, 45);
+            this.maskedTextBox1.Mask = "00/00/0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 10;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // textBox6
             // 
@@ -472,58 +507,24 @@
             this.button10.Text = "Mentés";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // dataGridViewKamionok
             // 
-            this.maskedTextBox1.AllowDrop = true;
-            this.maskedTextBox1.Location = new System.Drawing.Point(141, 45);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.dataGridViewKamionok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKamionok.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewKamionok.Name = "dataGridViewKamionok";
+            this.dataGridViewKamionok.Size = new System.Drawing.Size(425, 302);
+            this.dataGridViewKamionok.TabIndex = 1;
             // 
-            // maskedTextBox2
+            // tabPageUtvonal
             // 
-            this.maskedTextBox2.AllowDrop = true;
-            this.maskedTextBox2.Location = new System.Drawing.Point(141, 75);
-            this.maskedTextBox2.Mask = "AAA-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 11;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 168);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Súly:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 197);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Hajtás:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(141, 168);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 14;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(141, 197);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 15;
+            this.tabPageUtvonal.Controls.Add(this.dataGridViewUtvonal);
+            this.tabPageUtvonal.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUtvonal.Name = "tabPageUtvonal";
+            this.tabPageUtvonal.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUtvonal.Size = new System.Drawing.Size(793, 305);
+            this.tabPageUtvonal.TabIndex = 2;
+            this.tabPageUtvonal.Text = "Utvonal";
+            this.tabPageUtvonal.UseVisualStyleBackColor = true;
             // 
             // dataGridViewUtvonal
             // 
@@ -559,21 +560,21 @@
             // dolgozókToolStripMenuItem
             // 
             this.dolgozókToolStripMenuItem.Name = "dolgozókToolStripMenuItem";
-            this.dolgozókToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dolgozókToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.dolgozókToolStripMenuItem.Text = "Dolgozók";
             this.dolgozókToolStripMenuItem.Click += new System.EventHandler(this.dolgozókToolStripMenuItem_Click);
             // 
             // kamionokToolStripMenuItem
             // 
             this.kamionokToolStripMenuItem.Name = "kamionokToolStripMenuItem";
-            this.kamionokToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kamionokToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.kamionokToolStripMenuItem.Text = "Kamionok";
             this.kamionokToolStripMenuItem.Click += new System.EventHandler(this.kamionokToolStripMenuItem_Click);
             // 
             // utvonalToolStripMenuItem
             // 
             this.utvonalToolStripMenuItem.Name = "utvonalToolStripMenuItem";
-            this.utvonalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.utvonalToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.utvonalToolStripMenuItem.Text = "Utvonal";
             this.utvonalToolStripMenuItem.Click += new System.EventHandler(this.utvonalToolStripMenuItem_Click);
             // 
@@ -582,7 +583,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -593,31 +594,31 @@
             this.törliATesztadatokatToolStripMenuItem,
             this.törliAzAdatbázistToolStripMenuItem});
             this.adatbázisToolStripMenuItem.Name = "adatbázisToolStripMenuItem";
-            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.adatbázisToolStripMenuItem.Text = "Adatbázis";
             // 
             // adatbázisLétrehozásaToolStripMenuItem
             // 
             this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
-            this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
             // 
             // feltöltésTesztadatokalToolStripMenuItem
             // 
             this.feltöltésTesztadatokalToolStripMenuItem.Name = "feltöltésTesztadatokalToolStripMenuItem";
-            this.feltöltésTesztadatokalToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.feltöltésTesztadatokalToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.feltöltésTesztadatokalToolStripMenuItem.Text = "Feltöltés Tesztadatokal";
             // 
             // törliATesztadatokatToolStripMenuItem
             // 
             this.törliATesztadatokatToolStripMenuItem.Name = "törliATesztadatokatToolStripMenuItem";
-            this.törliATesztadatokatToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.törliATesztadatokatToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.törliATesztadatokatToolStripMenuItem.Text = "Törli a tesztadatokat";
             // 
             // törliAzAdatbázistToolStripMenuItem
             // 
             this.törliAzAdatbázistToolStripMenuItem.Name = "törliAzAdatbázistToolStripMenuItem";
-            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.törliAzAdatbázistToolStripMenuItem.Text = "Törli az adatbázist";
             // 
             // kilépésToolStripMenuItem
@@ -646,10 +647,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDolgozok)).EndInit();
             this.tabPageKamion.ResumeLayout(false);
-            this.tabPageUtvonal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).EndInit();
+            this.tabPageUtvonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvonal)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

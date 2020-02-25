@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smart_Trucks_Kft.Repository.Kamionn;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace Smart_Trucks_Kft
 {
     public partial class Form1 : Form
     {
+        private DataTable kamionDT = new DataTable();
+
+        private KMRepository kr = new KMRepository();
+
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +70,18 @@ namespace Smart_Trucks_Kft
         private void utvonalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControlKamion.SelectTab("tabPageUtvonal");
+        }
+
+        private void buttonBetolt_Click(object sender, EventArgs e)
+        {
+            //Adatbázisban pizza tábla kezelése
+            RepositoryKamionDatabaseTable rtp = new RepositoryKamionDatabaseTable();
+            //A repo-ba lévő pizza listát feltölti az adatbázisból
+            repo.setPizzas(rtp.getPizzasFromDatabaseTable());
+            frissitAdatokkalDataGriedViewt();
+            beallitPizzaDataGriViewt();
+            beallitGombokatIndulaskor();
+            dataGridViewPizzak.SelectionChanged += DataGridViewPizzak_SelectionChanged;
         }
     }
     }

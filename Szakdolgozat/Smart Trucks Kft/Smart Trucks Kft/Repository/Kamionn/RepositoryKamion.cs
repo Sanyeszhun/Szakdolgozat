@@ -29,7 +29,7 @@ namespace Smart_Trucks_Kft.Repository
         {
             DataTable kamionDT = new DataTable();
             kamionDT.Columns.Add("Azonosito", typeof(int));
-            kamionDT.Columns.Add("MuszakiErv", typeof(int));
+            kamionDT.Columns.Add("MuszakiErv", typeof(string));
             kamionDT.Columns.Add("Rendszam", typeof(string));
             kamionDT.Columns.Add("Motor", typeof(string));
             kamionDT.Columns.Add("Uzemanyag", typeof(string));

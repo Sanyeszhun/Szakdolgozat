@@ -16,6 +16,11 @@ namespace Smart_Trucks_Kft
         private DataTable kamionDT = new DataTable();
 
         private KMRepository kr = new KMRepository();
+
+
+        bool ujAdatFel = false;
+
+
     }
 
 }

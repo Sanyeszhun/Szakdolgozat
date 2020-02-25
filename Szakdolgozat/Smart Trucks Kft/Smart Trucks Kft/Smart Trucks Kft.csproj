@@ -68,6 +68,7 @@
     <Compile Include="Modell\ModelKamionNotValidRenExeception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Kamionn\RepositoryKamionTableTestData.cs" />
     <Compile Include="Repository\Kamionn\RepositoryKamionTableSQL.cs" />
     <Compile Include="Repository\KMRepository.cs" />
     <Compile Include="Repository\RepositoryDatabase.cs" />
