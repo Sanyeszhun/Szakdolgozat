@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    partial class Dolgozok
+    partial class Dolgozo
     {
         public string getInsert()
         {

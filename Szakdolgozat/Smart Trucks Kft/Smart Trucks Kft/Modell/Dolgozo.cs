@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-   partial class Dolgozok
+   partial class Dolgozo
     {
         private int id;
         private string nev;
@@ -14,7 +14,7 @@ namespace Smart_Trucks_Kft.Modell
         private string email;
         private string jelszo;
 
-        public Dolgozok(int id, string nev, string telefonszam, string email, string jelszo)
+        public Dolgozo(int id, string nev, string telefonszam, string email, string jelszo)
         {
             this.id = id;
             this.nev = nev;
@@ -29,7 +29,7 @@ namespace Smart_Trucks_Kft.Modell
             this.jelszo = jelszo;
         }
        
-        public void update(Dolgozok modified)
+        public void update(Dolgozo modified)
         {
             this.nev = modified.getNev();
             this.telefonszam= modified.getTelefonszam();
