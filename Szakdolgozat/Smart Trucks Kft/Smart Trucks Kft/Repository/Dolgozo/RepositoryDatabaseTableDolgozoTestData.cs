@@ -1,14 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
-using Smart_Trucks_Kft.Modell;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Repository
 {
-    partial class RepositoryKamionDatabaseTable
+    partial class RepositoryDatabaseTableDolgozo
     {
-        public void fillKamionWithTestDataFromSQLCommand()
+
+        public void fillDolgozoWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
@@ -16,11 +19,11 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `kamionok` (`tid`, `Muszakierv`, `Rendszam`, `Motor`, `Uzemanyag`, `Suly`, `Hajtas`) VALUES " +
-                            " (1, '2020-02-27', 'AAA-123', 'Benzin', 'Dizel', 100, 'Negykerek'), " +
-                            " (2, '2020-03-27', 'AAB-123', 'Benzin', 'Dizel', 120, 'Negykerek'), " +
-                            " (3, '2020-06-27', 'CAS-123', 'Benzin', 'Dizel', 400, 'Negykerek'), " +
-                            " (4, '2020-02-27', 'AGW-123', 'Benzin', 'Dizel', 410, 'Negykerek'); ";
+                    "INSERT INTO `dolgozok` (`id`, `nev`, `telefonszam`, `email`, `jelszo`) VALUES " +
+                            " (1, 'Makkos Máté', '+36205887205', 'valamik@gmail.com', '1234'), " +
+                            " (2, 'Patka Attila', '+36205887204', 'valami@gmail.com', '12456'), " +
+                            " (3, 'Nyul Péter', '+36205887203', 'valam@gmail.com', '12341'), " +
+                            " (4, 'Bán Norbert', '+36205887202', 'val@gmail.com', 'abc'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -32,5 +35,8 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tesztadatok feltöltése sikertelen.");
             }
         }
+
+
+
     }
 }

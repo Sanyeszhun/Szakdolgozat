@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Repository
 {
-    partial class KMRepository
+    partial class Repository
     {
         List<Kamion> kamionok;
 
@@ -61,21 +61,7 @@ namespace Smart_Trucks_Kft.Repository
             }
  
         }
-        public deletKamionFromlistByID(int tid)
-        {
-            Kamion k = kamionok.Find(x => x.getId() == tid);
-            if (k != null)
-            {
-                kamionok.Remove(k);
-
-            }
-            else 
-            {
-                throw new RepositoryExceptionCantDelete("a Kamiont nem lehet törölni");
-            }
-            
-        
-        }
+       
         public void updateKamionInList(int tid, Kamion modified)
         {
             Kamion k = kamionok.Find(x => x.getId() == tid);

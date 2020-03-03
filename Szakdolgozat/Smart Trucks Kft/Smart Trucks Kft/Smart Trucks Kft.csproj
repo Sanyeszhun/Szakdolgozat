@@ -72,9 +72,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Dolgozo\Repository.cs" />
+    <Compile Include="Repository\Dolgozo\RepositoryDatabaseTableDolgozoTestData.cs" />
+    <Compile Include="Repository\Dolgozo\RepositoryDatabaseTableDolgozoSQL.cs" />
+    <Compile Include="Repository\Dolgozo\RepositoryDatabaseTableDolgozo.cs" />
     <Compile Include="Repository\Kamionn\RepositoryKamionTableTestData.cs" />
     <Compile Include="Repository\Kamionn\RepositoryKamionTableSQL.cs" />
-    <Compile Include="Repository\KMRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\RepositoryDatabase.cs" />
     <Compile Include="Repository\RepositoryException.cs" />

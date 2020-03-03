@@ -3,35 +3,42 @@ using Smart_Trucks_Kft.Modell;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Repository
 {
-    partial class RepositoryKamionDatabaseTable
-    {
-        public List<Kamion> getKamionFromDatabaseTable() 
+   partial class RepositoryDatabaseTableDolgozo
+    {/// <summary>
+    /// Ezt nem tudom meg kell kerdezni!!
+    /// </summary>
+    /// <returns></returns>
+        public List<Pizza> getPizzasFromDatabaseTable()
         {
-            List<Kamion> kamionok = new List<Kamion>();
+            List<Pizza> pizzas = new List<Pizza>();
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
                 connection.Open();
-                string query = Kamion.getSQLCommandGetAllRecord();
+                string query = Pizza.getSQLCommandGetAllRecord();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dr;
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+                    string name = dr["pnev"].ToString();
                     bool goodResult = false;
-                    string name = dr["fnev"].ToString();
                     int id = -1;
-                    goodResult = int.TryParse(dr["fazon"].ToString(), out id);
+                    goodResult = int.TryParse(dr["pazon"].ToString(), out id);
                     if (goodResult)
                     {
-                        string tel = dr["ftel"].ToString();
+                        int price = -1;
+                        goodResult = int.TryParse(dr["par"].ToString(), out price);
                         if (goodResult)
                         {
-                            Futar f = new Futar(id, name, tel);
-                            futarok.Add(f);
+                            Pizza p = new Pizza(id, name, price);
+                            pizzas.Add(p);
                         }
                     }
                 }
@@ -41,18 +48,18 @@ namespace Smart_Trucks_Kft.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new RepositoryException("Futar adatok beolvasása az adatbázisból nem sikerült!");
+                throw new RepositoryException("Pizzaadatok beolvasása az adatbázisból nem sikerült!");
             }
-            return futarok;
-
+            return pizzas;
         }
-        public void deleteKamionFromDatabase(int tid)
+
+        public void deleteDolgozoFromDatabase(int id)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
                 connection.Open();
-                string query = "DELETE FROM kamionok WHERE tid=" + tid;
+                string query = "DELETE FROM dolgozok WHERE id=" + id;
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -61,18 +68,18 @@ namespace Smart_Trucks_Kft.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                Debug.WriteLine(tid + " idéjű pizza törlése nem sikerült.");
+                Debug.WriteLine(id + " idéjű dolgozo törlése nem sikerült.");
                 throw new RepositoryException("Sikertelen törlés az adatbázisból.");
             }
         }
 
-        public void updateInDatabase(int tid, Kamion modified)
+        public void updateDolgozoInDatabase(int id, Dolgozo modified)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
                 connection.Open();
-                string query = modified.getUpdate(tid);
+                string query = modified.getUpdate(id);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -81,18 +88,18 @@ namespace Smart_Trucks_Kft.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                Debug.WriteLine(tid + " idéjű kamion módosítása nem sikerült.");
+                Debug.WriteLine(id + " idéjű dolgozo módosítása nem sikerült.");
                 throw new RepositoryException("Sikertelen módosítás az adatbázisból.");
             }
         }
 
-        public void insertKamionToDatabase(Kamion ujKamion)
+        public void insertDolgozoToDatabase(Dolgozo ujDolgozo)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
                 connection.Open();
-                string query = ujKamion.getInsert();
+                string query = ujDolgozo.getInsert();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -101,7 +108,7 @@ namespace Smart_Trucks_Kft.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                Debug.WriteLine(ujKamion + " kamion beszúrása adatbázisba nem sikerült.");
+                Debug.WriteLine(ujDolgozo + " dolgozo beszúrása adatbázisba nem sikerült.");
                 throw new RepositoryException("Sikertelen beszúrás az adatbázisból.");
             }
         }

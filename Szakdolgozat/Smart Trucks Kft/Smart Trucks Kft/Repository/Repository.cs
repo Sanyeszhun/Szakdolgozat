@@ -13,9 +13,11 @@ namespace Smart_Trucks_Kft.Repository
         public Repository()
         {
             dolgozok = new List<Dolgozo>();
-
-
-
+            kamionok = new List<Kamion>();
         }
+
+
     }
+    
+
 }
