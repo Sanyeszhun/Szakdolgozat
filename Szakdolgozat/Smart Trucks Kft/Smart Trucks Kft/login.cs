@@ -29,7 +29,7 @@ namespace Smart_Trucks_Kft
 
         private void buttonlogin_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            SmartTruckkft f1 = new SmartTruckkft();
             
             f1.ShowDialog();
         }

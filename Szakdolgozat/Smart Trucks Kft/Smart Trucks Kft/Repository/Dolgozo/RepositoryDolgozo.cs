@@ -21,9 +21,9 @@ namespace Smart_Trucks_Kft.Repository
         public List<string> getDolgozokNev()
         {
             List<string> dolgozoNevek = new List<string>();
-            foreach (Dolgozo p in dolgozok)
+            foreach (Dolgozo d in dolgozok)
             {
-                dolgozoNevek.Add(p.getNev());
+                dolgozoNevek.Add(d.getNev());
             }
             return dolgozoNevek;
         }
@@ -32,6 +32,22 @@ namespace Smart_Trucks_Kft.Repository
         {
             this.dolgozok = dolgozok;
         }
+
+        public DataTable getDolgozoDataTableFromList()
+        {
+            DataTable dolgozoDT = new DataTable();
+            dolgozoDT.Columns.Add("id", typeof(int));
+            dolgozoDT.Columns.Add("nev", typeof(string));
+            dolgozoDT.Columns.Add("telefonszam", typeof(string));
+            dolgozoDT.Columns.Add("email", typeof(string));
+            dolgozoDT.Columns.Add("jelszo", typeof(string));
+            foreach (Dolgozo d in dolgozok)
+            {
+                dolgozoDT.Rows.Add(d.getId(), d.getNev(), d.getTelefonszam(), d.getEmail(), d.getJelszo());
+            }
+            return dolgozoDT;
+        }
+
         private void fillDolgozoListFromDataTable(DataTable dolgozodt)
         {
             foreach (DataRow row in dolgozodt.Rows)
