@@ -9,7 +9,7 @@ using Smart_Trucks_Kft.Modell;
 
 namespace Smart_Trucks_Kft.Repository
 {
-    partial class Repository
+    partial class Repository1
     {
         List<Dolgozo> dolgozok;
 

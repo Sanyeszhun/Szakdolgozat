@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Modell\DolgozoDatabase.cs" />
     <Compile Include="Modell\Dolgozo.cs" />
+    <Compile Include="Repository\Repository1.cs" />
     <Compile Include="SmartTruckkftDolgozo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,7 +78,6 @@
     <Compile Include="Repository\Dolgozo\RepositoryDatabaseTableDolgozo.cs" />
     <Compile Include="Repository\Kamionn\RepositoryKamionTableTestData.cs" />
     <Compile Include="Repository\Kamionn\RepositoryKamionTableSQL.cs" />
-    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\RepositoryDatabase.cs" />
     <Compile Include="Repository\RepositoryException.cs" />
     <Compile Include="Repository\RepositoryExceptionCantAdd.cs" />

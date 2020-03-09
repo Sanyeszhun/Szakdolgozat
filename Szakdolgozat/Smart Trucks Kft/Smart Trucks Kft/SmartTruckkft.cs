@@ -19,7 +19,7 @@ namespace Smart_Trucks_Kft
     public partial class SmartTruckkft : Form
     {
 
-        Repository repo = new Repository();
+        Repository1 repo = new Repository1();
 
 
 

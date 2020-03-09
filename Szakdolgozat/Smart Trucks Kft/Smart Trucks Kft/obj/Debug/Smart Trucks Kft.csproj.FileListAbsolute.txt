@@ -36,3 +36,10 @@ E:\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_T
 E:\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
 E:\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
 E:\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csprojAssemblyReference.cache
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.SmartTruckkft.resources
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.login.resources
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Properties.Resources.resources
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb

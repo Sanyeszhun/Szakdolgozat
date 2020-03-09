@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Repository
 {
-    partial class Repository
+    partial class Repository1
     {
         List<Kamion> kamionok;
 
