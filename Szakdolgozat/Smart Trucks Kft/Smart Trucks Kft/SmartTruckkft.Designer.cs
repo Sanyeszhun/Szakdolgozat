@@ -33,44 +33,44 @@
             this.tabControlKamion = new System.Windows.Forms.TabControl();
             this.tabPageDolgozok = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDologozJel = new System.Windows.Forms.TextBox();
+            this.textBoxDolgozoEmail = new System.Windows.Forms.TextBox();
+            this.textBoxDolgozoTel = new System.Windows.Forms.TextBox();
+            this.textBoxDolgozoNev = new System.Windows.Forms.TextBox();
+            this.textBoxDolgozoID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelAzzonosito = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDolgozoMod = new System.Windows.Forms.Button();
+            this.buttonDolgozoTorol = new System.Windows.Forms.Button();
+            this.buttonDologozMEg = new System.Windows.Forms.Button();
+            this.buttonUjDolgozo = new System.Windows.Forms.Button();
+            this.buttonDolgozoMEnt = new System.Windows.Forms.Button();
             this.buttonBetolt = new System.Windows.Forms.Button();
             this.dataGridViewDolgozok = new System.Windows.Forms.DataGridView();
             this.tabPageKamion = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxKamionHajtas = new System.Windows.Forms.TextBox();
+            this.textBoxKamionSuly = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxKamionRend = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxKamionMuszaki = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxKamionUzem = new System.Windows.Forms.TextBox();
+            this.textBoxKamionMotor = new System.Windows.Forms.TextBox();
+            this.textBoxKamionID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.buttonKamionModosit = new System.Windows.Forms.Button();
+            this.buttonKamionTorles = new System.Windows.Forms.Button();
+            this.buttonKamionMEgsem = new System.Windows.Forms.Button();
+            this.buttonUjKamion = new System.Windows.Forms.Button();
+            this.buttonKamionMEntes = new System.Windows.Forms.Button();
             this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
             this.tabPageUtvonal = new System.Windows.Forms.TabPage();
             this.dataGridViewUtvonal = new System.Windows.Forms.DataGridView();
@@ -125,11 +125,11 @@
             // tabPageDolgozok
             // 
             this.tabPageDolgozok.Controls.Add(this.panel1);
-            this.tabPageDolgozok.Controls.Add(this.button1);
-            this.tabPageDolgozok.Controls.Add(this.button5);
-            this.tabPageDolgozok.Controls.Add(this.button4);
-            this.tabPageDolgozok.Controls.Add(this.button3);
-            this.tabPageDolgozok.Controls.Add(this.button2);
+            this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMod);
+            this.tabPageDolgozok.Controls.Add(this.buttonDolgozoTorol);
+            this.tabPageDolgozok.Controls.Add(this.buttonDologozMEg);
+            this.tabPageDolgozok.Controls.Add(this.buttonUjDolgozo);
+            this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMEnt);
             this.tabPageDolgozok.Controls.Add(this.buttonBetolt);
             this.tabPageDolgozok.Controls.Add(this.dataGridViewDolgozok);
             this.tabPageDolgozok.Location = new System.Drawing.Point(4, 22);
@@ -143,11 +143,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxDologozJel);
+            this.panel1.Controls.Add(this.textBoxDolgozoEmail);
+            this.panel1.Controls.Add(this.textBoxDolgozoTel);
+            this.panel1.Controls.Add(this.textBoxDolgozoNev);
+            this.panel1.Controls.Add(this.textBoxDolgozoID);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -158,41 +158,41 @@
             this.panel1.Size = new System.Drawing.Size(355, 208);
             this.panel1.TabIndex = 7;
             // 
-            // textBox5
+            // textBoxDologozJel
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 139);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.textBoxDologozJel.Location = new System.Drawing.Point(141, 139);
+            this.textBoxDologozJel.Name = "textBoxDologozJel";
+            this.textBoxDologozJel.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDologozJel.TabIndex = 9;
             // 
-            // textBox4
+            // textBoxDolgozoEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(141, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.textBoxDolgozoEmail.Location = new System.Drawing.Point(141, 107);
+            this.textBoxDolgozoEmail.Name = "textBoxDolgozoEmail";
+            this.textBoxDolgozoEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDolgozoEmail.TabIndex = 8;
             // 
-            // textBox3
+            // textBoxDolgozoTel
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 75);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBoxDolgozoTel.Location = new System.Drawing.Point(141, 75);
+            this.textBoxDolgozoTel.Name = "textBoxDolgozoTel";
+            this.textBoxDolgozoTel.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDolgozoTel.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxDolgozoNev
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBoxDolgozoNev.Location = new System.Drawing.Point(141, 47);
+            this.textBoxDolgozoNev.Name = "textBoxDolgozoNev";
+            this.textBoxDolgozoNev.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDolgozoNev.TabIndex = 6;
             // 
-            // textBox1
+            // textBoxDolgozoID
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxDolgozoID.Location = new System.Drawing.Point(141, 19);
+            this.textBoxDolgozoID.Name = "textBoxDolgozoID";
+            this.textBoxDolgozoID.ReadOnly = true;
+            this.textBoxDolgozoID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDolgozoID.TabIndex = 5;
             // 
             // label4
             // 
@@ -239,51 +239,51 @@
             this.labelAzzonosito.TabIndex = 0;
             this.labelAzzonosito.Text = "ID:";
             // 
-            // button1
+            // buttonDolgozoMod
             // 
-            this.button1.Location = new System.Drawing.Point(529, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Modosít";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonDolgozoMod.Location = new System.Drawing.Point(529, 249);
+            this.buttonDolgozoMod.Name = "buttonDolgozoMod";
+            this.buttonDolgozoMod.Size = new System.Drawing.Size(75, 23);
+            this.buttonDolgozoMod.TabIndex = 6;
+            this.buttonDolgozoMod.Text = "Modosít";
+            this.buttonDolgozoMod.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonDolgozoTorol
             // 
-            this.button5.Location = new System.Drawing.Point(529, 278);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Töröl";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonDolgozoTorol.Location = new System.Drawing.Point(529, 278);
+            this.buttonDolgozoTorol.Name = "buttonDolgozoTorol";
+            this.buttonDolgozoTorol.Size = new System.Drawing.Size(75, 23);
+            this.buttonDolgozoTorol.TabIndex = 5;
+            this.buttonDolgozoTorol.Text = "Töröl";
+            this.buttonDolgozoTorol.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonDologozMEg
             // 
-            this.button4.Location = new System.Drawing.Point(641, 249);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Megsem";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonDologozMEg.Location = new System.Drawing.Point(641, 249);
+            this.buttonDologozMEg.Name = "buttonDologozMEg";
+            this.buttonDologozMEg.Size = new System.Drawing.Size(75, 23);
+            this.buttonDologozMEg.TabIndex = 4;
+            this.buttonDologozMEg.Text = "Megsem";
+            this.buttonDologozMEg.UseVisualStyleBackColor = true;
+            this.buttonDologozMEg.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // buttonUjDolgozo
             // 
-            this.button3.Location = new System.Drawing.Point(429, 249);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Uj Adat";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonUjDolgozo.Location = new System.Drawing.Point(429, 249);
+            this.buttonUjDolgozo.Name = "buttonUjDolgozo";
+            this.buttonUjDolgozo.Size = new System.Drawing.Size(75, 23);
+            this.buttonUjDolgozo.TabIndex = 3;
+            this.buttonUjDolgozo.Text = "Uj Adat";
+            this.buttonUjDolgozo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonDolgozoMEnt
             // 
-            this.button2.Location = new System.Drawing.Point(429, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Mentés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDolgozoMEnt.Location = new System.Drawing.Point(429, 278);
+            this.buttonDolgozoMEnt.Name = "buttonDolgozoMEnt";
+            this.buttonDolgozoMEnt.Size = new System.Drawing.Size(75, 23);
+            this.buttonDolgozoMEnt.TabIndex = 2;
+            this.buttonDolgozoMEnt.Text = "Mentés";
+            this.buttonDolgozoMEnt.UseVisualStyleBackColor = true;
             // 
             // buttonBetolt
             // 
@@ -293,7 +293,6 @@
             this.buttonBetolt.TabIndex = 1;
             this.buttonBetolt.Text = "Betölt";
             this.buttonBetolt.UseVisualStyleBackColor = true;
-    
             // 
             // dataGridViewDolgozok
             // 
@@ -306,11 +305,11 @@
             // tabPageKamion
             // 
             this.tabPageKamion.Controls.Add(this.panel2);
-            this.tabPageKamion.Controls.Add(this.button6);
-            this.tabPageKamion.Controls.Add(this.button7);
-            this.tabPageKamion.Controls.Add(this.button8);
-            this.tabPageKamion.Controls.Add(this.button9);
-            this.tabPageKamion.Controls.Add(this.button10);
+            this.tabPageKamion.Controls.Add(this.buttonKamionModosit);
+            this.tabPageKamion.Controls.Add(this.buttonKamionTorles);
+            this.tabPageKamion.Controls.Add(this.buttonKamionMEgsem);
+            this.tabPageKamion.Controls.Add(this.buttonUjKamion);
+            this.tabPageKamion.Controls.Add(this.buttonKamionMEntes);
             this.tabPageKamion.Controls.Add(this.dataGridViewKamionok);
             this.tabPageKamion.Location = new System.Drawing.Point(4, 22);
             this.tabPageKamion.Name = "tabPageKamion";
@@ -322,15 +321,15 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.textBoxKamionHajtas);
+            this.panel2.Controls.Add(this.textBoxKamionSuly);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.maskedTextBox2);
-            this.panel2.Controls.Add(this.maskedTextBox1);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.maskedTextBoxKamionRend);
+            this.panel2.Controls.Add(this.maskedTextBoxKamionMuszaki);
+            this.panel2.Controls.Add(this.textBoxKamionUzem);
+            this.panel2.Controls.Add(this.textBoxKamionMotor);
+            this.panel2.Controls.Add(this.textBoxKamionID);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
@@ -341,19 +340,19 @@
             this.panel2.Size = new System.Drawing.Size(355, 229);
             this.panel2.TabIndex = 13;
             // 
-            // textBox9
+            // textBoxKamionHajtas
             // 
-            this.textBox9.Location = new System.Drawing.Point(141, 197);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 15;
+            this.textBoxKamionHajtas.Location = new System.Drawing.Point(141, 197);
+            this.textBoxKamionHajtas.Name = "textBoxKamionHajtas";
+            this.textBoxKamionHajtas.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKamionHajtas.TabIndex = 15;
             // 
-            // textBox8
+            // textBoxKamionSuly
             // 
-            this.textBox8.Location = new System.Drawing.Point(141, 168);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 14;
+            this.textBoxKamionSuly.Location = new System.Drawing.Point(141, 168);
+            this.textBoxKamionSuly.Name = "textBoxKamionSuly";
+            this.textBoxKamionSuly.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKamionSuly.TabIndex = 14;
             // 
             // label11
             // 
@@ -373,48 +372,48 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Súly:";
             // 
-            // maskedTextBox2
+            // maskedTextBoxKamionRend
             // 
-            this.maskedTextBox2.AllowDrop = true;
-            this.maskedTextBox2.Location = new System.Drawing.Point(141, 75);
-            this.maskedTextBox2.Mask = "AAA-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 11;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxKamionRend.AllowDrop = true;
+            this.maskedTextBoxKamionRend.Location = new System.Drawing.Point(141, 75);
+            this.maskedTextBoxKamionRend.Mask = "AAA-000";
+            this.maskedTextBoxKamionRend.Name = "maskedTextBoxKamionRend";
+            this.maskedTextBoxKamionRend.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxKamionRend.TabIndex = 11;
+            this.maskedTextBoxKamionRend.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // maskedTextBoxKamionMuszaki
             // 
-            this.maskedTextBox1.AllowDrop = true;
-            this.maskedTextBox1.Location = new System.Drawing.Point(141, 45);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.maskedTextBoxKamionMuszaki.AllowDrop = true;
+            this.maskedTextBoxKamionMuszaki.Location = new System.Drawing.Point(141, 45);
+            this.maskedTextBoxKamionMuszaki.Mask = "00/00/0000";
+            this.maskedTextBoxKamionMuszaki.Name = "maskedTextBoxKamionMuszaki";
+            this.maskedTextBoxKamionMuszaki.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxKamionMuszaki.TabIndex = 10;
+            this.maskedTextBoxKamionMuszaki.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxKamionMuszaki.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
-            // textBox6
+            // textBoxKamionUzem
             // 
-            this.textBox6.Location = new System.Drawing.Point(141, 139);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 9;
+            this.textBoxKamionUzem.Location = new System.Drawing.Point(141, 139);
+            this.textBoxKamionUzem.Name = "textBoxKamionUzem";
+            this.textBoxKamionUzem.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKamionUzem.TabIndex = 9;
             // 
-            // textBox7
+            // textBoxKamionMotor
             // 
-            this.textBox7.Location = new System.Drawing.Point(141, 107);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 8;
+            this.textBoxKamionMotor.Location = new System.Drawing.Point(141, 107);
+            this.textBoxKamionMotor.Name = "textBoxKamionMotor";
+            this.textBoxKamionMotor.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKamionMotor.TabIndex = 8;
             // 
-            // textBox10
+            // textBoxKamionID
             // 
-            this.textBox10.Location = new System.Drawing.Point(141, 19);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 5;
+            this.textBoxKamionID.Location = new System.Drawing.Point(141, 19);
+            this.textBoxKamionID.Name = "textBoxKamionID";
+            this.textBoxKamionID.ReadOnly = true;
+            this.textBoxKamionID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKamionID.TabIndex = 5;
             // 
             // label5
             // 
@@ -462,50 +461,50 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "ID:";
             // 
-            // button6
+            // buttonKamionModosit
             // 
-            this.button6.Location = new System.Drawing.Point(534, 241);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Modosít";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonKamionModosit.Location = new System.Drawing.Point(534, 241);
+            this.buttonKamionModosit.Name = "buttonKamionModosit";
+            this.buttonKamionModosit.Size = new System.Drawing.Size(75, 23);
+            this.buttonKamionModosit.TabIndex = 12;
+            this.buttonKamionModosit.Text = "Modosít";
+            this.buttonKamionModosit.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // buttonKamionTorles
             // 
-            this.button7.Location = new System.Drawing.Point(534, 270);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Töröl";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonKamionTorles.Location = new System.Drawing.Point(534, 270);
+            this.buttonKamionTorles.Name = "buttonKamionTorles";
+            this.buttonKamionTorles.Size = new System.Drawing.Size(75, 23);
+            this.buttonKamionTorles.TabIndex = 11;
+            this.buttonKamionTorles.Text = "Töröl";
+            this.buttonKamionTorles.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // buttonKamionMEgsem
             // 
-            this.button8.Location = new System.Drawing.Point(646, 241);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Megsem";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonKamionMEgsem.Location = new System.Drawing.Point(646, 241);
+            this.buttonKamionMEgsem.Name = "buttonKamionMEgsem";
+            this.buttonKamionMEgsem.Size = new System.Drawing.Size(75, 23);
+            this.buttonKamionMEgsem.TabIndex = 10;
+            this.buttonKamionMEgsem.Text = "Megsem";
+            this.buttonKamionMEgsem.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // buttonUjKamion
             // 
-            this.button9.Location = new System.Drawing.Point(434, 241);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Uj Adat";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonUjKamion.Location = new System.Drawing.Point(434, 241);
+            this.buttonUjKamion.Name = "buttonUjKamion";
+            this.buttonUjKamion.Size = new System.Drawing.Size(75, 23);
+            this.buttonUjKamion.TabIndex = 9;
+            this.buttonUjKamion.Text = "Uj Adat";
+            this.buttonUjKamion.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // buttonKamionMEntes
             // 
-            this.button10.Location = new System.Drawing.Point(434, 270);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Mentés";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonKamionMEntes.Location = new System.Drawing.Point(434, 270);
+            this.buttonKamionMEntes.Name = "buttonKamionMEntes";
+            this.buttonKamionMEntes.Size = new System.Drawing.Size(75, 23);
+            this.buttonKamionMEntes.TabIndex = 8;
+            this.buttonKamionMEntes.Text = "Mentés";
+            this.buttonKamionMEntes.UseVisualStyleBackColor = true;
             // 
             // dataGridViewKamionok
             // 
@@ -628,7 +627,7 @@
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
-            // Form1
+            // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -638,7 +637,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "SmartTruckkft";
             this.Text = "Smart Truck Kft";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlKamion.ResumeLayout(false);
@@ -667,42 +666,42 @@
         private System.Windows.Forms.DataGridView dataGridViewDolgozok;
         private System.Windows.Forms.TabPage tabPageKamion;
         private System.Windows.Forms.TabPage tabPageUtvonal;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDolgozoTorol;
+        private System.Windows.Forms.Button buttonDologozMEg;
+        private System.Windows.Forms.Button buttonUjDolgozo;
+        private System.Windows.Forms.Button buttonDolgozoMEnt;
         private System.Windows.Forms.Button buttonBetolt;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDologozJel;
+        private System.Windows.Forms.TextBox textBoxDolgozoEmail;
+        private System.Windows.Forms.TextBox textBoxDolgozoTel;
+        private System.Windows.Forms.TextBox textBoxDolgozoNev;
+        private System.Windows.Forms.TextBox textBoxDolgozoID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelAzzonosito;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDolgozoMod;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxKamionUzem;
+        private System.Windows.Forms.TextBox textBoxKamionMotor;
+        private System.Windows.Forms.TextBox textBoxKamionID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buttonKamionModosit;
+        private System.Windows.Forms.Button buttonKamionTorles;
+        private System.Windows.Forms.Button buttonKamionMEgsem;
+        private System.Windows.Forms.Button buttonUjKamion;
+        private System.Windows.Forms.Button buttonKamionMEntes;
         private System.Windows.Forms.DataGridView dataGridViewKamionok;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxKamionMuszaki;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxKamionRend;
+        private System.Windows.Forms.TextBox textBoxKamionHajtas;
+        private System.Windows.Forms.TextBox textBoxKamionSuly;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridViewUtvonal;

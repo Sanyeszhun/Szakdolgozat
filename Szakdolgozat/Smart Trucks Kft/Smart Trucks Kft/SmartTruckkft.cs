@@ -25,9 +25,15 @@ namespace Smart_Trucks_Kft
 
         public SmartTruckkft()
         {
+            beallitKezdoFormot();
             InitializeComponent();
         }
 
+        public void beallitKezdoFormot()
+        {
+            this.Size = new Size(1024, 768);
+            this.Text = "Smart truck KFT.";
+        }
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
