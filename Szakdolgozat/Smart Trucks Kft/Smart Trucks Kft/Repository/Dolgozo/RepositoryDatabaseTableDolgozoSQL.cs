@@ -14,7 +14,7 @@ namespace Smart_Trucks_Kft.Repository
     /// Ezt nem tudom meg kell kerdezni!!
     /// </summary>
     /// <returns></returns>
-        public List<Pizza> getPizzasFromDatabaseTable()
+        public List<Pizza> getDolgozoFromDatabaseTable()
         {
             List<Pizza> pizzas = new List<Pizza>();
             MySqlConnection connection = new MySqlConnection(connectionString);

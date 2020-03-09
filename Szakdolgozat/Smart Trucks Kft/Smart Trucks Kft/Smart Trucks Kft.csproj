@@ -50,6 +50,9 @@
     <Compile Include="Modell\DolgozoDatabase.cs" />
     <Compile Include="Modell\Dolgozo.cs" />
     <Compile Include="Repository\Repository1.cs" />
+    <Compile Include="FormTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SmartTruckkftDolgozo.cs">
       <SubType>Form</SubType>
     </Compile>
