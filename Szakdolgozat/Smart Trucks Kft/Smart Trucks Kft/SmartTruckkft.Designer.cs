@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlKamion = new System.Windows.Forms.TabControl();
             this.tabPageDolgozok = new System.Windows.Forms.TabPage();
-            this.buttonAdatbazisLetrehozas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDologozJel = new System.Windows.Forms.TextBox();
             this.textBoxDolgozoEmail = new System.Windows.Forms.TextBox();
@@ -75,7 +74,6 @@
             this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
             this.tabPageUtvonal = new System.Windows.Forms.TabPage();
             this.dataGridViewUtvonal = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dolgozókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kamionokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,10 +85,9 @@
             this.törliATesztadatokatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törliAzAdatbázistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLableDolgozo = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -130,9 +127,6 @@
             // 
             // tabPageDolgozok
             // 
-            this.tabPageDolgozok.Controls.Add(this.toolStrip2);
-            this.tabPageDolgozok.Controls.Add(this.toolStrip1);
-            this.tabPageDolgozok.Controls.Add(this.buttonAdatbazisLetrehozas);
             this.tabPageDolgozok.Controls.Add(this.panel1);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMod);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoTorol);
@@ -149,16 +143,6 @@
             this.tabPageDolgozok.Text = "Dolgozók";
             this.tabPageDolgozok.UseVisualStyleBackColor = true;
             this.tabPageDolgozok.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // buttonAdatbazisLetrehozas
-            // 
-            this.buttonAdatbazisLetrehozas.Location = new System.Drawing.Point(429, 6);
-            this.buttonAdatbazisLetrehozas.Name = "buttonAdatbazisLetrehozas";
-            this.buttonAdatbazisLetrehozas.Size = new System.Drawing.Size(126, 23);
-            this.buttonAdatbazisLetrehozas.TabIndex = 8;
-            this.buttonAdatbazisLetrehozas.Text = "Adatbázi létrehozzás ";
-            this.buttonAdatbazisLetrehozas.UseVisualStyleBackColor = true;
-            this.buttonAdatbazisLetrehozas.Click += new System.EventHandler(this.buttonAdatbazisLetrehozas_Click);
             // 
             // panel1
             // 
@@ -306,7 +290,7 @@
             // 
             // buttonBetolt
             // 
-            this.buttonBetolt.Location = new System.Drawing.Point(619, 6);
+            this.buttonBetolt.Location = new System.Drawing.Point(447, 6);
             this.buttonBetolt.Name = "buttonBetolt";
             this.buttonBetolt.Size = new System.Drawing.Size(75, 23);
             this.buttonBetolt.TabIndex = 1;
@@ -317,7 +301,7 @@
             // dataGridViewDolgozok
             // 
             this.dataGridViewDolgozok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDolgozok.Location = new System.Drawing.Point(-4, 3);
+            this.dataGridViewDolgozok.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewDolgozok.Name = "dataGridViewDolgozok";
             this.dataGridViewDolgozok.Size = new System.Drawing.Size(425, 302);
             this.dataGridViewDolgozok.TabIndex = 0;
@@ -553,19 +537,6 @@
             this.dataGridViewUtvonal.Size = new System.Drawing.Size(779, 303);
             this.dataGridViewUtvonal.TabIndex = 0;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.meToolStripMenuItem,
-            this.tesztadatokToolStripMenuItem,
-            this.kilépésToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
             // meToolStripMenuItem
             // 
             this.meToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -647,16 +618,28 @@
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meToolStripMenuItem,
+            this.tesztadatokToolStripMenuItem,
+            this.kilépésToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelHibauzenet,
-            this.toolStripLableDolgozo});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 277);
+            this.toolStripLabelHibauzenet});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 391);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(787, 25);
-            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabelHibauzenet
@@ -665,40 +648,23 @@
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabelHibauzenet.Text = "toolStripLabel1";
             // 
-            // toolStripLableDolgozo
-            // 
-            this.toolStripLableDolgozo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripLableDolgozo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLableDolgozo.Image")));
-            this.toolStripLableDolgozo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripLableDolgozo.Name = "toolStripLableDolgozo";
-            this.toolStripLableDolgozo.Size = new System.Drawing.Size(23, 22);
-            this.toolStripLableDolgozo.Text = "toolStripButton1";
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip2.Location = new System.Drawing.Point(3, 252);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(787, 25);
-            this.toolStrip2.TabIndex = 10;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 402);
+            this.ClientSize = new System.Drawing.Size(800, 416);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControlKamion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SmartTruckkft";
             this.Text = "Smart Truck Kft";
+         
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlKamion.ResumeLayout(false);
             this.tabPageDolgozok.ResumeLayout(false);
-            this.tabPageDolgozok.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDolgozok)).EndInit();
@@ -764,7 +730,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridViewUtvonal;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dolgozókToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kamionokToolStripMenuItem;
@@ -776,11 +741,9 @@
         private System.Windows.Forms.ToolStripMenuItem törliATesztadatokatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törliAzAdatbázistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
-        private System.Windows.Forms.Button buttonAdatbazisLetrehozas;
+        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
-        private System.Windows.Forms.ToolStripButton toolStripLableDolgozo;
-        private System.Windows.Forms.ToolStrip toolStrip2;
     }
 }
 

@@ -14,32 +14,35 @@ namespace Smart_Trucks_Kft.Repository
     /// Ezt nem tudom meg kell kerdezni!!
     /// </summary>
     /// <returns></returns>
-        public List<Pizza> getDolgozoFromDatabaseTable()
+        public List<Dolgozo> getDolgozoFromDatabaseTable()
         {
-            List<Pizza> pizzas = new List<Pizza>();
+            List<Dolgozo> dologzok = new List<Dolgozo>();
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
                 connection.Open();
-                string query = Pizza.getSQLCommandGetAllRecord();
+                string query = Dolgozo.getSQLCommandGetAllRecord();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dr;
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    string name = dr["pnev"].ToString();
+                    string dolgozoname = dr["nev"].ToString();
+                    string dolgozotelefon = dr["telefonszam"].ToString();
+                    string dolgozoemail = dr["email"].ToString();
+                    string dolgozojelszo = dr["jelszo"].ToString();
+
+
                     bool goodResult = false;
                     int id = -1;
-                    goodResult = int.TryParse(dr["pazon"].ToString(), out id);
+                    goodResult = int.TryParse(dr["id"].ToString(), out id);
                     if (goodResult)
                     {
-                        int price = -1;
-                        goodResult = int.TryParse(dr["par"].ToString(), out price);
-                        if (goodResult)
-                        {
-                            Pizza p = new Pizza(id, name, price);
-                            pizzas.Add(p);
-                        }
+                       
+                       
+                            Dolgozo d = new Dolgozo(id,dolgozoname,dolgozotelefon,dolgozoemail,dolgozojelszo);
+                           dologzok.Add(d);
+                       
                     }
                 }
                 connection.Close();
@@ -50,7 +53,7 @@ namespace Smart_Trucks_Kft.Repository
                 Debug.WriteLine(e.Message);
                 throw new RepositoryException("Pizzaadatok beolvasása az adatbázisból nem sikerült!");
             }
-            return pizzas;
+            return dologzok;
         }
 
         public void deleteDolgozoFromDatabase(int id)

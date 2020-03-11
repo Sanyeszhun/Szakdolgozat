@@ -35,7 +35,7 @@ namespace Smart_Trucks_Kft
         {
             rdDolgozo.createTableDolgozo();
             rdDolgozo.fillDolgozoWithTestDataFromSQLCommand();
-                  repo.setDolgozok(rdDolgozo.getPizzasFromDatabaseTable());
+                  repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
 
 
         }
