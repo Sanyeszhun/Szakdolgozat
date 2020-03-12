@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlKamion = new System.Windows.Forms.TabControl();
             this.tabPageDolgozok = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAdatbazisletrehozas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDologozJel = new System.Windows.Forms.TextBox();
             this.textBoxDolgozoEmail = new System.Windows.Forms.TextBox();
@@ -80,16 +80,12 @@
             this.kamionokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utvonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesztadatokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adatbázisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adatbázisLétrehozásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.feltöltésTesztadatokalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.törliATesztadatokatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törliAzAdatbázistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.törliATáblákatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
-            this.buttonAdatbazisletrehozas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -121,7 +117,7 @@
             this.tabControlKamion.Controls.Add(this.tabPageDolgozok);
             this.tabControlKamion.Controls.Add(this.tabPageKamion);
             this.tabControlKamion.Controls.Add(this.tabPageUtvonal);
-            this.tabControlKamion.Location = new System.Drawing.Point(0, 71);
+            this.tabControlKamion.Location = new System.Drawing.Point(0, 73);
             this.tabControlKamion.Name = "tabControlKamion";
             this.tabControlKamion.SelectedIndex = 0;
             this.tabControlKamion.Size = new System.Drawing.Size(801, 331);
@@ -130,7 +126,6 @@
             // tabPageDolgozok
             // 
             this.tabPageDolgozok.Controls.Add(this.buttonAdatbazisletrehozas);
-            this.tabPageDolgozok.Controls.Add(this.button2);
             this.tabPageDolgozok.Controls.Add(this.panel1);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMod);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoTorol);
@@ -148,14 +143,15 @@
             this.tabPageDolgozok.UseVisualStyleBackColor = true;
             this.tabPageDolgozok.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button2
+            // buttonAdatbazisletrehozas
             // 
-            this.button2.Location = new System.Drawing.Point(641, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Megsem";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonAdatbazisletrehozas.Location = new System.Drawing.Point(529, 6);
+            this.buttonAdatbazisletrehozas.Name = "buttonAdatbazisletrehozas";
+            this.buttonAdatbazisletrehozas.Size = new System.Drawing.Size(126, 23);
+            this.buttonAdatbazisletrehozas.TabIndex = 10;
+            this.buttonAdatbazisletrehozas.Text = "Adatbazis létrehozás";
+            this.buttonAdatbazisletrehozas.UseVisualStyleBackColor = true;
+            this.buttonAdatbazisletrehozas.Click += new System.EventHandler(this.buttonAdatbazisletrehozas_Click);
             // 
             // panel1
             // 
@@ -263,6 +259,7 @@
             this.buttonDolgozoMod.TabIndex = 6;
             this.buttonDolgozoMod.Text = "Modosít";
             this.buttonDolgozoMod.UseVisualStyleBackColor = true;
+            this.buttonDolgozoMod.Click += new System.EventHandler(this.buttonDolgozoMod_Click);
             // 
             // buttonDolgozoTorol
             // 
@@ -272,6 +269,7 @@
             this.buttonDolgozoTorol.TabIndex = 5;
             this.buttonDolgozoTorol.Text = "Töröl";
             this.buttonDolgozoTorol.UseVisualStyleBackColor = true;
+            this.buttonDolgozoTorol.Click += new System.EventHandler(this.buttonDolgozoTorol_Click);
             // 
             // buttonDologozMEg
             // 
@@ -585,45 +583,25 @@
             // tesztadatokToolStripMenuItem
             // 
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adatbázisToolStripMenuItem});
+            this.törliAzAdatbázistToolStripMenuItem,
+            this.törliATáblákatToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
-            // 
-            // adatbázisToolStripMenuItem
-            // 
-            this.adatbázisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adatbázisLétrehozásaToolStripMenuItem,
-            this.feltöltésTesztadatokalToolStripMenuItem,
-            this.törliATesztadatokatToolStripMenuItem,
-            this.törliAzAdatbázistToolStripMenuItem});
-            this.adatbázisToolStripMenuItem.Name = "adatbázisToolStripMenuItem";
-            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.adatbázisToolStripMenuItem.Text = "Adatbázis";
-            // 
-            // adatbázisLétrehozásaToolStripMenuItem
-            // 
-            this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
-            this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
-            // 
-            // feltöltésTesztadatokalToolStripMenuItem
-            // 
-            this.feltöltésTesztadatokalToolStripMenuItem.Name = "feltöltésTesztadatokalToolStripMenuItem";
-            this.feltöltésTesztadatokalToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.feltöltésTesztadatokalToolStripMenuItem.Text = "Feltöltés Tesztadatokal";
-            // 
-            // törliATesztadatokatToolStripMenuItem
-            // 
-            this.törliATesztadatokatToolStripMenuItem.Name = "törliATesztadatokatToolStripMenuItem";
-            this.törliATesztadatokatToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.törliATesztadatokatToolStripMenuItem.Text = "Törli a tesztadatokat";
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.tesztadatokToolStripMenuItem.Text = "Adatbázis törlések";
             // 
             // törliAzAdatbázistToolStripMenuItem
             // 
             this.törliAzAdatbázistToolStripMenuItem.Name = "törliAzAdatbázistToolStripMenuItem";
-            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.törliAzAdatbázistToolStripMenuItem.Text = "Törli az adatbázist";
+            this.törliAzAdatbázistToolStripMenuItem.Click += new System.EventHandler(this.törliAzAdatbázistToolStripMenuItem_Click);
+            // 
+            // törliATáblákatToolStripMenuItem
+            // 
+            this.törliATáblákatToolStripMenuItem.Name = "törliATáblákatToolStripMenuItem";
+            this.törliATáblákatToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.törliATáblákatToolStripMenuItem.Text = "Törli a táblákat";
+            this.törliATáblákatToolStripMenuItem.Click += new System.EventHandler(this.törliATáblákatToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
@@ -661,16 +639,6 @@
             this.toolStripLabelHibauzenet.Name = "toolStripLabelHibauzenet";
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabelHibauzenet.Text = "toolStripLabel1";
-            // 
-            // buttonAdatbazisletrehozas
-            // 
-            this.buttonAdatbazisletrehozas.Location = new System.Drawing.Point(625, 6);
-            this.buttonAdatbazisletrehozas.Name = "buttonAdatbazisletrehozas";
-            this.buttonAdatbazisletrehozas.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdatbazisletrehozas.TabIndex = 10;
-            this.buttonAdatbazisletrehozas.Text = "Adatbazis létrehozás";
-            this.buttonAdatbazisletrehozas.UseVisualStyleBackColor = true;
-            this.buttonAdatbazisletrehozas.Click += new System.EventHandler(this.buttonAdatbazisletrehozas_Click);
             // 
             // SmartTruckkft
             // 
@@ -758,17 +726,13 @@
         private System.Windows.Forms.ToolStripMenuItem kamionokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utvonalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tesztadatokToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adatbázisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adatbázisLétrehozásaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem feltöltésTesztadatokalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem törliATesztadatokatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem törliAzAdatbázistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonAdatbazisletrehozas;
+        private System.Windows.Forms.ToolStripMenuItem törliAzAdatbázistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem törliATáblákatToolStripMenuItem;
     }
 }
 

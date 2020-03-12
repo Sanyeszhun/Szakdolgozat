@@ -19,7 +19,7 @@ namespace Smart_Trucks_Kft
     {
         RepositoryDatabase rd = new RepositoryDatabase();
         RepositoryDatabaseTableDolgozo rdDolgozo = new RepositoryDatabaseTableDolgozo();
-
+       
 
         private void torolHibauzenetet()
         {
@@ -33,9 +33,11 @@ namespace Smart_Trucks_Kft
         }
         private void buttonAdatbazisletrehozas_Click(object sender, EventArgs e)
         {
+            rd.createDatabase();
             rdDolgozo.createTableDolgozo();
             rdDolgozo.fillDolgozoWithTestDataFromSQLCommand();
             repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
+           
         }
 
        
@@ -53,6 +55,25 @@ namespace Smart_Trucks_Kft
 
             }
         }
+
+        private void törliAzAdatbázistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                torolHibauzenetet();
+                rd.deleteDatabase();
+
+            }
+            catch (Exception ex)
+            {
+                kiirHibauzenetet("Adatbázis törlési hiba!");
+            }
+
+
+        }
+            
+
+       
 
     }
 }

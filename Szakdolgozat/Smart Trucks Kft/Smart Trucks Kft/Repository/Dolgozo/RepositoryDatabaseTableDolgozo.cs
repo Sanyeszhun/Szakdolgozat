@@ -102,5 +102,8 @@ namespace Smart_Trucks_Kft.Repository
         }
 
 
+
+
+
     }
 }

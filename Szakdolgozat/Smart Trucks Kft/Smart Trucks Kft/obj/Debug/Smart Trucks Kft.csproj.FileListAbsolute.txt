@@ -49,3 +49,9 @@ C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Tr
 C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.CopyComplete
 C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
 C:\Users\sz8szisan\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe.config
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.pdb
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.dll
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.xml
+C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.CopyComplete

@@ -21,10 +21,10 @@ namespace Smart_Trucks_Kft
 
         Repository1 repo = new Repository1();
 
-
+        
 
         public SmartTruckkft()
-        {
+        { 
             beallitKezdoFormot();
             InitializeComponent();
         }
@@ -33,6 +33,8 @@ namespace Smart_Trucks_Kft
         {
             this.Size = new Size(1024, 768);
             this.Text = "Smart truck KFT.";
+           
+           
         }
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -84,7 +86,21 @@ namespace Smart_Trucks_Kft
             tabControlKamion.SelectTab("tabPageUtvonal");
         }
 
+        private void törliATáblákatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                torolHibauzenetet();
+                rdDolgozo.deleteTableDolgozo();
+              
+            }
+            catch (Exception ex)
+            {
+                kiirHibauzenetet("Táblák törlése sikertelen!");
+            }
+        }
        
+
     }
     }
 
