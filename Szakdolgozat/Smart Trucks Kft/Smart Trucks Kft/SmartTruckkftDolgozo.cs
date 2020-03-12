@@ -299,6 +299,8 @@ namespace Smart_Trucks_Kft
             catch (Exception ex)
             {
                 kiirHibauzenetet(ex.Message);
+
+
             }
         }
     }
