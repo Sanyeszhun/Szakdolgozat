@@ -41,10 +41,7 @@ namespace Smart_Trucks_Kft
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -99,8 +96,8 @@ namespace Smart_Trucks_Kft
                 kiirHibauzenetet("Táblák törlése sikertelen!");
             }
         }
-       
 
+      
     }
     }
 

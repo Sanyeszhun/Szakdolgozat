@@ -222,6 +222,85 @@ namespace Smart_Trucks_Kft
             //errorProviderPizzaName.Clear();
             //errorProviderPizzaPrice.Clear();
         }
+
+
+        private void buttonUjDolgozo_Click(object sender, EventArgs e)
+        {
+            ujAdatfelvitel = true;
+            beallitGombokatTextboxokatUjPizzanal();
+            int ujDolgozoAzonosito = repo.getNextDolgozoId();
+            textBoxDolgozoID.Text = ujDolgozoAzonosito.ToString();
+        }
+
+
+
+        private void beallitGombokatTextboxokatUjPizzanal()
+        {
+            panel1.Visible = true;
+       
+            textBoxDolgozoNev.Text = string.Empty;
+            textBoxDolgozoTel.Text = string.Empty;
+            textBoxDolgozoEmail.Text = string.Empty;
+            textBoxDologozJel.Text = string.Empty;
+        }
+
+        private void buttonDolgozoMEnt_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            //errorProviderPizzaName.Clear();
+            //errorProviderPizzaPrice.Clear();
+            try
+            {
+                Dolgozo ujDolgozo = new Dolgozo(
+                     Convert.ToInt32(textBoxDolgozoID.Text),
+                    textBoxDolgozoNev.Text,
+                    textBoxDolgozoTel.Text,
+                    textBoxDolgozoEmail.Text,
+                    textBoxDologozJel.Text
+                    );
+                int azonosito = Convert.ToInt32(textBoxDolgozoID.Text);
+                //1. Hozzáadni a listához
+                try
+                {
+                    repo.addDolgozoToList(ujDolgozo);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                    return;
+                }
+                //2. Hozzáadni az adatbázishoz
+               RepositoryDatabaseTableDolgozo rdtd = new RepositoryDatabaseTableDolgozo();
+                try
+                {
+                    rdtd.insertDolgozoToDatabase(ujDolgozo);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. Frissíteni a DataGridView-t
+               
+                frissitAdatokkalDataGriedViewt();
+                if (dataGridViewDolgozok.SelectedRows.Count == 1)
+                {
+                    beallitDolgozoDataGriViewt();
+                }
+
+            }
+            //catch (ModelPizzaNotValidNameExeption nvn)
+            //{
+            //    errorProviderPizzaName.SetError(textBoxPizzaNev, nvn.Message);
+            //}
+            //catch (ModelPizzaNotValidPriceExeption nvp)
+            //{
+            //    errorProviderPizzaName.SetError(textBoxPizzaAr, nvp.Message);
+            //}
+            catch (Exception ex)
+            {
+                kiirHibauzenetet(ex.Message);
+            }
+        }
     }
 }
 

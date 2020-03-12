@@ -279,7 +279,6 @@
             this.buttonDologozMEg.TabIndex = 4;
             this.buttonDologozMEg.Text = "Megsem";
             this.buttonDologozMEg.UseVisualStyleBackColor = true;
-            this.buttonDologozMEg.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttonUjDolgozo
             // 
@@ -289,6 +288,7 @@
             this.buttonUjDolgozo.TabIndex = 3;
             this.buttonUjDolgozo.Text = "Uj Adat";
             this.buttonUjDolgozo.UseVisualStyleBackColor = true;
+            this.buttonUjDolgozo.Click += new System.EventHandler(this.buttonUjDolgozo_Click);
             // 
             // buttonDolgozoMEnt
             // 
@@ -298,6 +298,7 @@
             this.buttonDolgozoMEnt.TabIndex = 2;
             this.buttonDolgozoMEnt.Text = "Mentés";
             this.buttonDolgozoMEnt.UseVisualStyleBackColor = true;
+            this.buttonDolgozoMEnt.Click += new System.EventHandler(this.buttonDolgozoMEnt_Click);
             // 
             // buttonBetolt
             // 
