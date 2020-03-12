@@ -84,16 +84,10 @@ namespace Smart_Trucks_Kft
             tabControlKamion.SelectTab("tabPageUtvonal");
         }
 
-       
-       
+        private void buttonBetolt_Click(object sender, EventArgs e)
+        {
 
-      
-
-      
-
-       
-
-      
+        }
     }
     }
 

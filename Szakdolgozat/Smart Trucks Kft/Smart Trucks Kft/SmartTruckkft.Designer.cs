@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlKamion = new System.Windows.Forms.TabControl();
             this.tabPageDolgozok = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDologozJel = new System.Windows.Forms.TextBox();
             this.textBoxDolgozoEmail = new System.Windows.Forms.TextBox();
@@ -127,6 +129,8 @@
             // 
             // tabPageDolgozok
             // 
+            this.tabPageDolgozok.Controls.Add(this.button2);
+            this.tabPageDolgozok.Controls.Add(this.button1);
             this.tabPageDolgozok.Controls.Add(this.panel1);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMod);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoTorol);
@@ -143,6 +147,24 @@
             this.tabPageDolgozok.Text = "Dolgozók";
             this.tabPageDolgozok.UseVisualStyleBackColor = true;
             this.tabPageDolgozok.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(641, 282);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Megsem";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(595, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Betölt";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -296,7 +318,6 @@
             this.buttonBetolt.TabIndex = 1;
             this.buttonBetolt.Text = "Betölt";
             this.buttonBetolt.UseVisualStyleBackColor = true;
-            this.buttonBetolt.Click += new System.EventHandler(this.buttonBetolt_Click);
             // 
             // dataGridViewDolgozok
             // 
@@ -573,7 +594,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -590,25 +611,25 @@
             // adatbázisLétrehozásaToolStripMenuItem
             // 
             this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
-            this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
             // 
             // feltöltésTesztadatokalToolStripMenuItem
             // 
             this.feltöltésTesztadatokalToolStripMenuItem.Name = "feltöltésTesztadatokalToolStripMenuItem";
-            this.feltöltésTesztadatokalToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.feltöltésTesztadatokalToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.feltöltésTesztadatokalToolStripMenuItem.Text = "Feltöltés Tesztadatokal";
             // 
             // törliATesztadatokatToolStripMenuItem
             // 
             this.törliATesztadatokatToolStripMenuItem.Name = "törliATesztadatokatToolStripMenuItem";
-            this.törliATesztadatokatToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.törliATesztadatokatToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.törliATesztadatokatToolStripMenuItem.Text = "Törli a tesztadatokat";
             // 
             // törliAzAdatbázistToolStripMenuItem
             // 
             this.törliAzAdatbázistToolStripMenuItem.Name = "törliAzAdatbázistToolStripMenuItem";
-            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.törliAzAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.törliAzAdatbázistToolStripMenuItem.Text = "Törli az adatbázist";
             // 
             // kilépésToolStripMenuItem
@@ -661,7 +682,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SmartTruckkft";
             this.Text = "Smart Truck Kft";
-         
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlKamion.ResumeLayout(false);
             this.tabPageDolgozok.ResumeLayout(false);
@@ -744,6 +764,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
