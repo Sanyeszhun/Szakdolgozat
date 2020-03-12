@@ -31,14 +31,29 @@ namespace Smart_Trucks_Kft
             toolStripLabelHibauzenet.ForeColor = Color.Red;
             toolStripLabelHibauzenet.Text = hibauzenet;
         }
-        private void buttonAdatbazisLetrehozas_Click(object sender, EventArgs e)
+        private void buttonAdatbazisletrehozas_Click(object sender, EventArgs e)
         {
             rdDolgozo.createTableDolgozo();
             rdDolgozo.fillDolgozoWithTestDataFromSQLCommand();
-                  repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
-
-
+            repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
         }
+
+       
+        
+        private void dataGridViewDolgozok_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) 
+            {
+                DataGridViewRow row = this.dataGridViewDolgozok.Rows[e.RowIndex];
+                textBoxDolgozoID.Text = row.Cells[0].Value.ToString();
+                textBoxDolgozoNev.Text = row.Cells[1].Value.ToString();
+                textBoxDolgozoTel.Text = row.Cells[2].Value.ToString();
+                textBoxDolgozoEmail.Text = row.Cells[3].Value.ToString();
+                textBoxDologozJel.Text = row.Cells[4].Value.ToString();
+
+            }
+        }
+
     }
 }
 

@@ -20,14 +20,16 @@ namespace Smart_Trucks_Kft
 
         private DataTable dolgozDT = new DataTable();
 
-        private void buttonBetolt_Click(object sender, EventArgs e)
+
+        private void buttonBetolt_Click_1(object sender, EventArgs e)
         {
             frissitAdatokkalDataGriedViewt();
             beallitDolgozoDataGriViewt();
-
-
-
         }
+        
+      
+
+        
 
         private void beallitDolgozoDataGriViewt()
         {

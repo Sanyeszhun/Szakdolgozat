@@ -33,8 +33,8 @@ namespace Smart_Trucks_Kft.Repository
                   "   `nev` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                    "   `telefonszam` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                     "   `email` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
-                    "   `jelszo` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +                     
-                        ")ENGINE = InnoDB; ";
+                    "   `jelszo` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +                     
+                        " ENGINE = InnoDB;";
             string queryPrimaryKey =
                 "ALTER TABLE `dolgozok`  ADD PRIMARY KEY(`id`); ";
 

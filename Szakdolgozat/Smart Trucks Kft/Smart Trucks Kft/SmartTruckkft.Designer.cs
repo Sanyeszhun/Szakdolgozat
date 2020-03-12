@@ -33,7 +33,6 @@
             this.tabControlKamion = new System.Windows.Forms.TabControl();
             this.tabPageDolgozok = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDologozJel = new System.Windows.Forms.TextBox();
             this.textBoxDolgozoEmail = new System.Windows.Forms.TextBox();
@@ -90,6 +89,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
+            this.buttonAdatbazisletrehozas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -129,8 +129,8 @@
             // 
             // tabPageDolgozok
             // 
+            this.tabPageDolgozok.Controls.Add(this.buttonAdatbazisletrehozas);
             this.tabPageDolgozok.Controls.Add(this.button2);
-            this.tabPageDolgozok.Controls.Add(this.button1);
             this.tabPageDolgozok.Controls.Add(this.panel1);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoMod);
             this.tabPageDolgozok.Controls.Add(this.buttonDolgozoTorol);
@@ -156,15 +156,6 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Megsem";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(595, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Betölt";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -318,6 +309,7 @@
             this.buttonBetolt.TabIndex = 1;
             this.buttonBetolt.Text = "Betölt";
             this.buttonBetolt.UseVisualStyleBackColor = true;
+            this.buttonBetolt.Click += new System.EventHandler(this.buttonBetolt_Click_1);
             // 
             // dataGridViewDolgozok
             // 
@@ -326,6 +318,7 @@
             this.dataGridViewDolgozok.Name = "dataGridViewDolgozok";
             this.dataGridViewDolgozok.Size = new System.Drawing.Size(425, 302);
             this.dataGridViewDolgozok.TabIndex = 0;
+            this.dataGridViewDolgozok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDolgozok_CellClick);
             // 
             // tabPageKamion
             // 
@@ -669,6 +662,16 @@
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabelHibauzenet.Text = "toolStripLabel1";
             // 
+            // buttonAdatbazisletrehozas
+            // 
+            this.buttonAdatbazisletrehozas.Location = new System.Drawing.Point(625, 6);
+            this.buttonAdatbazisletrehozas.Name = "buttonAdatbazisletrehozas";
+            this.buttonAdatbazisletrehozas.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdatbazisletrehozas.TabIndex = 10;
+            this.buttonAdatbazisletrehozas.Text = "Adatbazis létrehozás";
+            this.buttonAdatbazisletrehozas.UseVisualStyleBackColor = true;
+            this.buttonAdatbazisletrehozas.Click += new System.EventHandler(this.buttonAdatbazisletrehozas_Click);
+            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,7 +768,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAdatbazisletrehozas;
     }
 }
 
