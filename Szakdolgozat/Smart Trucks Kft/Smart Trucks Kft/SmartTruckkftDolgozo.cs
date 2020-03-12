@@ -120,8 +120,9 @@ namespace Smart_Trucks_Kft
         private void buttonDolgozoMod_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
-            //errorProviderPizzaName.Clear();
-            //errorProviderPizzaPrice.Clear();
+            errorProviderDolgozName.Clear();
+            errorProviderDolgozoTel.Clear();
+            errorProviderDolgozoEmail.Clear();
             try
             {
                 Dolgozo modosult = new Dolgozo(
@@ -155,14 +156,18 @@ namespace Smart_Trucks_Kft
                 //3. módosítani a DataGridView-ban           
                 frissitAdatokkalDataGriedViewt();
             }
-            //catch (ModelPizzaNotValidNameExeption nvn)
-            //{
-            //    errorProviderPizzaName.SetError(textBoxPizzaNev, nvn.Message);
-            //}
-            //catch (ModelPizzaNotValidPriceExeption nvp)
-            //{
-            //    errorProviderPizzaName.SetError(textBoxPizzaAr, nvp.Message);
-            //}
+            catch (ModelDolgozoNotValidNevExeption nvn)
+            {
+                errorProviderDolgozName.SetError(textBoxDolgozoNev, nvn.Message);
+            }
+            catch (ModelDolgozoNotValidNTelExeption nvt)
+            {
+               errorProviderDolgozoTel.SetError(textBoxDolgozoTel, nvt.Message);
+            }
+            catch (ModelDolgozoNotValidEmailExeption nve)
+            {
+                errorProviderDolgozoEmail.SetError(textBoxDolgozoEmail, nve.Message);
+            }
             catch (RepositoryExceptionCantModified recm)
             {
                 kiirHibauzenetet(recm.Message);
@@ -218,9 +223,10 @@ namespace Smart_Trucks_Kft
             ujAdatfelvitel = false;
             buttonUjDolgozo.Visible = false;
             buttonDologozMEg.Visible = false;
-         
-            //errorProviderPizzaName.Clear();
-            //errorProviderPizzaPrice.Clear();
+
+            errorProviderDolgozName.Clear();
+            errorProviderDolgozoTel.Clear();
+            errorProviderDolgozoEmail.Clear();
         }
 
 
@@ -247,8 +253,9 @@ namespace Smart_Trucks_Kft
         private void buttonDolgozoMEnt_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
-            //errorProviderPizzaName.Clear();
-            //errorProviderPizzaPrice.Clear();
+            errorProviderDolgozName.Clear();
+            errorProviderDolgozoTel.Clear();
+            errorProviderDolgozoEmail.Clear();
             try
             {
                 Dolgozo ujDolgozo = new Dolgozo(
@@ -288,14 +295,18 @@ namespace Smart_Trucks_Kft
                 }
 
             }
-            //catch (ModelPizzaNotValidNameExeption nvn)
-            //{
-            //    errorProviderPizzaName.SetError(textBoxPizzaNev, nvn.Message);
-            //}
-            //catch (ModelPizzaNotValidPriceExeption nvp)
-            //{
-            //    errorProviderPizzaName.SetError(textBoxPizzaAr, nvp.Message);
-            //}
+            catch (ModelDolgozoNotValidNevExeption nvn)
+            {
+                errorProviderDolgozName.SetError(textBoxDolgozoNev, nvn.Message);
+            }
+            catch (ModelDolgozoNotValidNTelExeption nvt)
+            {
+                errorProviderDolgozoTel.SetError(textBoxDolgozoTel, nvt.Message);
+            }
+            catch (ModelDolgozoNotValidEmailExeption nve)
+            {
+                errorProviderDolgozoEmail.SetError(textBoxDolgozoEmail, nve.Message);
+            }
             catch (Exception ex)
             {
                 kiirHibauzenetet(ex.Message);

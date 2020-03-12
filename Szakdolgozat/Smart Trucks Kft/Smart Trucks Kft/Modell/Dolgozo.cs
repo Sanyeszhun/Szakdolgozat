@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
@@ -23,12 +25,33 @@ namespace Smart_Trucks_Kft.Modell
             this.telefonszam = telefonszam;
             if (!isValidTel(telefonszam))
             {
-                throw new ModelDolgozoNotValidNevExeption("A telefonszám nem megfelelő (pl: +36705462345) !");
+                throw new ModelDolgozoNotValidNTelExeption("A telefonszám nem megfelelő (pl: +36705462345) !");
             }
             this.email = email;
+            if (!isValidEmail(email))
+            {
+                throw new ModelDolgozoNotValidEmailExeption("Az email nem megfelelő (pl: vasarlo@emailem.hu)!");
+            }
             this.jelszo = jelszo;
+           
         }
-       
+
+      
+
+        private bool isValidEmail(string email)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(email);
+
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
         public void update(Dolgozo modified)
         {
             this.nev = modified.getNev();

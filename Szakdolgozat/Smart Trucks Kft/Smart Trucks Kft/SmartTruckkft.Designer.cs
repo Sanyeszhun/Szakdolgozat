@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmartTruckkft));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlKamion = new System.Windows.Forms.TabControl();
@@ -86,6 +87,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
+            this.errorProviderDolgozName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDolgozoTel = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDolgozoEmail = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -98,6 +102,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvonal)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoTel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -176,6 +183,7 @@
             this.textBoxDologozJel.Name = "textBoxDologozJel";
             this.textBoxDologozJel.Size = new System.Drawing.Size(100, 20);
             this.textBoxDologozJel.TabIndex = 9;
+            this.textBoxDologozJel.UseSystemPasswordChar = true;
             // 
             // textBoxDolgozoEmail
             // 
@@ -641,6 +649,18 @@
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabelHibauzenet.Text = "toolStripLabel1";
             // 
+            // errorProviderDolgozName
+            // 
+            this.errorProviderDolgozName.ContainerControl = this;
+            // 
+            // errorProviderDolgozoTel
+            // 
+            this.errorProviderDolgozoTel.ContainerControl = this;
+            // 
+            // errorProviderDolgozoEmail
+            // 
+            this.errorProviderDolgozoEmail.ContainerControl = this;
+            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,6 +690,9 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoTel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,6 +757,9 @@
         private System.Windows.Forms.Button buttonAdatbazisletrehozas;
         private System.Windows.Forms.ToolStripMenuItem törliAzAdatbázistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törliATáblákatToolStripMenuItem;
+        private System.Windows.Forms.ErrorProvider errorProviderDolgozName;
+        private System.Windows.Forms.ErrorProvider errorProviderDolgozoTel;
+        private System.Windows.Forms.ErrorProvider errorProviderDolgozoEmail;
     }
 }
 
