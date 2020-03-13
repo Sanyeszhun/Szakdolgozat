@@ -21,13 +21,7 @@ namespace Smart_Trucks_Kft.Modell
         {
             this.tid = tid;
             this.date = date;
-            //datum kell meg this.date
-
-            //if (!isValideRendszam(rendszam))
-            //{
-            //    throw new ModelKamionNotValidRenExeception("Nem megfelelő a rendszam");
-
-            //}
+          
             this.rendszam = rendszam;///rendszam lekezelése
             this.motor = motor;
             this.uzemanyag = uzemanyag;

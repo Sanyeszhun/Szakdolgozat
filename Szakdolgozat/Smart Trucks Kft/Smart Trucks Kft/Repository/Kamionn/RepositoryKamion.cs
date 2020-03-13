@@ -19,6 +19,16 @@ namespace Smart_Trucks_Kft.Repository
         
         
         }
+        public List<string> getKamionsName()
+        {
+            List<string> kamionNames = new List<string>();
+            foreach (Kamion k in kamionok)
+            {
+                kamionNames.Add(k.getRend());
+            }
+            return kamionNames;
+        }
+
         public void setKamionok(List<Kamion> kamionok) 
         {
 

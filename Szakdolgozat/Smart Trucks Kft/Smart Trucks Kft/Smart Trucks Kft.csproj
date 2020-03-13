@@ -55,6 +55,9 @@
     <Compile Include="FormTestData.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SmartTruckkftKamion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SmartTruckkftDolgozo.cs">
       <SubType>Form</SubType>
     </Compile>
