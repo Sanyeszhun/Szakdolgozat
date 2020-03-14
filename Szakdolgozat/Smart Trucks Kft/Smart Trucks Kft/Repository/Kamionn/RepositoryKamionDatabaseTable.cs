@@ -38,8 +38,8 @@ namespace Smart_Trucks_Kft.Repository
                    "   `Motor` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                     "   `Uzemanyag` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                      "   `Suly` int(60) NOT NULL DEFAULT '0', " +
-                       "   `Hajtas` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
-                        ")ENGINE = InnoDB; ";
+                       "   `Hajtas` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +
+                        " ENGINE = InnoDB;";
             string queryPrimaryKey =
                 "ALTER TABLE `kamionok`  ADD PRIMARY KEY(`tid`); ";
           
