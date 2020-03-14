@@ -19,7 +19,8 @@ namespace Smart_Trucks_Kft
     {
         RepositoryDatabase rd = new RepositoryDatabase();
         RepositoryDatabaseTableDolgozo rdDolgozo = new RepositoryDatabaseTableDolgozo();
-       
+        RepositoryKamionDatabaseTable rdKamion = new RepositoryKamionDatabaseTable();
+
 
         private void torolHibauzenetet()
         {
@@ -33,10 +34,25 @@ namespace Smart_Trucks_Kft
         }
         private void buttonAdatbazisletrehozas_Click(object sender, EventArgs e)
         {
-            rd.createDatabase();
-            rdDolgozo.createTableDolgozo();
-            rdDolgozo.fillDolgozoWithTestDataFromSQLCommand();
-            repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
+            try
+            {
+                torolHibauzenetet();
+                rd.createDatabase();
+                rdDolgozo.createTableDolgozo();
+                rdDolgozo.fillDolgozoWithTestDataFromSQLCommand();
+                repo.setDolgozok(rdDolgozo.getDolgozoFromDatabaseTable());
+
+
+                rdKamion.createTableKamion();
+                rdKamion.fillKamionWithTestDataFromSQLCommand();
+                repo.setKamionok(rdKamion.getKamionFromDatabaseTable());
+            }
+            catch (Exception ex) 
+            {
+                kiirHibauzenetet("Adatbázis létrehozási hiba");
+            
+            }
+           
            
         }
 

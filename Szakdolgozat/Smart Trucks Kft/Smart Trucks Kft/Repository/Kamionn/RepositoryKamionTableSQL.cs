@@ -23,10 +23,12 @@ namespace Smart_Trucks_Kft.Repository
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    //string muszakierv = dr["Muszakierv"].ToString();
+                    string muszakierv = dr["Muszakierv"].ToString();
+
                     string rendszam = dr["Rendszam"].ToString();
                     string motor = dr["Motor"].ToString();
                     string uzemanyag = dr["Uzemanyag"].ToString();
+                    string suly = dr["Suly"].ToString();
                     string hajtas= dr["Hajtas"].ToString();
 
 
@@ -35,28 +37,12 @@ namespace Smart_Trucks_Kft.Repository
                     goodResult = int.TryParse(dr["tid"].ToString(), out tid);
                     if (goodResult)
                     {
-                        int muszakierv = -1;
-                        goodResult = int.TryParse(dr["Muszakierv"].ToString(), out muszakierv);
-                        if (goodResult)
-                        {
 
-                            int suly = -1;
-                            goodResult = int.TryParse(dr["suly"].ToString(), out suly);
-                            if (goodResult)
-                            {
+                          
 
                                 Kamion k = new Kamion(tid, muszakierv, rendszam, motor, uzemanyag, suly, hajtas);
                                 kamionok.Add(k);
 
-                            }
-                            
-                        
-                        
-                        }
-                        
-                       
-                            
-                        
 
                     }
                 }

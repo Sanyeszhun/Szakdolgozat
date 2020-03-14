@@ -10,14 +10,14 @@ namespace Smart_Trucks_Kft.Modell
     {
 
         private int tid;
-        private int date; //datum jo formatum megadasa
+        private string date; //datum jo formatum megadasa
         private string rendszam;
         private string motor;
         private string uzemanyag;
-        private int suly;
+        private string suly;
         private string hajtas;
 
-        public Kamion(int tid, int date, string rendszam, string motor, string uzemanyag, int suly, string hajtas)
+        public Kamion(int tid, string date, string rendszam, string motor, string uzemanyag, string suly, string hajtas)
         {
             this.tid = tid;
             this.date = date;
@@ -37,7 +37,7 @@ namespace Smart_Trucks_Kft.Modell
         
         }
 
-        public void setDate(int date)
+        public void setDate(string date)
         {
             this.date = date;
 
@@ -61,7 +61,7 @@ namespace Smart_Trucks_Kft.Modell
 
         }
 
-        public void setSuly(int suly)
+        public void setSuly(string suly)
         {
             this.suly = suly;
 
@@ -78,7 +78,7 @@ namespace Smart_Trucks_Kft.Modell
             return tid;
         
         }
-        public int getDate() 
+        public string getDate() 
         {
             return date;
         
@@ -103,7 +103,7 @@ namespace Smart_Trucks_Kft.Modell
         
         }
 
-        public int getSuly()
+        public string getSuly()
         {
             return suly;
 

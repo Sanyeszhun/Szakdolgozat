@@ -43,7 +43,7 @@ namespace Smart_Trucks_Kft.Repository
             kamionDT.Columns.Add("Rendszam", typeof(string));
             kamionDT.Columns.Add("Motor", typeof(string));
             kamionDT.Columns.Add("Uzemanyag", typeof(string));
-            kamionDT.Columns.Add("Suly", typeof(int));
+            kamionDT.Columns.Add("Suly", typeof(string));
             kamionDT.Columns.Add("Hajtas", typeof(string));
             foreach (Kamion k in kamionok) 
             {
@@ -59,11 +59,11 @@ namespace Smart_Trucks_Kft.Repository
             foreach (DataRow row in kamiondt.Rows) 
             {
                 int tid = Convert.ToInt32(row[0]);
-                int date = Convert.ToInt32(row[1]);///datumm ido hogy kell???
+                string date = row[1].ToString(); ;///datumm ido hogy kell???
                 string rendszam = row[2].ToString();
                 string motor = row[3].ToString();
                 string uzemanyag= row[4].ToString();
-                int suly = Convert.ToInt32(row[5]);
+                string suly = row[5].ToString();
                 string hajtas = row[6].ToString();
                 Kamion k = new Kamion(tid, date, rendszam, motor, uzemanyag, suly, hajtas);
                 kamionok.Add(k);

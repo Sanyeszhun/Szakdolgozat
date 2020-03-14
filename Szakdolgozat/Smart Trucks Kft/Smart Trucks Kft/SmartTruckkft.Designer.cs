@@ -70,7 +70,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonKamionModosit = new System.Windows.Forms.Button();
             this.buttonKamionTorles = new System.Windows.Forms.Button();
-            this.buttonKamionMEgsem = new System.Windows.Forms.Button();
             this.buttonUjKamion = new System.Windows.Forms.Button();
             this.buttonKamionMEntes = new System.Windows.Forms.Button();
             this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
@@ -90,6 +89,7 @@
             this.errorProviderDolgozName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoTel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonBetolteskamionok = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -329,10 +329,10 @@
             // 
             // tabPageKamion
             // 
+            this.tabPageKamion.Controls.Add(this.buttonBetolteskamionok);
             this.tabPageKamion.Controls.Add(this.panel2);
             this.tabPageKamion.Controls.Add(this.buttonKamionModosit);
             this.tabPageKamion.Controls.Add(this.buttonKamionTorles);
-            this.tabPageKamion.Controls.Add(this.buttonKamionMEgsem);
             this.tabPageKamion.Controls.Add(this.buttonUjKamion);
             this.tabPageKamion.Controls.Add(this.buttonKamionMEntes);
             this.tabPageKamion.Controls.Add(this.dataGridViewKamionok);
@@ -360,7 +360,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(434, 6);
+            this.panel2.Location = new System.Drawing.Point(442, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 229);
             this.panel2.TabIndex = 13;
@@ -488,7 +488,7 @@
             // 
             // buttonKamionModosit
             // 
-            this.buttonKamionModosit.Location = new System.Drawing.Point(534, 241);
+            this.buttonKamionModosit.Location = new System.Drawing.Point(709, 270);
             this.buttonKamionModosit.Name = "buttonKamionModosit";
             this.buttonKamionModosit.Size = new System.Drawing.Size(75, 23);
             this.buttonKamionModosit.TabIndex = 12;
@@ -497,25 +497,16 @@
             // 
             // buttonKamionTorles
             // 
-            this.buttonKamionTorles.Location = new System.Drawing.Point(534, 270);
+            this.buttonKamionTorles.Location = new System.Drawing.Point(628, 270);
             this.buttonKamionTorles.Name = "buttonKamionTorles";
             this.buttonKamionTorles.Size = new System.Drawing.Size(75, 23);
             this.buttonKamionTorles.TabIndex = 11;
             this.buttonKamionTorles.Text = "Töröl";
             this.buttonKamionTorles.UseVisualStyleBackColor = true;
             // 
-            // buttonKamionMEgsem
-            // 
-            this.buttonKamionMEgsem.Location = new System.Drawing.Point(646, 241);
-            this.buttonKamionMEgsem.Name = "buttonKamionMEgsem";
-            this.buttonKamionMEgsem.Size = new System.Drawing.Size(75, 23);
-            this.buttonKamionMEgsem.TabIndex = 10;
-            this.buttonKamionMEgsem.Text = "Megsem";
-            this.buttonKamionMEgsem.UseVisualStyleBackColor = true;
-            // 
             // buttonUjKamion
             // 
-            this.buttonUjKamion.Location = new System.Drawing.Point(434, 241);
+            this.buttonUjKamion.Location = new System.Drawing.Point(466, 270);
             this.buttonUjKamion.Name = "buttonUjKamion";
             this.buttonUjKamion.Size = new System.Drawing.Size(75, 23);
             this.buttonUjKamion.TabIndex = 9;
@@ -524,7 +515,7 @@
             // 
             // buttonKamionMEntes
             // 
-            this.buttonKamionMEntes.Location = new System.Drawing.Point(434, 270);
+            this.buttonKamionMEntes.Location = new System.Drawing.Point(547, 270);
             this.buttonKamionMEntes.Name = "buttonKamionMEntes";
             this.buttonKamionMEntes.Size = new System.Drawing.Size(75, 23);
             this.buttonKamionMEntes.TabIndex = 8;
@@ -538,6 +529,7 @@
             this.dataGridViewKamionok.Name = "dataGridViewKamionok";
             this.dataGridViewKamionok.Size = new System.Drawing.Size(425, 302);
             this.dataGridViewKamionok.TabIndex = 1;
+            this.dataGridViewKamionok.SelectionChanged += new System.EventHandler(this.dataGridViewKamionok_SelectionChanged);
             // 
             // tabPageUtvonal
             // 
@@ -661,6 +653,16 @@
             // 
             this.errorProviderDolgozoEmail.ContainerControl = this;
             // 
+            // buttonBetolteskamionok
+            // 
+            this.buttonBetolteskamionok.Location = new System.Drawing.Point(450, 6);
+            this.buttonBetolteskamionok.Name = "buttonBetolteskamionok";
+            this.buttonBetolteskamionok.Size = new System.Drawing.Size(75, 23);
+            this.buttonBetolteskamionok.TabIndex = 14;
+            this.buttonBetolteskamionok.Text = "Betöltés";
+            this.buttonBetolteskamionok.UseVisualStyleBackColor = true;
+            this.buttonBetolteskamionok.Click += new System.EventHandler(this.buttonBetolteskamionok_Click);
+            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,7 +736,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonKamionModosit;
         private System.Windows.Forms.Button buttonKamionTorles;
-        private System.Windows.Forms.Button buttonKamionMEgsem;
         private System.Windows.Forms.Button buttonUjKamion;
         private System.Windows.Forms.Button buttonKamionMEntes;
         private System.Windows.Forms.DataGridView dataGridViewKamionok;
@@ -760,6 +761,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderDolgozName;
         private System.Windows.Forms.ErrorProvider errorProviderDolgozoTel;
         private System.Windows.Forms.ErrorProvider errorProviderDolgozoEmail;
+        private System.Windows.Forms.Button buttonBetolteskamionok;
     }
 }
 

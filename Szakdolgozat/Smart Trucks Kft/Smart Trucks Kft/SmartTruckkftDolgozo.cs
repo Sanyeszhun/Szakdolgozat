@@ -24,10 +24,14 @@ namespace Smart_Trucks_Kft
 
         private void buttonBetolt_Click_1(object sender, EventArgs e)
         {
+           
             frissitAdatokkalDataGriedViewt();
             beallitDolgozoDataGriViewt();
             beallitGombokatIndulaskor();
             dataGridViewDolgozok.SelectionChanged += DataGriedViewDolgozok_SelectionChanged;
+
+            
+   
         }
         
       
