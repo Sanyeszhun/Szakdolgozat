@@ -234,6 +234,97 @@ namespace Smart_Trucks_Kft
             catch (Exception ex)
             { }
         }
+
+        private void buttonKamionMEntes_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            //errorProviderDolgozName.Clear();
+            //errorProviderDolgozoTel.Clear();
+            //errorProviderDolgozoEmail.Clear();
+            try
+            {
+                Kamion ujKamion = new Kamion(
+                   Convert.ToInt32(textBoxKamionID.Text),
+                  maskedTextBoxKamionMuszaki.Text,
+                  maskedTextBoxKamionRend.Text,
+                   textBoxKamionMotor.Text,
+                   textBoxKamionUzem.Text,
+                   textBoxKamionSuly.Text,
+                   textBoxKamionHajtas.Text
+                   );
+                int azonosito = Convert.ToInt32(textBoxKamionID.Text);
+                //1. Hozzáadni a listához
+                try
+                {
+                    repo.addKamionToList(ujKamion);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                    return;
+                }
+                //2. Hozzáadni az adatbázishoz
+                RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
+                try
+                {
+                    rdtk.insertKamionToDatabase(ujKamion);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. Frissíteni a DataGridView-t
+
+               frissitAdatokkalDataGriedViewtKamiont();
+                if (dataGridViewKamionok.SelectedRows.Count == 1)
+                {
+                    beallitDolgozoDataGriViewt();
+                }
+
+            }
+            //catch (ModelDolgozoNotValidNevExeption nvn)
+            //{
+            //    errorProviderDolgozName.SetError(textBoxDolgozoNev, nvn.Message);
+            //}
+            //catch (ModelDolgozoNotValidNTelExeption nvt)
+            //{
+            //    errorProviderDolgozoTel.SetError(textBoxDolgozoTel, nvt.Message);
+            //}
+            //catch (ModelDolgozoNotValidEmailExeption nve)
+            //{
+            //    errorProviderDolgozoEmail.SetError(textBoxDolgozoEmail, nve.Message);
+            //}
+            catch (Exception ex)
+            {
+                kiirHibauzenetet(ex.Message);
+
+
+            }
+        }
+
+        private void buttonUjKamion_Click(object sender, EventArgs e)
+        {
+
+            ujAdatfelvitel = true;
+            beallitGombokatTextboxokatUjKamional();
+            int ujKamionAzonosito = repo.getNextKamionId();
+            textBoxKamionID.Text = ujKamionAzonosito.ToString();
+        }
+
+
+        private void beallitGombokatTextboxokatUjKamional()
+        {
+            panel2.Visible = true;
+
+            maskedTextBoxKamionMuszaki.Text= string.Empty;
+            maskedTextBoxKamionRend.Text= string.Empty;
+            textBoxKamionMotor.Text= string.Empty;
+            textBoxKamionUzem.Text= string.Empty;
+            textBoxKamionSuly.Text= string.Empty;
+            textBoxKamionHajtas.Text= string.Empty;
+        
+        }
     }
+
 }
 

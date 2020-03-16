@@ -524,6 +524,7 @@
             this.buttonUjKamion.TabIndex = 9;
             this.buttonUjKamion.Text = "Uj Adat";
             this.buttonUjKamion.UseVisualStyleBackColor = true;
+            this.buttonUjKamion.Click += new System.EventHandler(this.buttonUjKamion_Click);
             // 
             // buttonKamionMEntes
             // 
@@ -533,6 +534,7 @@
             this.buttonKamionMEntes.TabIndex = 8;
             this.buttonKamionMEntes.Text = "Mentés";
             this.buttonKamionMEntes.UseVisualStyleBackColor = true;
+            this.buttonKamionMEntes.Click += new System.EventHandler(this.buttonKamionMEntes_Click);
             // 
             // dataGridViewKamionok
             // 
