@@ -230,11 +230,20 @@ namespace Smart_Trucks_Kft
             {
                 errorProviderKamionRendszam.SetError(maskedTextBoxKamionRend, nvr.Message);
             }
-            catch (ModelKamionNotValidMotorExeption nvm) 
+            catch (ModelKamionNotValidMotorExeption nvm)
             {
                 errorProviderKamionMotor.SetError(textBoxKamionMotor, nvm.Message);
 
             }
+            catch (ModelKamionNotValidUzemanyagExeption nvu)
+            {
+                errorProviderKamionUzemanyag.SetError(textBoxKamionUzem, nvu.Message);
+            }
+            catch (ModelKamionNotValidSulyExeption nvsu) 
+            {
+                errorProviderKamionSuly.SetError(textBoxKamionSuly, nvsu.Message);
+                    }
+
             //catch (ModelDolgozoNotValidNevExeption nvn)
             //{
             //    errorProviderDolgozName.SetError(textBoxDolgozoNev, nvn.Message);
@@ -321,6 +330,14 @@ namespace Smart_Trucks_Kft
             {
                 errorProviderKamionMotor.SetError(textBoxKamionMotor, nvm.Message);
 
+            }
+            catch (ModelKamionNotValidUzemanyagExeption nvu)
+            {
+                errorProviderKamionUzemanyag.SetError(textBoxKamionUzem, nvu.Message);
+            }
+            catch (ModelKamionNotValidSulyExeption nvsu)
+            {
+                errorProviderKamionSuly.SetError(textBoxKamionSuly, nvsu.Message);
             }
             //catch (ModelDolgozoNotValidNevExeption nvn)
             //{

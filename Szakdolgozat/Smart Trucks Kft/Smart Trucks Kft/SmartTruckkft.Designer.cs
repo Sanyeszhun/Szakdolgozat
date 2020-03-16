@@ -400,6 +400,7 @@
             this.textBoxKamionSuly.Name = "textBoxKamionSuly";
             this.textBoxKamionSuly.Size = new System.Drawing.Size(100, 20);
             this.textBoxKamionSuly.TabIndex = 14;
+            this.textBoxKamionSuly.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKamionSuly_KeyPress);
             // 
             // label11
             // 
@@ -415,9 +416,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 168);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 13);
+            this.label10.Size = new System.Drawing.Size(117, 13);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Súly:";
+            this.label10.Text = "A jármű tömege Kg-ban";
             // 
             // maskedTextBoxKamionRend
             // 
@@ -453,6 +454,7 @@
             this.textBoxKamionMotor.Name = "textBoxKamionMotor";
             this.textBoxKamionMotor.Size = new System.Drawing.Size(100, 20);
             this.textBoxKamionMotor.TabIndex = 8;
+            this.textBoxKamionMotor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKamionMotor_KeyPress);
             // 
             // textBoxKamionID
             // 

@@ -27,10 +27,14 @@ namespace Smart_Trucks_Kft.Modell
                 throw new ModelKamionNotValidRenExeption("A Rendszámnak 3 nagy betűt és 3 számot kell tartalmaznia!!!!");
             this.motor = motor;
             if (!isValidMotor(motor))
-                throw new ModelKamionNotValidMotorExeption("A Rendszámnak 3 nagy betűt és 3 számot kell tartalmaznia!!!!");
+                throw new ModelKamionNotValidMotorExeption("A  A Motor Lóerőnek 3 számot kell tartalmaznia!!");
 
             this.uzemanyag = uzemanyag;
+            if (!isValidUzemanyag(uzemanyag))
+                throw new ModelKamionNotValidUzemanyagExeption("Az üzemanyag Dízel vagy Benzin lehet!!!");
             this.suly = suly;
+            if (!isValidSuly(suly))
+                throw new ModelKamionNotValidSulyExeption("A kamion Sulyat kgbna adja meg ami 4 számjegy!!!!");
 
             this.hajtas = hajtas;
             if (!isValidHajtas(hajtas))
@@ -38,6 +42,32 @@ namespace Smart_Trucks_Kft.Modell
 
 
 
+        }
+
+        private bool isValidSuly(string suly)
+        {
+            if (suly.Length !=4)
+            {
+                return false;
+
+
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool isValidUzemanyag(string uzemanyag)
+        {
+            if (uzemanyag == "Benzin" || uzemanyag == "Dízel")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool isValidMotor(string motor)
@@ -50,34 +80,10 @@ namespace Smart_Trucks_Kft.Modell
             }
             else
             {
-
-
-                if (char.IsDigit(motor[1]))
-                {
-                    if (char.IsDigit(motor[2]))
-                    {
-                        if (char.IsDigit(motor[3]))
-                        {
-                            return true;
-
-                        }
-                        else
-                        {
-                            return false;
-                        }
-
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
-                }
-                else
-                {
-                    return false;
-                }
+                return true;
             }
+
+              
         }
            
           

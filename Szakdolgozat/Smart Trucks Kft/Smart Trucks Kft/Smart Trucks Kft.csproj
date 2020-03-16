@@ -54,6 +54,8 @@
     <Compile Include="Modell\ModelKamionNotValidHajtasExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidMotorExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidRenExeption.cs" />
+    <Compile Include="Modell\ModelKamionNotValidSulyExeption.cs" />
+    <Compile Include="Modell\ModelKamionNotValidUzemanyagExeption.cs" />
     <Compile Include="Repository\Repository1.cs" />
     <Compile Include="FormTestData.cs">
       <SubType>Form</SubType>
