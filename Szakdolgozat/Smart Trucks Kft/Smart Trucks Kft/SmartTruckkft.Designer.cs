@@ -504,6 +504,7 @@
             this.buttonKamionModosit.TabIndex = 12;
             this.buttonKamionModosit.Text = "Modosít";
             this.buttonKamionModosit.UseVisualStyleBackColor = true;
+            this.buttonKamionModosit.Click += new System.EventHandler(this.buttonKamionModosit_Click);
             // 
             // buttonKamionTorles
             // 

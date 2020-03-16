@@ -172,6 +172,68 @@ namespace Smart_Trucks_Kft
 
             }
         }
+
+        private void buttonKamionModosit_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            //errorProviderDolgozName.Clear();
+            //errorProviderDolgozoTel.Clear();
+            //errorProviderDolgozoEmail.Clear();
+            try
+            {
+                Kamion modosult = new Kamion(
+                    Convert.ToInt32(textBoxKamionID.Text),
+                   maskedTextBoxKamionMuszaki.Text,
+                   maskedTextBoxKamionRend.Text,
+                    textBoxKamionMotor.Text,
+                    textBoxKamionUzem.Text,
+                    textBoxKamionSuly.Text,
+                    textBoxKamionHajtas.Text
+                    );
+                int azonosito = Convert.ToInt32(textBoxKamionID.Text);
+                //1. módosítani a listába
+                try
+                {
+                    repo.updateKamionInList(azonosito, modosult);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                    return;
+                }
+                //2. módosítani az adatbáziba
+               RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
+                try
+                {
+                    rdtk.updateInDatabase(azonosito, modosult);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. módosítani a DataGridView-ban           
+                frissitAdatokkalDataGriedViewtKamiont();
+            }
+            //catch (ModelDolgozoNotValidNevExeption nvn)
+            //{
+            //    errorProviderDolgozName.SetError(textBoxDolgozoNev, nvn.Message);
+            //}
+            //catch (ModelDolgozoNotValidNTelExeption nvt)
+            //{
+            //    errorProviderDolgozoTel.SetError(textBoxDolgozoTel, nvt.Message);
+            //}
+            //catch (ModelDolgozoNotValidEmailExeption nve)
+            //{
+            //    errorProviderDolgozoEmail.SetError(textBoxDolgozoEmail, nve.Message);
+            //}
+            catch (RepositoryExceptionCantModified recm)
+            {
+                kiirHibauzenetet(recm.Message);
+                Debug.WriteLine("Módosítás nem sikerült, a kamion nincs a listába!");
+            }
+            catch (Exception ex)
+            { }
+        }
     }
 }
 
