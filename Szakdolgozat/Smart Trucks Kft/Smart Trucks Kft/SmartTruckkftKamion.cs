@@ -112,8 +112,13 @@ namespace Smart_Trucks_Kft
         {
             ujAdatfelvitel = false;
             buttonUjKamion.Visible = false;
-            
 
+            errorProviderKamionMuszaki.Clear();
+            errorProviderKamionRendszam.Clear();
+            errorProviderKamionMotor.Clear();
+            errorProviderKamionUzemanyag.Clear();
+            errorProviderKamionSuly.Clear();
+            errorProviderKamionHajtas.Clear();
             //errorProviderDolgozName.Clear();
             //errorProviderDolgozoTel.Clear();
             //errorProviderDolgozoEmail.Clear();
@@ -176,9 +181,12 @@ namespace Smart_Trucks_Kft
         private void buttonKamionModosit_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
-            //errorProviderDolgozName.Clear();
-            //errorProviderDolgozoTel.Clear();
-            //errorProviderDolgozoEmail.Clear();
+            errorProviderKamionMuszaki.Clear();
+            errorProviderKamionRendszam.Clear();
+            errorProviderKamionMotor.Clear();
+            errorProviderKamionUzemanyag.Clear();
+            errorProviderKamionSuly.Clear();
+            errorProviderKamionHajtas.Clear();
             try
             {
                 Kamion modosult = new Kamion(
@@ -202,7 +210,7 @@ namespace Smart_Trucks_Kft
                     return;
                 }
                 //2. módosítani az adatbáziba
-               RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
+                RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
                 try
                 {
                     rdtk.updateInDatabase(azonosito, modosult);
@@ -213,6 +221,19 @@ namespace Smart_Trucks_Kft
                 }
                 //3. módosítani a DataGridView-ban           
                 frissitAdatokkalDataGriedViewtKamiont();
+            }
+            catch (ModelKamionNotValidHajtasExeption nvh)
+            {
+                errorProviderKamionHajtas.SetError(textBoxKamionHajtas, nvh.Message);
+            }
+            catch (ModelKamionNotValidRenExeption nvr)
+            {
+                errorProviderKamionRendszam.SetError(maskedTextBoxKamionRend, nvr.Message);
+            }
+            catch (ModelKamionNotValidMotorExeption nvm) 
+            {
+                errorProviderKamionMotor.SetError(textBoxKamionMotor, nvm.Message);
+
             }
             //catch (ModelDolgozoNotValidNevExeption nvn)
             //{
@@ -238,6 +259,12 @@ namespace Smart_Trucks_Kft
         private void buttonKamionMEntes_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
+            errorProviderKamionMuszaki.Clear();
+            errorProviderKamionRendszam.Clear();
+            errorProviderKamionMotor.Clear();
+            errorProviderKamionUzemanyag.Clear();
+            errorProviderKamionSuly.Clear();
+            errorProviderKamionHajtas.Clear();
             //errorProviderDolgozName.Clear();
             //errorProviderDolgozoTel.Clear();
             //errorProviderDolgozoEmail.Clear();
@@ -280,6 +307,19 @@ namespace Smart_Trucks_Kft
                 {
                     beallitDolgozoDataGriViewt();
                 }
+
+            }
+            catch (ModelKamionNotValidHajtasExeption nvh)
+            {
+                errorProviderKamionHajtas.SetError(textBoxKamionHajtas, nvh.Message);
+            }
+            catch (ModelKamionNotValidRenExeption nvr)
+            {
+                errorProviderKamionRendszam.SetError(maskedTextBoxKamionRend, nvr.Message);
+            }
+            catch (ModelKamionNotValidMotorExeption nvm)
+            {
+                errorProviderKamionMotor.SetError(textBoxKamionMotor, nvm.Message);
 
             }
             //catch (ModelDolgozoNotValidNevExeption nvn)

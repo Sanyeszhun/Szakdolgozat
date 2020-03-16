@@ -21,16 +21,108 @@ namespace Smart_Trucks_Kft.Modell
         {
             this.tid = tid;
             this.date = date;
-          
+          ////Datumot hogy kell le kezelni hogy tegnapi vagy regebbi datumot nem lehesen de irni
             this.rendszam = rendszam;///rendszam lekezelése
+            if (!isValidRendszam(rendszam))
+                throw new ModelKamionNotValidRenExeption("A Rendszámnak 3 nagy betűt és 3 számot kell tartalmaznia!!!!");
             this.motor = motor;
+            if (!isValidMotor(motor))
+                throw new ModelKamionNotValidMotorExeption("A Rendszámnak 3 nagy betűt és 3 számot kell tartalmaznia!!!!");
+
             this.uzemanyag = uzemanyag;
             this.suly = suly;
+
             this.hajtas = hajtas;
+            if (!isValidHajtas(hajtas))
+                throw new ModelKamionNotValidHajtasExeption("A Kamion Négykerék meghajtsu lehet vagy hatkerék meghajtasu!");
 
 
 
         }
+
+        private bool isValidMotor(string motor)
+        {
+            if (motor.Length != 3)
+            {
+                return false;
+
+
+            }
+            else
+            {
+
+
+                if (char.IsDigit(motor[1]))
+                {
+                    if (char.IsDigit(motor[2]))
+                    {
+                        if (char.IsDigit(motor[3]))
+                        {
+                            return true;
+
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+           
+          
+            
+        
+
+        private bool isValidRendszam(string rendszam)
+        {
+            if (char.IsLetter(rendszam[0]) && char.IsUpper(rendszam.ElementAt(0)))
+            {
+                if (char.IsLetter(rendszam[1]) && char.IsUpper(rendszam.ElementAt(1)))
+                {
+                    if (char.IsLetter(rendszam[2]) && char.IsUpper(rendszam.ElementAt(2)))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else 
+                {
+                    return false;
+                }
+               
+
+            }
+            else
+            { return false;
+            }
+        }
+
+        private bool isValidHajtas(string hajtas)
+        {
+            if (hajtas == "Negykerek" || hajtas=="Hatkerék")
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            } 
+        }
+
         public void setTid(int tid) 
         {
             this.tid = tid;

@@ -90,6 +90,12 @@
             this.errorProviderDolgozName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoTel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionMuszaki = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionRendszam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionMotor = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionUzemanyag = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionSuly = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderKamionHajtas = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -105,6 +111,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionMuszaki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionRendszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionUzemanyag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionSuly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionHajtas)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -462,11 +474,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 107);
+            this.label6.Location = new System.Drawing.Point(11, 110);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(124, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Motor:";
+            this.label6.Text = "Teljesítménye Lóerőben:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -667,6 +680,30 @@
             // 
             this.errorProviderDolgozoEmail.ContainerControl = this;
             // 
+            // errorProviderKamionMuszaki
+            // 
+            this.errorProviderKamionMuszaki.ContainerControl = this;
+            // 
+            // errorProviderKamionRendszam
+            // 
+            this.errorProviderKamionRendszam.ContainerControl = this;
+            // 
+            // errorProviderKamionMotor
+            // 
+            this.errorProviderKamionMotor.ContainerControl = this;
+            // 
+            // errorProviderKamionUzemanyag
+            // 
+            this.errorProviderKamionUzemanyag.ContainerControl = this;
+            // 
+            // errorProviderKamionSuly
+            // 
+            this.errorProviderKamionSuly.ContainerControl = this;
+            // 
+            // errorProviderKamionHajtas
+            // 
+            this.errorProviderKamionHajtas.ContainerControl = this;
+            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,6 +736,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozoEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionMuszaki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionRendszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionUzemanyag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionSuly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderKamionHajtas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -766,6 +809,12 @@
         private System.Windows.Forms.ErrorProvider errorProviderDolgozoTel;
         private System.Windows.Forms.ErrorProvider errorProviderDolgozoEmail;
         private System.Windows.Forms.Button buttonBetolteskamionok;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionMuszaki;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionRendszam;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionMotor;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionUzemanyag;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionSuly;
+        private System.Windows.Forms.ErrorProvider errorProviderKamionHajtas;
     }
 }
 
