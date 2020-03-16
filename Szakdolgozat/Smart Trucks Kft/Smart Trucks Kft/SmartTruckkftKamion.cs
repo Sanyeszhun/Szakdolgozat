@@ -118,6 +118,60 @@ namespace Smart_Trucks_Kft
             //errorProviderDolgozoTel.Clear();
             //errorProviderDolgozoEmail.Clear();
         }
+
+
+        private void buttonKamionTorles_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            if ((dataGridViewKamionok.Rows == null) ||
+                (dataGridViewKamionok.Rows.Count == 0))
+                return;
+            //A felhasználó által kiválasztott sor a DataGridView-ban            
+            int sor = dataGridViewKamionok.SelectedRows[0].Index;
+            if (MessageBox.Show(
+                "Valóban törölni akarja a sort?",
+                "Törlés",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                //1. törölni kell a listából
+                int tid = -1;
+                if (!int.TryParse(
+                        dataGridViewKamionok.SelectedRows[0].Cells[0].Value.ToString(),
+                         out tid))
+                    return;
+                try
+                {
+                    repo.deleteKamionFromList(tid);
+                }
+                catch (RepositoryExceptionCantDelete recd)
+                {
+                    kiirHibauzenetet(recd.Message);
+                    Debug.WriteLine("A pizza törlés nem sikerült, nincs a listába!");
+                }
+                //2. törölni kell az adatbázisból
+                RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
+                try
+                {
+                    rdtk.deleteKamionFromDatabase(tid);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. frissíteni kell a DataGridView-t  
+                frissitAdatokkalDataGriedViewtKamiont();
+                if (dataGridViewKamionok.SelectedRows.Count <= 0)
+                {
+                    buttonUjKamion.Visible = true;
+
+                }
+                beallitKamionDataGriViewt();
+
+
+
+            }
+        }
     }
 }
 

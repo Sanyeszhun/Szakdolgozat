@@ -53,6 +53,7 @@
             this.buttonBetolt = new System.Windows.Forms.Button();
             this.dataGridViewDolgozok = new System.Windows.Forms.DataGridView();
             this.tabPageKamion = new System.Windows.Forms.TabPage();
+            this.buttonBetolteskamionok = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxKamionHajtas = new System.Windows.Forms.TextBox();
             this.textBoxKamionSuly = new System.Windows.Forms.TextBox();
@@ -89,7 +90,6 @@
             this.errorProviderDolgozName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoTel = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDolgozoEmail = new System.Windows.Forms.ErrorProvider(this.components);
-            this.buttonBetolteskamionok = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -344,6 +344,16 @@
             this.tabPageKamion.Text = "Kamionok";
             this.tabPageKamion.UseVisualStyleBackColor = true;
             // 
+            // buttonBetolteskamionok
+            // 
+            this.buttonBetolteskamionok.Location = new System.Drawing.Point(450, 6);
+            this.buttonBetolteskamionok.Name = "buttonBetolteskamionok";
+            this.buttonBetolteskamionok.Size = new System.Drawing.Size(75, 23);
+            this.buttonBetolteskamionok.TabIndex = 14;
+            this.buttonBetolteskamionok.Text = "Betöltés";
+            this.buttonBetolteskamionok.UseVisualStyleBackColor = true;
+            this.buttonBetolteskamionok.Click += new System.EventHandler(this.buttonBetolteskamionok_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.textBoxKamionHajtas);
@@ -503,6 +513,7 @@
             this.buttonKamionTorles.TabIndex = 11;
             this.buttonKamionTorles.Text = "Töröl";
             this.buttonKamionTorles.UseVisualStyleBackColor = true;
+            this.buttonKamionTorles.Click += new System.EventHandler(this.buttonKamionTorles_Click);
             // 
             // buttonUjKamion
             // 
@@ -652,16 +663,6 @@
             // errorProviderDolgozoEmail
             // 
             this.errorProviderDolgozoEmail.ContainerControl = this;
-            // 
-            // buttonBetolteskamionok
-            // 
-            this.buttonBetolteskamionok.Location = new System.Drawing.Point(450, 6);
-            this.buttonBetolteskamionok.Name = "buttonBetolteskamionok";
-            this.buttonBetolteskamionok.Size = new System.Drawing.Size(75, 23);
-            this.buttonBetolteskamionok.TabIndex = 14;
-            this.buttonBetolteskamionok.Text = "Betöltés";
-            this.buttonBetolteskamionok.UseVisualStyleBackColor = true;
-            this.buttonBetolteskamionok.Click += new System.EventHandler(this.buttonBetolteskamionok_Click);
             // 
             // SmartTruckkft
             // 

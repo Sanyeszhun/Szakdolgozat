@@ -117,5 +117,14 @@ namespace Smart_Trucks_Kft.Repository
             }
         
         }
+
+        public void deleteKamionFromList(int tid)
+        {
+            Kamion k = kamionok.Find(x => x.getId() == tid);
+            if (k != null)
+                kamionok.Remove(k);
+            else
+                throw new RepositoryExceptionCantDelete("A dolgozot nem lehetett törölni.");
+        }
     }
 }
