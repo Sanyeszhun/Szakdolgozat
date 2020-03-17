@@ -61,6 +61,7 @@
     <Compile Include="Modell\ModelKamionNotValidSulyExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidUzemanyagExeption.cs" />
     <Compile Include="Repository\Hely\RepositoryHely.cs" />
+    <Compile Include="Repository\Hely\RepositoryHelyDatabaseTableTestData.cs" />
     <Compile Include="Repository\Hely\RepositoryHelyDatabaseTableSQL.cs" />
     <Compile Include="Repository\Hely\RepositoryHelyDatabaseTable.cs" />
     <Compile Include="Repository\Repository1.cs" />
