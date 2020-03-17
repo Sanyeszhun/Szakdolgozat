@@ -24,7 +24,9 @@ namespace Smart_Trucks_Kft
 
         private void login_Load(object sender, EventArgs e)
         {
+           
 
+          
         }
 
         private void buttonlogin_Click(object sender, EventArgs e)

@@ -719,6 +719,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SmartTruckkft";
             this.Text = "Smart Truck Kft";
+            this.Load += new System.EventHandler(this.SmartTruckkft_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlKamion.ResumeLayout(false);
             this.tabPageDolgozok.ResumeLayout(false);

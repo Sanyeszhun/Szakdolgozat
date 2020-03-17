@@ -111,6 +111,21 @@ namespace Smart_Trucks_Kft
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void SmartTruckkft_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                torolHibauzenetet();
+                rd.deleteDatabase();
+             
+
+            }
+            catch (Exception ex)
+            {
+                kiirHibauzenetet("Adatbázis törlési hiba!");
+            }
+        }
     }
     }
 
