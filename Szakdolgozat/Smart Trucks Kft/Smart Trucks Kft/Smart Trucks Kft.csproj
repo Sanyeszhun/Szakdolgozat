@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="Modell\DolgozoDatabase.cs" />
     <Compile Include="Modell\Dolgozo.cs" />
+    <Compile Include="Modell\HelyDatabase.cs" />
+    <Compile Include="Modell\Hely.cs" />
     <Compile Include="Modell\TermekDatabase.cs" />
     <Compile Include="Modell\Termek.cs" />
     <Compile Include="Modell\ModelDolgozoNotValidEmailExeption.cs" />
@@ -58,6 +60,9 @@
     <Compile Include="Modell\ModelKamionNotValidRenExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidSulyExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidUzemanyagExeption.cs" />
+    <Compile Include="Repository\Hely\RepositoryHely.cs" />
+    <Compile Include="Repository\Hely\RepositoryHelyDatabaseTableSQL.cs" />
+    <Compile Include="Repository\Hely\RepositoryHelyDatabaseTable.cs" />
     <Compile Include="Repository\Repository1.cs" />
     <Compile Include="FormTestData.cs">
       <SubType>Form</SubType>
