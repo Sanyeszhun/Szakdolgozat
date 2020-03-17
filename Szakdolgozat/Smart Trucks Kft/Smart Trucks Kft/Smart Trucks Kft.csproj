@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="Modell\DolgozoDatabase.cs" />
     <Compile Include="Modell\Dolgozo.cs" />
+    <Compile Include="Modell\TermekDatabase.cs" />
+    <Compile Include="Modell\Termek.cs" />
     <Compile Include="Modell\ModelDolgozoNotValidEmailExeption.cs" />
     <Compile Include="Modell\ModelDolgozoNotValidNTelExeption.cs" />
     <Compile Include="Modell\ModelKamionNotValidHajtasExeption.cs" />
@@ -60,6 +62,10 @@
     <Compile Include="FormTestData.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Repository\Termekek\RepositoryTermekDatabaseTableTestData.cs" />
+    <Compile Include="Repository\Termekek\RepositoryTermekDatabaseTableSQL.cs" />
+    <Compile Include="Repository\Termekek\RepositoryTermekDatabaseTable.cs" />
+    <Compile Include="Repository\Termekek\RepositoryTermek.cs" />
     <Compile Include="SmartTruckkftKamion.cs">
       <SubType>Form</SubType>
     </Compile>

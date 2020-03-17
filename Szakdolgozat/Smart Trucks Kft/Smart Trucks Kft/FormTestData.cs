@@ -20,6 +20,7 @@ namespace Smart_Trucks_Kft
         RepositoryDatabase rd = new RepositoryDatabase();
         RepositoryDatabaseTableDolgozo rdDolgozo = new RepositoryDatabaseTableDolgozo();
         RepositoryKamionDatabaseTable rdKamion = new RepositoryKamionDatabaseTable();
+        RepositoryTermekDatabaseTable rdTermek= new RepositoryTermekDatabaseTable();
 
 
         private void torolHibauzenetet()
@@ -46,6 +47,12 @@ namespace Smart_Trucks_Kft
                 rdKamion.createTableKamion();
                 rdKamion.fillKamionWithTestDataFromSQLCommand();
                 repo.setKamionok(rdKamion.getKamionFromDatabaseTable());
+
+                rdTermek.createTableTermekek();
+                rdTermek.fillTermekWithTestDataFromSQLCommand();
+                repo.setTermekek(rdTermek.getTermekFromDatabaseTable());
+
+
             }
             catch (Exception ex) 
             {
