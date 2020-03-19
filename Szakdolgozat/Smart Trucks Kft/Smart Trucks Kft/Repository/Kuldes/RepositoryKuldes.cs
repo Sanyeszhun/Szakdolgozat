@@ -32,11 +32,18 @@ namespace Smart_Trucks_Kft.Repository
             kuldesDT.Columns.Add("Visszaerkezes", typeof(string));
             foreach (Kuldes h in kuldesek)
             {
-                kuldesDT.Rows.Add(h.getKikuldesId(), h.getKamionId(), h.getHelyId(), h.getTermekId(), h.getKikuldes(),h.getVisszaerkezes());
+                kuldesDT.Rows.Add(h.getKikuldesId(), h.getKamionId(), h.getHelyId(), h.getTermekId(),h.getDolgozoId(),  h.getKikuldes(),h.getVisszaerkezes());
             }
             return kuldesDT;
 
 
+        }
+
+
+        public List<Kuldes> getKudlesek(string Dolgozoneve)
+        {
+            int DolgozoId = dolgozok.Find(x => x.getNev() == Dolgozoneve).getId();
+            return kuldesek.FindAll(x => x.getDolgozoId() == DolgozoId);
         }
     }
 }

@@ -24,9 +24,9 @@ namespace Smart_Trucks_Kft.Repository
                 string query =
                     "INSERT INTO `kuldes` (`sid`, `kid`, `heid`, `teid`, `did`, `Kikuldes`, `Viszaerkezes`) VALUES " +
                             " (1, 2, 1, 1, 1, '2020-02-27', '2020-02-28'), " +
-                             "  (2, 3, 1, 1, 1, '2020-02-22', '2020-02-27'), " +
-                              "  (3, 5, 1, 1, 1, '2020-02-20', '2020-02-25'),  " +
-                            " (4, 1, 4, 1, 1, '2020-02-21', '2020-02-28'); ";
+                             "  (2, 3, 1, 1, 2, '2020-02-22', '2020-02-27'), " +
+                              "  (3, 5, 1, 1, 3, '2020-02-20', '2020-02-25'),  " +
+                            " (4, 1, 4, 1, 4, '2020-02-21', '2020-02-28'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

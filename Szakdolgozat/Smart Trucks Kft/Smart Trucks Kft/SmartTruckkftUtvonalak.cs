@@ -21,6 +21,7 @@ namespace Smart_Trucks_Kft
         private void feltoltComboBoxotDolgozokkal()
         {
             comboBoxDolgozok.DataSource = repo.getDolgozokNev();
+           
         }
 
         private void comboBoxDolgozok_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,26 +37,57 @@ namespace Smart_Trucks_Kft
 
         private void feltoltListViewtAdatokkal(string dolgozoNev)
         {
-            listViewRendelesek.Items.Clear();
-            List<Order> megrendelok = repo.getOrders(megrendeloNev);
-            foreach (Order megrendelo in megrendelok)
+            listViewDolgozoUtvonalak.Items.Clear();
+            List<Kuldes> dolgozok = repo.getKudlesek(dolgozoNev);
+            foreach (Kuldes dolgozo in dolgozok)
             {
-                ListViewItem lvi = new ListViewItem(megrendelo.getOrderId().ToString());
-                lvi.SubItems.Add(megrendelo.getCourierId().ToString());
-                lvi.SubItems.Add(megrendelo.getCustomerId().ToString());
-                lvi.SubItems.Add(megrendelo.getDate().Substring(0, 13).ToString());
-                lvi.SubItems.Add(megrendelo.getTime().ToString().Replace(',', ':'));
-                if (megrendelo.getDone())
-                    lvi.SubItems.Add("Teljesítve");
-                else
-                    lvi.SubItems.Add("Nem teljesítve");
-                listViewRendelesek.Items.Add(lvi);
+                ListViewItem lvi = new ListViewItem(dolgozo.getKikuldesId().ToString());
+                lvi.SubItems.Add(dolgozo.getKamionId().ToString());
+                lvi.SubItems.Add(dolgozo.getHelyId().ToString());
+                lvi.SubItems.Add(dolgozo.getTermekId().ToString());
+                lvi.SubItems.Add(dolgozo.getDolgozoId().ToString());               
+                lvi.SubItems.Add(dolgozo.getKikuldes().ToString());
+                lvi.SubItems.Add(dolgozo.getVisszaerkezes().ToString());
+                
+                       
+                listViewDolgozoUtvonalak.Items.Add(lvi);
             }
-            listViewRendelesek.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
-            listViewRendelesek.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.HeaderSize);
-            listViewRendelesek.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.HeaderSize);
-            listViewRendelesek.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.ColumnContent);
-            listViewRendelesek.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewDolgozoUtvonalak.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewDolgozoUtvonalak.AutoResizeColumn(6, ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
+
+        private void beallitUtvonalakTabPaAgeIndulaskor()
+        {
+           listViewDolgozoUtvonalak.Visible = false;
+            labelDolgozoUtvonalak.Visible = false;
+
+
+
+            listViewDolgozoUtvonalak.GridLines = true;
+            listViewDolgozoUtvonalak.View = View.Details;
+            listViewDolgozoUtvonalak.FullRowSelect = true;
+
+            listViewDolgozoUtvonalak.Columns.Add("Azonosító");
+            listViewDolgozoUtvonalak.Columns.Add("Kamion");
+            listViewDolgozoUtvonalak.Columns.Add("Hely");
+            listViewDolgozoUtvonalak.Columns.Add("Termek");
+            listViewDolgozoUtvonalak.Columns.Add("Dolgozó");
+            listViewDolgozoUtvonalak.Columns.Add("kikuldes");
+            listViewDolgozoUtvonalak.Columns.Add("Visszaerkezes");
+
+
+            listViewDolgozoUtvonalak.Columns[1].TextAlign = HorizontalAlignment.Right;
+            listViewDolgozoUtvonalak.Columns[2].TextAlign = HorizontalAlignment.Right;
+            listViewDolgozoUtvonalak.Columns[3].TextAlign = HorizontalAlignment.Right;
+            listViewDolgozoUtvonalak.Columns[4].TextAlign = HorizontalAlignment.Right;
+            listViewDolgozoUtvonalak.Columns[5].TextAlign = HorizontalAlignment.Right;
+            listViewDolgozoUtvonalak.Columns[6].TextAlign = HorizontalAlignment.Right;
+            
         }
 
     }

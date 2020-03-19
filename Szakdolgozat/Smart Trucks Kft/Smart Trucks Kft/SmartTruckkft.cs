@@ -129,8 +129,16 @@ namespace Smart_Trucks_Kft
 
         private void tabControlKamion_Selected(object sender, TabControlEventArgs e)
         {
+            beallitUtvonalakTabPaAgeIndulaskor();
             feltoltComboBoxotDolgozokkal();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
     }
 

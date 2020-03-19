@@ -69,9 +69,23 @@ namespace Smart_Trucks_Kft.Repository
                 kamionok.Add(k);
 
             }
- 
+
+
+            
+
         }
-       
+
+
+        public List<int> getKamionID()
+        {
+            List<int> kamionid = new List<int>();
+            foreach (Kamion kamion in kamionok)
+            {
+                kamionid.Add(kamion.getId());
+            }
+            return kamionid;
+        }
+
         public void updateKamionInList(int tid, Kamion modified)
         {
             Kamion k = kamionok.Find(x => x.getId() == tid);

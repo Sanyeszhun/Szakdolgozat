@@ -103,5 +103,12 @@ namespace Smart_Trucks_Kft.Repository
             else
                 return dolgozok.Max(x => x.getId()) + 1;
         }
+
+
+        public int getDolgozoSzama(string dolgozNev)
+        {
+            Dolgozo dolgozo = dolgozok.Find(c => c.getNev() == dolgozNev);
+            return dolgozo.getId();
+        }
     }
 }

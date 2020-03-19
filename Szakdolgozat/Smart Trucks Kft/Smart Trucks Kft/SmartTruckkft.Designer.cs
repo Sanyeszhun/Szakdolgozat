@@ -75,7 +75,9 @@
             this.buttonKamionMEntes = new System.Windows.Forms.Button();
             this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
             this.tabPageUtvonal = new System.Windows.Forms.TabPage();
-            this.comboBoxDolgozok = new System.Windows.Forms.ComboBox();
+            this.listViewDolgozoUtvonalak = new System.Windows.Forms.ListView();
+            this.labelDolgozoUtvonalak = new System.Windows.Forms.Label();
+            this.labelValaszDolgozot = new System.Windows.Forms.Label();
             this.meToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dolgozókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kamionokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,9 +98,7 @@
             this.errorProviderKamionUzemanyag = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderKamionSuly = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderKamionHajtas = new System.Windows.Forms.ErrorProvider(this.components);
-            this.labelValaszDolgozot = new System.Windows.Forms.Label();
-            this.labelDolgozoUtvonalak = new System.Windows.Forms.Label();
-            this.listViewDolgozoUtvonalak = new System.Windows.Forms.ListView();
+            this.comboBoxDolgozok = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -577,14 +577,32 @@
             this.tabPageUtvonal.Text = "Utvonal";
             this.tabPageUtvonal.UseVisualStyleBackColor = true;
             // 
-            // comboBoxDolgozok
+            // listViewDolgozoUtvonalak
             // 
-            this.comboBoxDolgozok.FormattingEnabled = true;
-            this.comboBoxDolgozok.Location = new System.Drawing.Point(630, 48);
-            this.comboBoxDolgozok.Name = "comboBoxDolgozok";
-            this.comboBoxDolgozok.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxDolgozok.TabIndex = 1;
-            this.comboBoxDolgozok.SelectedIndexChanged += new System.EventHandler(this.comboBoxDolgozok_SelectedIndexChanged);
+            this.listViewDolgozoUtvonalak.HideSelection = false;
+            this.listViewDolgozoUtvonalak.Location = new System.Drawing.Point(3, 48);
+            this.listViewDolgozoUtvonalak.Name = "listViewDolgozoUtvonalak";
+            this.listViewDolgozoUtvonalak.Size = new System.Drawing.Size(383, 245);
+            this.listViewDolgozoUtvonalak.TabIndex = 4;
+            this.listViewDolgozoUtvonalak.UseCompatibleStateImageBehavior = false;
+            // 
+            // labelDolgozoUtvonalak
+            // 
+            this.labelDolgozoUtvonalak.AutoSize = true;
+            this.labelDolgozoUtvonalak.Location = new System.Drawing.Point(8, 32);
+            this.labelDolgozoUtvonalak.Name = "labelDolgozoUtvonalak";
+            this.labelDolgozoUtvonalak.Size = new System.Drawing.Size(97, 13);
+            this.labelDolgozoUtvonalak.TabIndex = 3;
+            this.labelDolgozoUtvonalak.Text = "Dolgozo Utvonalai:";
+            // 
+            // labelValaszDolgozot
+            // 
+            this.labelValaszDolgozot.AutoSize = true;
+            this.labelValaszDolgozot.Location = new System.Drawing.Point(500, 51);
+            this.labelValaszDolgozot.Name = "labelValaszDolgozot";
+            this.labelValaszDolgozot.Size = new System.Drawing.Size(124, 13);
+            this.labelValaszDolgozot.TabIndex = 2;
+            this.labelValaszDolgozot.Text = "Válaszon ki egy dolgozot";
             // 
             // meToolStripMenuItem
             // 
@@ -713,32 +731,14 @@
             // 
             this.errorProviderKamionHajtas.ContainerControl = this;
             // 
-            // labelValaszDolgozot
+            // comboBoxDolgozok
             // 
-            this.labelValaszDolgozot.AutoSize = true;
-            this.labelValaszDolgozot.Location = new System.Drawing.Point(500, 51);
-            this.labelValaszDolgozot.Name = "labelValaszDolgozot";
-            this.labelValaszDolgozot.Size = new System.Drawing.Size(124, 13);
-            this.labelValaszDolgozot.TabIndex = 2;
-            this.labelValaszDolgozot.Text = "Válaszon ki egy dolgozot";
-            // 
-            // labelDolgozoUtvonalak
-            // 
-            this.labelDolgozoUtvonalak.AutoSize = true;
-            this.labelDolgozoUtvonalak.Location = new System.Drawing.Point(8, 32);
-            this.labelDolgozoUtvonalak.Name = "labelDolgozoUtvonalak";
-            this.labelDolgozoUtvonalak.Size = new System.Drawing.Size(97, 13);
-            this.labelDolgozoUtvonalak.TabIndex = 3;
-            this.labelDolgozoUtvonalak.Text = "Dolgozo Utvonalai:";
-            // 
-            // listViewDolgozoUtvonalak
-            // 
-            this.listViewDolgozoUtvonalak.HideSelection = false;
-            this.listViewDolgozoUtvonalak.Location = new System.Drawing.Point(3, 48);
-            this.listViewDolgozoUtvonalak.Name = "listViewDolgozoUtvonalak";
-            this.listViewDolgozoUtvonalak.Size = new System.Drawing.Size(483, 245);
-            this.listViewDolgozoUtvonalak.TabIndex = 4;
-            this.listViewDolgozoUtvonalak.UseCompatibleStateImageBehavior = false;
+            this.comboBoxDolgozok.FormattingEnabled = true;
+            this.comboBoxDolgozok.Location = new System.Drawing.Point(630, 48);
+            this.comboBoxDolgozok.Name = "comboBoxDolgozok";
+            this.comboBoxDolgozok.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDolgozok.TabIndex = 1;
+            this.comboBoxDolgozok.SelectedIndexChanged += new System.EventHandler(this.comboBoxDolgozok_SelectedIndexChanged);
             // 
             // SmartTruckkft
             // 
@@ -851,10 +851,10 @@
         private System.Windows.Forms.ErrorProvider errorProviderKamionUzemanyag;
         private System.Windows.Forms.ErrorProvider errorProviderKamionSuly;
         private System.Windows.Forms.ErrorProvider errorProviderKamionHajtas;
-        private System.Windows.Forms.ComboBox comboBoxDolgozok;
         private System.Windows.Forms.Label labelValaszDolgozot;
         private System.Windows.Forms.Label labelDolgozoUtvonalak;
         private System.Windows.Forms.ListView listViewDolgozoUtvonalak;
+        private System.Windows.Forms.ComboBox comboBoxDolgozok;
     }
 }
 

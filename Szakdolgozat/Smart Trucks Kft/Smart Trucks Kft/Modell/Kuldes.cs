@@ -45,6 +45,11 @@ namespace Smart_Trucks_Kft.Modell
         {
             return teid;
         }
+
+        public int getDolgozoId()
+        {
+            return did;
+        }
         public string getKikuldes()
         {
             return kikuldes;
