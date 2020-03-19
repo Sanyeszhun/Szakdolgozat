@@ -130,7 +130,7 @@ namespace Smart_Trucks_Kft
         private void tabControlKamion_Selected(object sender, TabControlEventArgs e)
         {
             beallitUtvonalakTabPaAgeIndulaskor();
-            feltoltComboBoxotDolgozokkal();
+            feltoltComboBoxotDolgozokkal();//kesz
         }
 
         
