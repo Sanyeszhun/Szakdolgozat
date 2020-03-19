@@ -13,6 +13,7 @@ namespace Smart_Trucks_Kft.Modell
         private string tavolsag;
         private string ido;
         private string lerakohely;
+       
 
         public Hely(int hid, string felvetelezohely, string tavolsag, string ido, string lerakohely)
         {

@@ -22,6 +22,7 @@ namespace Smart_Trucks_Kft
         RepositoryKamionDatabaseTable rdKamion = new RepositoryKamionDatabaseTable();
         RepositoryTermekDatabaseTable rdTermek= new RepositoryTermekDatabaseTable();
         RepositoryHelyDatabaseTable rdHely = new RepositoryHelyDatabaseTable();
+        RepositoryKuldesDatabaseTable rdKuldes = new RepositoryKuldesDatabaseTable();
 
 
         private void torolHibauzenetet()
@@ -57,7 +58,9 @@ namespace Smart_Trucks_Kft
                 rdHely.fillHelyWithTestDataFromSQLCommand();
                 repo.setHelyek(rdHely.getHelyekFromDatabaseTable());
 
-
+                rdKuldes.createTableKuldes();
+                rdKuldes.fillKuldesWithTestDataFromSQLCommand();
+                repo.setKuldesek(rdKuldes.getKuldesFromDatabaseTable());
 
 
             }

@@ -66,6 +66,10 @@
     <Compile Include="Repository\Hely\RepositoryHelyDatabaseTableTestData.cs" />
     <Compile Include="Repository\Hely\RepositoryHelyDatabaseTableSQL.cs" />
     <Compile Include="Repository\Hely\RepositoryHelyDatabaseTable.cs" />
+    <Compile Include="Repository\Kuldes\RepositoryKuldes.cs" />
+    <Compile Include="Repository\Kuldes\RepositoryKuldesDatabaseTableTestData.cs" />
+    <Compile Include="Repository\Kuldes\RepositoryKuldesDatabaseTableSQL.cs" />
+    <Compile Include="Repository\Kuldes\RepositoryKuldesDatabaseTable.cs" />
     <Compile Include="Repository\Repository1.cs" />
     <Compile Include="FormTestData.cs">
       <SubType>Form</SubType>
@@ -74,6 +78,9 @@
     <Compile Include="Repository\Termekek\RepositoryTermekDatabaseTableSQL.cs" />
     <Compile Include="Repository\Termekek\RepositoryTermekDatabaseTable.cs" />
     <Compile Include="Repository\Termekek\RepositoryTermek.cs" />
+    <Compile Include="SmartTruckkftUtvonalak.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SmartTruckkftKamion.cs">
       <SubType>Form</SubType>
     </Compile>

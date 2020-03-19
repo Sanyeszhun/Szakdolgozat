@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    partial class Kikuldes
+    partial class Kuldes
     {
 
         public static string getSQLCommandGetAllRecord()

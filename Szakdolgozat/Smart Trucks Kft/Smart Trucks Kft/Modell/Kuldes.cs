@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    partial class Kikuldes
+    partial class Kuldes
     {
         private int sid;
         private int kid;
@@ -17,7 +17,7 @@ namespace Smart_Trucks_Kft.Modell
         private string visszaerkezes;
 
 
-        public Kikuldes(int sid, int kid, int heid, int teid, int did, string kikuldes, string visszaerkezes)
+        public Kuldes(int sid, int kid, int heid, int teid, int did, string kikuldes, string visszaerkezes)
         {
 
             this.sid = sid;

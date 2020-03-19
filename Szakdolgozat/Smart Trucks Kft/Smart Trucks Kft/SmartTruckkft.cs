@@ -126,6 +126,11 @@ namespace Smart_Trucks_Kft
                 kiirHibauzenetet("Adatbázis törlési hiba!");
             }
         }
+
+        private void tabControlKamion_Selected(object sender, TabControlEventArgs e)
+        {
+            feltoltComboBoxotDolgozokkal();
+        }
     }
     }
 

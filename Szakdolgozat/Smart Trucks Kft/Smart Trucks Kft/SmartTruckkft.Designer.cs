@@ -75,7 +75,7 @@
             this.buttonKamionMEntes = new System.Windows.Forms.Button();
             this.dataGridViewKamionok = new System.Windows.Forms.DataGridView();
             this.tabPageUtvonal = new System.Windows.Forms.TabPage();
-            this.dataGridViewUtvonal = new System.Windows.Forms.DataGridView();
+            this.comboBoxDolgozok = new System.Windows.Forms.ComboBox();
             this.meToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dolgozókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kamionokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,6 +96,9 @@
             this.errorProviderKamionUzemanyag = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderKamionSuly = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderKamionHajtas = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelValaszDolgozot = new System.Windows.Forms.Label();
+            this.labelDolgozoUtvonalak = new System.Windows.Forms.Label();
+            this.listViewDolgozoUtvonalak = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlKamion.SuspendLayout();
             this.tabPageDolgozok.SuspendLayout();
@@ -105,7 +108,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).BeginInit();
             this.tabPageUtvonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvonal)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDolgozName)).BeginInit();
@@ -141,6 +143,7 @@
             this.tabControlKamion.SelectedIndex = 0;
             this.tabControlKamion.Size = new System.Drawing.Size(801, 331);
             this.tabControlKamion.TabIndex = 1;
+            this.tabControlKamion.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlKamion_Selected);
             // 
             // tabPageDolgozok
             // 
@@ -562,7 +565,10 @@
             // 
             // tabPageUtvonal
             // 
-            this.tabPageUtvonal.Controls.Add(this.dataGridViewUtvonal);
+            this.tabPageUtvonal.Controls.Add(this.listViewDolgozoUtvonalak);
+            this.tabPageUtvonal.Controls.Add(this.labelDolgozoUtvonalak);
+            this.tabPageUtvonal.Controls.Add(this.labelValaszDolgozot);
+            this.tabPageUtvonal.Controls.Add(this.comboBoxDolgozok);
             this.tabPageUtvonal.Location = new System.Drawing.Point(4, 22);
             this.tabPageUtvonal.Name = "tabPageUtvonal";
             this.tabPageUtvonal.Padding = new System.Windows.Forms.Padding(3);
@@ -571,13 +577,14 @@
             this.tabPageUtvonal.Text = "Utvonal";
             this.tabPageUtvonal.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewUtvonal
+            // comboBoxDolgozok
             // 
-            this.dataGridViewUtvonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUtvonal.Location = new System.Drawing.Point(8, 6);
-            this.dataGridViewUtvonal.Name = "dataGridViewUtvonal";
-            this.dataGridViewUtvonal.Size = new System.Drawing.Size(779, 303);
-            this.dataGridViewUtvonal.TabIndex = 0;
+            this.comboBoxDolgozok.FormattingEnabled = true;
+            this.comboBoxDolgozok.Location = new System.Drawing.Point(630, 48);
+            this.comboBoxDolgozok.Name = "comboBoxDolgozok";
+            this.comboBoxDolgozok.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDolgozok.TabIndex = 1;
+            this.comboBoxDolgozok.SelectedIndexChanged += new System.EventHandler(this.comboBoxDolgozok_SelectedIndexChanged);
             // 
             // meToolStripMenuItem
             // 
@@ -706,6 +713,33 @@
             // 
             this.errorProviderKamionHajtas.ContainerControl = this;
             // 
+            // labelValaszDolgozot
+            // 
+            this.labelValaszDolgozot.AutoSize = true;
+            this.labelValaszDolgozot.Location = new System.Drawing.Point(500, 51);
+            this.labelValaszDolgozot.Name = "labelValaszDolgozot";
+            this.labelValaszDolgozot.Size = new System.Drawing.Size(124, 13);
+            this.labelValaszDolgozot.TabIndex = 2;
+            this.labelValaszDolgozot.Text = "Válaszon ki egy dolgozot";
+            // 
+            // labelDolgozoUtvonalak
+            // 
+            this.labelDolgozoUtvonalak.AutoSize = true;
+            this.labelDolgozoUtvonalak.Location = new System.Drawing.Point(8, 32);
+            this.labelDolgozoUtvonalak.Name = "labelDolgozoUtvonalak";
+            this.labelDolgozoUtvonalak.Size = new System.Drawing.Size(97, 13);
+            this.labelDolgozoUtvonalak.TabIndex = 3;
+            this.labelDolgozoUtvonalak.Text = "Dolgozo Utvonalai:";
+            // 
+            // listViewDolgozoUtvonalak
+            // 
+            this.listViewDolgozoUtvonalak.HideSelection = false;
+            this.listViewDolgozoUtvonalak.Location = new System.Drawing.Point(3, 48);
+            this.listViewDolgozoUtvonalak.Name = "listViewDolgozoUtvonalak";
+            this.listViewDolgozoUtvonalak.Size = new System.Drawing.Size(483, 245);
+            this.listViewDolgozoUtvonalak.TabIndex = 4;
+            this.listViewDolgozoUtvonalak.UseCompatibleStateImageBehavior = false;
+            // 
             // SmartTruckkft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,7 +765,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKamionok)).EndInit();
             this.tabPageUtvonal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvonal)).EndInit();
+            this.tabPageUtvonal.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -795,7 +829,6 @@
         private System.Windows.Forms.TextBox textBoxKamionSuly;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridViewUtvonal;
         private System.Windows.Forms.ToolStripMenuItem meToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dolgozókToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kamionokToolStripMenuItem;
@@ -818,6 +851,10 @@
         private System.Windows.Forms.ErrorProvider errorProviderKamionUzemanyag;
         private System.Windows.Forms.ErrorProvider errorProviderKamionSuly;
         private System.Windows.Forms.ErrorProvider errorProviderKamionHajtas;
+        private System.Windows.Forms.ComboBox comboBoxDolgozok;
+        private System.Windows.Forms.Label labelValaszDolgozot;
+        private System.Windows.Forms.Label labelDolgozoUtvonalak;
+        private System.Windows.Forms.ListView listViewDolgozoUtvonalak;
     }
 }
 

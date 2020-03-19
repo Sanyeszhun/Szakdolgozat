@@ -21,9 +21,9 @@ namespace Smart_Trucks_Kft.Repository
         public List<string> getDolgozokNev()
         {
             List<string> dolgozoNevek = new List<string>();
-            foreach (Dolgozo d in dolgozok)
+            foreach (Dolgozo dolgozo in dolgozok)
             {
-                dolgozoNevek.Add(d.getNev());
+                dolgozoNevek.Add(dolgozo.getNev());
             }
             return dolgozoNevek;
         }
