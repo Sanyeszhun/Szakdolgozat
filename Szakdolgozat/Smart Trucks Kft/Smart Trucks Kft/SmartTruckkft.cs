@@ -133,10 +133,7 @@ namespace Smart_Trucks_Kft
             feltoltComboBoxotDolgozokkal();
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
     }
