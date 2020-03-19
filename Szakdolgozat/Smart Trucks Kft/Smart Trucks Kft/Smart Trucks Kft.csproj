@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Modell\DolgozoDatabase.cs" />
     <Compile Include="Modell\Dolgozo.cs" />
+    <Compile Include="Modell\KuldesDatabase.cs" />
     <Compile Include="Modell\Kuldes.cs" />
     <Compile Include="Modell\HelyDatabase.cs" />
     <Compile Include="Modell\Hely.cs" />

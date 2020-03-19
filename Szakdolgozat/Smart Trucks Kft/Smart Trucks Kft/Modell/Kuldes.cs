@@ -33,24 +33,27 @@ namespace Smart_Trucks_Kft.Modell
         {
             return sid;
         }
-        public string getFelvetelezohely()
+        public int getKamionId()
         {
-            return felvetelezohely;
+            return kid;
         }
-        public string getTavolsag()
+        public int getHelyId()
         {
-            return tavolsag;
+            return heid;
         }
-        public string getIdo()
+        public int getTermekId()
         {
-            return ido;
+            return teid;
         }
-
-        public string GetLerakohely() 
+        public string getKikuldes()
         {
-
-            return lerakohely;
+            return kikuldes;
         }
+        public string getVisszaerkezes()
+        {
+            return visszaerkezes;
+        }
+       
     
 
 
