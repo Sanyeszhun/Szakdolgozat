@@ -14,7 +14,9 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryHelyDatabaseTable
 
     {
-       
+        /// <summary>
+        /// Teszt adatokkal tölti fel a Hely Táblát
+        /// </summary>
         public void fillHelyWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

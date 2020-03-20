@@ -11,9 +11,10 @@ namespace Smart_Trucks_Kft.Repository
 {
    partial class RepositoryDatabaseTableDolgozo
     {/// <summary>
-    /// Ezt nem tudom meg kell kerdezni!!
-    /// </summary>
-    /// <returns></returns>
+     /// Visszadja a adatbázisban lévő Dolgozokat
+     /// </summary>
+     /// <returns>Visszatér az Dolgozo adatokal</returns>
+
         public List<Dolgozo> getDolgozoFromDatabaseTable()
         {
             List<Dolgozo> dologzok = new List<Dolgozo>();
@@ -56,6 +57,11 @@ namespace Smart_Trucks_Kft.Repository
             return dologzok;
         }
 
+        /// <summary>
+        /// Törli a dolgozót az adatbázisból
+        /// </summary>
+        /// <param name="id">Adott ID törli</param>
+
         public void deleteDolgozoFromDatabase(int id)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -75,7 +81,11 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Sikertelen törlés az adatbázisból.");
             }
         }
-
+        /// <summary>
+        /// Módosítja a dolgozokat az adatbázisban
+        /// </summary>
+        /// <param name="id">Adott ID modosítja</param>
+        /// <param name="modified">Maga a módosítás</param>
         public void updateDolgozoInDatabase(int id, Dolgozo modified)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -95,7 +105,10 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Sikertelen módosítás az adatbázisból.");
             }
         }
-
+        /// <summary>
+        /// Új dolgozot beszúr az adatbázisba
+        /// </summary>
+        /// <param name="UjDolgozo">Az új dolgozo</param>
         public void insertDolgozoToDatabase(Dolgozo ujDolgozo)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

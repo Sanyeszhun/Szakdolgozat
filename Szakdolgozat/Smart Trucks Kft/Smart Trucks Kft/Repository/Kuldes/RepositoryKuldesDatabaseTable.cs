@@ -25,7 +25,9 @@ namespace Smart_Trucks_Kft.Repository
             connectionString = cs.getConnectionString();
 
         }
-
+        /// <summary>
+        /// Táblák létrehozása a kuldés tesztadatoknak
+        /// </summary>
         public void createTableKuldes()
         {
             string queryUSE = "USE kamion;";
@@ -65,7 +67,9 @@ namespace Smart_Trucks_Kft.Repository
         }
 
 
-
+        /// <summary>
+        /// Kuldes Tábla törlése az adatbázisból
+        /// </summary>
         public void deleteTableKuldes()
         {
             string query =
@@ -88,7 +92,9 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
-
+        /// <summary>
+        /// Teszt adatok törlése
+        /// </summary>
         public void deleteDataFromTermekTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

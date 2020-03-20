@@ -14,6 +14,10 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryTermekDatabaseTable
 
     {
+        /// <summary>
+        /// Visszadja a adatbázisban lévő Termékeket
+        /// </summary>
+        /// <returns>Visszatér a Termék adatokal</returns>
         public List<Termek> getTermekFromDatabaseTable()
         {
             List<Termek> termekek = new List<Termek>();

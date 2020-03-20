@@ -11,15 +11,30 @@ namespace Smart_Trucks_Kft.Repository
 {
     partial class Repository1
     {
+        // Kuldesek Lista deklarálása
         List<Kuldes> kuldesek;
+
+        //Kuldes visszadása a listának
         public List<Kuldes> getKuldesek() 
         {
             return  kuldesek;
         }
+
+        /// <summary>
+        /// Kuldes beállitása
+        /// </summary>
+        /// <param name="kuldesek"></param>
         public void setKuldesek(List<Kuldes> kuldesek)
         {
             this.kuldesek = kuldesek;
         }
+
+
+        /// <summary>
+        /// Listából készítünk egy táblát
+        /// </summary>
+        /// <returns>A legyártott táblát kapjuk vissza.</returns>
+
         public DataTable getKuldesDataTableFromList() 
         {
             DataTable kuldesDT = new DataTable();

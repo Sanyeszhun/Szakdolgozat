@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smart_Trucks_Kft.myExeception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
+
+    /// <summary>
+    /// Kamion Osztály
+    /// </summary>
    partial class Kamion
     {
 
@@ -90,7 +95,7 @@ namespace Smart_Trucks_Kft.Modell
         /// Motor lóerejének validálása
         /// </summary>
         /// <param name="motor"></param>
-        /// <returns></returns>
+        /// <returns>Hibét dob ha nem 3 karakter van meg adva es ha többet ad meg a felhasznaló ha jól adta meg akkor igaz ágra futt es nem dob hibát</returns>
         private bool isValidMotor(string motor)
         {
             if (motor.Length != 3)
@@ -110,7 +115,11 @@ namespace Smart_Trucks_Kft.Modell
           
             
         
-
+        /// <summary>
+        /// Rendszám validálása
+        /// </summary>
+        /// <param name="rendszam"></param>
+        /// <returns>Hibát dob ha az első 3 karakter nem nagy betüvel kezdödik ha a felhasznaló jól irta be igaz ágra futt és nem dob hibát</returns>
         private bool isValidRendszam(string rendszam)
         {
             if (char.IsLetter(rendszam[0]) && char.IsUpper(rendszam.ElementAt(0)))
@@ -137,7 +146,11 @@ namespace Smart_Trucks_Kft.Modell
             { return false;
             }
         }
-
+        /// <summary>
+        /// Kamion Hajtásának validálása
+        /// </summary>
+        /// <param name="hajtas"></param>
+        /// <returns>Hiibát dob ha szöveg amit a felhasznaló be írt nem egyezik A hajtás típusával ha jól irta be igaz ágra futf és nem dob hibát</returns>
         private bool isValidHajtas(string hajtas)
         {
             if (hajtas == "Negykerek" || hajtas=="Hatkerék")
@@ -149,6 +162,8 @@ namespace Smart_Trucks_Kft.Modell
                 return false;
             } 
         }
+
+        //Setterek létrehozása és beállítása
 
         public void setTid(int tid) 
         {
@@ -191,7 +206,7 @@ namespace Smart_Trucks_Kft.Modell
             this.hajtas =hajtas;
 
         }
-
+        //Getterek létrehozása és beállítása
         public int getId() 
         {
             return tid;

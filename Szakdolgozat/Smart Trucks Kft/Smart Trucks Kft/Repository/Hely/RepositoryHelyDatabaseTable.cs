@@ -25,7 +25,9 @@ namespace Smart_Trucks_Kft.Repository
             connectionString = cs.getConnectionString();
 
         }
-
+        /// <summary>
+        /// Táblák létrehozása a Helyek tesztadatoknak
+        /// </summary>
         public void createTableHelyek()
         {
             string queryUSE = "USE kamion;";
@@ -69,7 +71,9 @@ namespace Smart_Trucks_Kft.Repository
         }
 
 
-
+        /// <summary>
+        /// Helyek Tábla törlése az adatbázisból
+        /// </summary>
         public void deleteTableHely()
         {
             string query =
@@ -92,6 +96,10 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
+        
+        /// <summary>
+          /// Teszt adatok törlése
+          /// </summary>
 
         public void deleteDataFromHelyTable()
         {

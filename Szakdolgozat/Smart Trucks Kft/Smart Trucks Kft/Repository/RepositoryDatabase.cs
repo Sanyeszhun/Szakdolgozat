@@ -25,9 +25,11 @@ namespace Smart_Trucks_Kft.Repository
         }
 
         /// <summary>
-        /// Létrehozza a "csarp" adatbazist
+        /// Létrehozza a "kamion" adatbazist
         /// </summary>
 
+
+           
         public void createDatabase()
 
         {
@@ -57,7 +59,9 @@ namespace Smart_Trucks_Kft.Repository
             }
         }
 
-
+        /// <summary>
+        /// A kamion adatbázis törlése
+        /// </summary>
         public void deleteDatabase()
         {
             string query =

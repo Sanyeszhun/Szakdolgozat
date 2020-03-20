@@ -8,7 +8,10 @@ namespace Smart_Trucks_Kft.Modell
 {
    partial class Kamion
     {
-
+        /// <summary>
+        /// Adatbázisba való adat beszúrás
+        /// </summary>
+        /// <returns></returns>
         public string getInsert() 
         {
             return
@@ -30,6 +33,11 @@ namespace Smart_Trucks_Kft.Modell
                 "');";
 
         }
+        /// <summary>
+         /// Adatbázisba frissíti a mezőket
+         /// </summary>
+         /// <param name="id"></param>
+         /// <returns></returns>
         public string getUpdate(int tid)
         {
             return
@@ -48,11 +56,19 @@ namespace Smart_Trucks_Kft.Modell
                 "' WHERE `kamionok`.`tid` = " +
                 tid;
         }
+
+        /// <summary>
+        /// törli az összes sort az adatbáisból
+        /// </summary>
+        /// <returns></returns>
         public static string getSQLCommandDeleteAllRecord()
         {
             return "DELETE FROM kamionok";
         }
-
+        /// <summary>
+        /// listázza az összes sort az adatbázis táblából
+        /// </summary>
+        /// <returns></returns>
         public static string getSQLCommandGetAllRecord()
         {
             return "SELECT * FROM kamionok";
