@@ -16,7 +16,16 @@ namespace Smart_Trucks_Kft.Modell
         private string uzemanyag;
         private string suly;
         private string hajtas;
-
+        /// <summary>
+        /// Konstruktorok es validálásuk;
+        /// </summary>
+        /// <param name="tid"></param>
+        /// <param name="date"></param>
+        /// <param name="rendszam"></param>
+        /// <param name="motor"></param>
+        /// <param name="uzemanyag"></param>
+        /// <param name="suly"></param>
+        /// <param name="hajtas"></param>
         public Kamion(int tid, string date, string rendszam, string motor, string uzemanyag, string suly, string hajtas)
         {
             this.tid = tid;
@@ -43,7 +52,11 @@ namespace Smart_Trucks_Kft.Modell
 
 
         }
-
+        /// <summary>
+        /// A Suly validációja
+        /// </summary>
+        /// <param name="suly"></param>
+        /// <returns>Vissza tér hibával ha suly nem 4 karakter ha a suly 4 karakter nem dob hibat</returns>
         private bool isValidSuly(string suly)
         {
             if (suly.Length !=4)
@@ -57,7 +70,11 @@ namespace Smart_Trucks_Kft.Modell
                 return true;
             }
         }
-
+        /// <summary>
+        /// Uzemanyag validálása
+        /// </summary>
+        /// <param name="uzemanyag"></param>
+        /// <returns>Hiibát dob ha szöveg amit a felhasznaló be írt nem egyezik Az uzemanyag típusával ha jól irta beigaz ágra fut és nem dob hibát</returns>
         private bool isValidUzemanyag(string uzemanyag)
         {
             if (uzemanyag == "Benzin" || uzemanyag == "Dízel")
@@ -69,7 +86,11 @@ namespace Smart_Trucks_Kft.Modell
                 return false;
             }
         }
-
+        /// <summary>
+        /// Motor lóerejének validálása
+        /// </summary>
+        /// <param name="motor"></param>
+        /// <returns></returns>
         private bool isValidMotor(string motor)
         {
             if (motor.Length != 3)

@@ -40,6 +40,9 @@ namespace Smart_Trucks_Kft.Repository
             string queryPrimaryKey =
                 "ALTER TABLE `hely`  ADD PRIMARY KEY(`hid`); ";
 
+           
+          
+
             MySqlConnection connection =
                new MySqlConnection(connectionString);
             try
@@ -51,6 +54,9 @@ namespace Smart_Trucks_Kft.Repository
                 cmdCreateTable.ExecuteNonQuery();
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
                 cmdPrimaryKey.ExecuteNonQuery();
+              
+
+
                 connection.Close();
             }
             catch (Exception e)

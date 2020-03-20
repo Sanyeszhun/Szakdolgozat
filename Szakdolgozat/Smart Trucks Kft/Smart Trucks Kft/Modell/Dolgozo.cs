@@ -8,14 +8,29 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
+
+    /// <summary>
+    /// Dolgozo osztaly
+    /// </summary>
    partial class Dolgozo
     {
+
+      
         private int id;
         private string nev;
         private string telefonszam;
         private string email;
         private string jelszo;
 
+
+        /// <summary>
+        /// Konstruktorok és validálásuk
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nev"></param>
+        /// <param name="telefonszam"></param>
+        /// <param name="email"></param>
+        /// <param name="jelszo"></param>
         public Dolgozo(int id, string nev, string telefonszam, string email, string jelszo)
         {
             this.id = id;
@@ -37,6 +52,12 @@ namespace Smart_Trucks_Kft.Modell
            
         }
 
+     
+        /// <summary>
+        /// Azemail cím Validációja
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>MEgfelelő eredményel tér vissza az email címben rossz esetben hibát dob</returns>
         private bool isValidEmail(string email)
         {
      
@@ -55,7 +76,10 @@ namespace Smart_Trucks_Kft.Modell
        
 
 
-
+        /// <summary>
+        /// A Dolgozok adatok firsitése történik itt
+        /// </summary>
+        /// <param name="modified"></param>
         public void update(Dolgozo modified)
         {
             this.nev = modified.getNev();
@@ -63,6 +87,14 @@ namespace Smart_Trucks_Kft.Modell
             this.email = modified.getEmail();
             this.jelszo = modified.getJelszo();
         }
+        
+        
+        
+        /// <summary>
+        /// A telefonszám Validációja
+        /// </summary>
+        /// <param name="telefonszam"></param>
+        /// <returns>Vissza ter jo ertekel ha a felhasznalo helyesen adta meg rossz esetben hibat dob</returns>
 
        
         public bool isValidTel(string telefonszam)
@@ -160,7 +192,11 @@ namespace Smart_Trucks_Kft.Modell
                 }
             }
         }
-
+        /// <summary>
+        /// Név validációja
+        /// </summary>
+        /// <param name="nev"></param>
+        /// <returns>Hibát dob ha nem jol irta be a nevet vagy kis betüvel kezdte,jo esetben vissza tér hiba nélkül </returns>
         private bool isValidName(string nev)
         {
             if (nev == string.Empty)
@@ -177,7 +213,7 @@ namespace Smart_Trucks_Kft.Modell
                     return false;
             return true;
         }
-
+        //Setterek létrehozása és beállítása
         public void setID(int id)
         {
             this.id = id;
@@ -201,7 +237,7 @@ namespace Smart_Trucks_Kft.Modell
             this.jelszo = jelszo;
         }
 
-
+        //Getterek létrehozása és beállítása
 
         public int getId()
         {

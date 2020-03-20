@@ -36,7 +36,7 @@ namespace Smart_Trucks_Kft.Repository
             }
             return kuldesDT;
 
-
+        
         }
 
 
