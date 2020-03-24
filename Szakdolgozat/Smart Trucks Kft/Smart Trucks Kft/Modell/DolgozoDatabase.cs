@@ -8,10 +8,6 @@ namespace Smart_Trucks_Kft.Modell
 {
     partial class Dolgozo
     {
-        /// <summary>
-        /// Adatbázisba való adat beszúrás
-        /// </summary>
-        /// <returns></returns>
         public string getInsert()
         {
             return
@@ -28,11 +24,7 @@ namespace Smart_Trucks_Kft.Modell
                 getJelszo() +
                 "');";
         }
-        /// <summary>
-        /// Adatbázisba frissíti a mezőket
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+
         public string getUpdate(int id)
         {
             return
@@ -46,20 +38,13 @@ namespace Smart_Trucks_Kft.Modell
                 getJelszo() +              
                 "' WHERE `dolgozok`.`id` = " +
                 id;
-           
         }
-        /// <summary>
-        /// törli az összes sort az adatbáisból
-        /// </summary>
-        /// <returns></returns>
+
         public static string getSQLCommandDeleteAllRecord()
         {
             return "DELETE FROM dolgozok";
         }
-        /// <summary>
-        /// listázza az összes sort az adatbázis táblából
-        /// </summary>
-        /// <returns></returns>
+
         public static string getSQLCommandGetAllRecord()
         {
             return "SELECT * FROM dolgozok";

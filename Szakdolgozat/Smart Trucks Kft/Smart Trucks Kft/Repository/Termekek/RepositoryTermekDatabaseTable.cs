@@ -25,9 +25,6 @@ namespace Smart_Trucks_Kft.Repository
             connectionString = cs.getConnectionString();
 
         }
-        /// <summary>
-        /// Táblák létrehozása a dolgozó tesztadatoknak
-        /// </summary>
 
         public void createTableTermekek()
         {
@@ -63,9 +60,7 @@ namespace Smart_Trucks_Kft.Repository
             }
 
         }
-        /// <summary>
-        /// Termék Tábla törlése az adatbázisból
-        /// </summary>
+
 
 
         public void deleteTableTermek()
@@ -90,9 +85,7 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
-        /// <summary>
-        /// Teszt adatok törlése
-        /// </summary>
+
         public void deleteDataFromTermekTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

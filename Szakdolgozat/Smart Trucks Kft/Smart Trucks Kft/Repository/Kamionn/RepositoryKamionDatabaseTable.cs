@@ -25,10 +25,8 @@ namespace Smart_Trucks_Kft.Repository
 
         }
 
+       
 
-        /// <summary>
-        /// Téblák létrehozása a Kamion tesztadatoknak
-        /// </summary>
         public void createTableKamion()
         {
             string queryUSE = "USE kamion;";
@@ -92,9 +90,7 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
-        /// <summary>
-        /// Teszt adatok törlése
-        /// </summary>
+
         public void deleteDataFromKamionTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

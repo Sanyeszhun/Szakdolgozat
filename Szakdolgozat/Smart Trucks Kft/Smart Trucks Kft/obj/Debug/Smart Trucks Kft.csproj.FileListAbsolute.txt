@@ -55,3 +55,16 @@ C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Truc
 C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.dll
 C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.xml
 C:\Users\Sanyesz\Downloads\Szakdolgozat\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.CopyComplete
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe.config
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.exe
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\Smart Trucks Kft.pdb
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.dll
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\bin\Debug\MySql.Data.xml
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csprojAssemblyReference.cache
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.SmartTruckkft.resources
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.login.resources
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart_Trucks_Kft.Properties.Resources.resources
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.GenerateResource.cache
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.csproj.CopyComplete
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.exe
+e:\A JÓÓ\Szakdolgozat\Smart Trucks Kft\Smart Trucks Kft\obj\Debug\Smart Trucks Kft.pdb

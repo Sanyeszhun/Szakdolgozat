@@ -9,8 +9,6 @@ namespace Smart_Trucks_Kft.Repository
 {
     partial class Repository1
     {
-
-        // Listák létrehozása a repoban
         public Repository1()
         {
             dolgozok = new List<Dolgozo>();

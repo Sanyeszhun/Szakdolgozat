@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    /// <summary>
-    /// Hely osztaly
-    /// </summary>
     partial class Hely
     {
         private int hid;
@@ -17,14 +14,7 @@ namespace Smart_Trucks_Kft.Modell
         private string ido;
         private string lerakohely;
        
-        /// <summary>
-        /// Alap konsturktorok
-        /// </summary>
-        /// <param name="hid"></param>
-        /// <param name="felvetelezohely"></param>
-        /// <param name="tavolsag"></param>
-        /// <param name="ido"></param>
-        /// <param name="lerakohely"></param>
+
         public Hely(int hid, string felvetelezohely, string tavolsag, string ido, string lerakohely)
         {
 
@@ -36,8 +26,6 @@ namespace Smart_Trucks_Kft.Modell
 
         }
 
-
-        //Getterek létrehozása és beállítása
         public int getHelyId()
         {
             return hid;

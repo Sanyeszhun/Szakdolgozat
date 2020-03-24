@@ -13,8 +13,6 @@ using Smart_Trucks_Kft.Repository;
 using Smart_Trucks_Kft.Modell;
 using System.Diagnostics;
 
-using Smart_Trucks_Kft.myExeception;
-
 namespace Smart_Trucks_Kft
 {
     public partial class SmartTruckkft : Form

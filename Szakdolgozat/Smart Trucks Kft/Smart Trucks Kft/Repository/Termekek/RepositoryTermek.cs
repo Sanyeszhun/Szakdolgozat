@@ -10,28 +10,16 @@ using System.Threading.Tasks;
 namespace Smart_Trucks_Kft.Repository
 {
     partial class Repository1
-    {  //Termék lista deklarálása
+    {
         List<Termek> termekek;
-
-        //Termék visszadása a listának
         public List<Termek> getTemekek() 
         {
             return termekek;
         }
-
-        /// <summary>
-        /// Termék beállitása
-        /// </summary>
-        /// <param name="termekek"></param>
         public void setTermekek(List<Termek> termekek)
         {
             this.termekek = termekek;
         }
-
-        /// <summary>
-        /// Listából készítünk egy táblát
-        /// </summary>
-        /// <returns>A legyártott táblát kapjuk vissza.</returns>
         public DataTable getTermekekDataTableFromList() 
         {
             DataTable termekDT = new DataTable();

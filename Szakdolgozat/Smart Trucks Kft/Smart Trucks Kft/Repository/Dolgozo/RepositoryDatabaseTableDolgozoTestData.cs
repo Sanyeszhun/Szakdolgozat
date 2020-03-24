@@ -10,9 +10,7 @@ namespace Smart_Trucks_Kft.Repository
 {
     partial class RepositoryDatabaseTableDolgozo
     {
-        /// <summary>
-        /// Teszt adatokkal tölti fel a Dolgozok Táblát
-        /// </summary>
+
         public void fillDolgozoWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

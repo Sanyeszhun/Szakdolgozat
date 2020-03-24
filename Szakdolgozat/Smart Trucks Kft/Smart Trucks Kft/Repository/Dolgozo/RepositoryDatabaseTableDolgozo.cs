@@ -23,11 +23,6 @@ namespace Smart_Trucks_Kft.Repository
             connectionStringCreate = cs.getCreateString();
             connectionString = cs.getConnectionString();
         }
-
-
-        /// <summary>
-        /// Táblák létrehozása a dolgozó tesztadatoknak
-        /// </summary>
         public void createTableDolgozo()
         {
         
@@ -65,10 +60,6 @@ namespace Smart_Trucks_Kft.Repository
 
 
         }
-        /// <summary>
-        /// Dolgozó Tábla törlése az adatbázisból
-        /// </summary>
-       
         public void deleteTableDolgozo()
         {
             string query =
@@ -91,9 +82,7 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
-        /// <summary>
-        /// Teszt adatok törlése
-        /// </summary>
+
         public void deleteDataFromTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

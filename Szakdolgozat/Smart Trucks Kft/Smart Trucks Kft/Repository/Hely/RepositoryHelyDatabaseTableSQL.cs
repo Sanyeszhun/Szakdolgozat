@@ -14,12 +14,6 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryHelyDatabaseTable
 
     {
-
-
-        /// <summary>
-        /// Visszadja a adatbázisban lévő Helyeket
-        /// </summary>
-        /// <returns>Visszatér a Hely adatokal</returns>
         public List<Hely> getHelyekFromDatabaseTable()
         {
             List<Hely> helyek = new List<Hely>();

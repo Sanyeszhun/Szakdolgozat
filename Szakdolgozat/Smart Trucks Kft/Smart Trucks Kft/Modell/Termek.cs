@@ -5,22 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
-{/// <summary>
-/// Termékek osztály
-/// </summary>
+{
     partial class Termek
     {
         private int teid;
         private string mennyiseg;
         private string termeksuly;
         private string termeknev;
-        /// <summary>
-        /// Alap konstruktorok létrehozzása
-        /// </summary>
-        /// <param name="teid"></param>
-        /// <param name="mennyiseg"></param>
-        /// <param name="termeksuly"></param>
-        /// <param name="termeknev"></param>
+
         public Termek(int teid, string mennyiseg, string termeksuly, string termeknev) 
         {
             this.teid = teid;
@@ -28,7 +20,7 @@ namespace Smart_Trucks_Kft.Modell
             this.termeksuly = termeksuly;
             this.termeknev = termeknev;
         }
-        //Getterek létrehozása és beállítása
+
         public int getTermekId() 
         {
             return teid;

@@ -14,9 +14,6 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryTermekDatabaseTable
 
     {
-        /// <summary>
-        /// Teszt adatokkal tölti fel a Termek Táblát
-        /// </summary>
         public void fillTermekWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

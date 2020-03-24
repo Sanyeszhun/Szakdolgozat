@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Smart_Trucks_Kft.myExeception
+namespace Smart_Trucks_Kft.Modell
 {
     [Serializable]
     internal class ModelKamionNotValidRenExeption : Exception

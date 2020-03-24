@@ -13,9 +13,7 @@ namespace Smart_Trucks_Kft.Repository
 {
     partial class RepositoryKuldesDatabaseTable
 
-    { /// <summary>
-      /// Teszt adatokkal tölti fel a Kuldes Táblát
-      /// </summary>
+    {
         public void fillKuldesWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

@@ -25,16 +25,11 @@ namespace Smart_Trucks_Kft.Repository
         }
 
         /// <summary>
-        /// Létrehozza a "kamion" adatbazist
+        /// Létrehozza a "csarp" adatbazist
         /// </summary>
 
-
-           
         public void createDatabase()
-
         {
-
-
             string query =
                 "CREATE DATABASE IF NOT EXISTS kamion " +
                 "DEFAULT CHARACTER SET utf8 " +
@@ -45,8 +40,6 @@ namespace Smart_Trucks_Kft.Repository
             try
             {
                 connection.Open();
-
-
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -59,9 +52,7 @@ namespace Smart_Trucks_Kft.Repository
             }
         }
 
-        /// <summary>
-        /// A kamion adatbázis törlése
-        /// </summary>
+
         public void deleteDatabase()
         {
             string query =

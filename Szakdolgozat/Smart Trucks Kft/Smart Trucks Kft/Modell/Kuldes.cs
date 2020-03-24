@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
-    /// <summary>
-    /// Kuldes osztály
-    /// </summary>
     partial class Kuldes
     {
         private int sid;
@@ -18,16 +15,7 @@ namespace Smart_Trucks_Kft.Modell
         private int did;
         private string kikuldes;
         private string visszaerkezes;
-        /// <summary>
-        /// Alap konstruktorok létrehozása
-        /// </summary>
-        /// <param name="sid"></param>
-        /// <param name="kid"></param>
-        /// <param name="heid"></param>
-        /// <param name="teid"></param>
-        /// <param name="did"></param>
-        /// <param name="kikuldes"></param>
-        /// <param name="visszaerkezes"></param>
+
 
         public Kuldes(int sid, int kid, int heid, int teid, int did, string kikuldes, string visszaerkezes)
         {
@@ -41,8 +29,6 @@ namespace Smart_Trucks_Kft.Modell
             this.visszaerkezes = visszaerkezes;
         }
 
-
-        //Getterek létrehozása és beállítása
         public int getKikuldesId()
         {
             return sid;

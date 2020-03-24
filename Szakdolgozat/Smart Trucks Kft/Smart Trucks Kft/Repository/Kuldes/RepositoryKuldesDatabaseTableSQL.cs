@@ -14,11 +14,6 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryKuldesDatabaseTable
 
     {
-
-        /// <summary>
-        /// Visszadja a adatbázisban lévő Kuldeseket
-        /// </summary>
-        /// <returns>Visszatér a Kuldesek adatokal</returns>
         public List<Kuldes> getKuldesFromDatabaseTable()
         {
             List<Kuldes> kuldesek = new List<Kuldes>();
