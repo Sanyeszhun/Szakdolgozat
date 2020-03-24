@@ -50,8 +50,7 @@ namespace Smart_Trucks_Kft.Repository
                  "ADD CONSTRAINT `kuldes_ibfk_2` FOREIGN KEY(`heid`) REFERENCES `hely` (`hid`), " +
                   "ADD CONSTRAINT `kuldes_ibfk_3` FOREIGN KEY(`teid`) REFERENCES `termekek` (`teid`), " +
                  "ADD CONSTRAINT `kuldes_ibfk_4` FOREIGN KEY(`did`) REFERENCES `dolgozok` (`id`); "; 
-                 //"ADD CONSTRAINT `kuldes_ibfk_3` FOREIGN KEY(`teid`) REFERENCES `termekek` (`teid`), " +
-                 //"ADD CONSTRAINT `kuldes_ibfk_4` FOREIGN KEY(`did`) REFERENCES `dolgozok` (`id`); ";
+               
 
             MySqlConnection connection =
                new MySqlConnection(connectionString);
