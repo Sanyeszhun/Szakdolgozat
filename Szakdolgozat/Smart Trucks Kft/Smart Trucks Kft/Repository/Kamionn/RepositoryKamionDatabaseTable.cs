@@ -43,6 +43,7 @@ namespace Smart_Trucks_Kft.Repository
             string queryPrimaryKey =
                 "ALTER TABLE `kamionok`  ADD PRIMARY KEY(`tid`); ";
           
+
             MySqlConnection connection =
                new MySqlConnection(connectionString);
             try
