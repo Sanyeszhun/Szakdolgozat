@@ -32,17 +32,26 @@ namespace Smart_Trucks_Kft.Repository
         {
             string queryUSE = "USE kamion;";
             string queryCreateTable =
-                "Create TABLE `kuldes` (" +
-                "   `sid` int(60) NOT NULL DEFAULT '0', " +
-                  "   `kid` int(60) NOT NULL DEFAULT '0', " +
-                    "   `heid` int(60) NOT NULL DEFAULT '0', " +
-                      "   `teid` int(60) NOT NULL DEFAULT '0', " +
-                        "   `did` int(60) NOT NULL DEFAULT '0', " +
-                   "   `Kikuldes` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +                
-                       "   `Viszaerkezes` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +
-                        " ENGINE = InnoDB;";
+                "Create TABLE IF NOT EXISTS `kuldes` (" +
+                "   `sid` int(60) NOT NULL, " +
+                  "   `kid` int(60) NOT NULL, " +
+                    "   `heid` int(60) NOT NULL, " +
+                      "   `teid` int(60) NOT NULL, " +
+                        "   `did` int(60) NOT NULL, " +
+                   "   `Kikuldes` varchar(60) COLLATE utf8_hungarian_ci NOT NULL, " +
+                       "   `Viszaerkezes` varchar(60) COLLATE utf8_hungarian_ci NOT NULL) " +
+                        " ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_hungarian_ci;";
             string queryPrimaryKey =
                 "ALTER TABLE `kuldes`  ADD PRIMARY KEY(`sid`); ";
+
+
+            string queryKeys = "ALTER TABLE `kuldes`" +
+                 "ADD CONSTRAINT `kuldes_ibfk_1` FOREIGN KEY(`kid`) REFERENCES `kamionok` (`tid`), " +
+                 "ADD CONSTRAINT `kuldes_ibfk_2` FOREIGN KEY(`heid`) REFERENCES `hely` (`hid`), " +
+                  "ADD CONSTRAINT `kuldes_ibfk_3` FOREIGN KEY(`teid`) REFERENCES `termekek` (`teid`), " +
+                 "ADD CONSTRAINT `kuldes_ibfk_4` FOREIGN KEY(`did`) REFERENCES `dolgozok` (`id`); "; 
+                 //"ADD CONSTRAINT `kuldes_ibfk_3` FOREIGN KEY(`teid`) REFERENCES `termekek` (`teid`), " +
+                 //"ADD CONSTRAINT `kuldes_ibfk_4` FOREIGN KEY(`did`) REFERENCES `dolgozok` (`id`); ";
 
             MySqlConnection connection =
                new MySqlConnection(connectionString);
@@ -54,6 +63,8 @@ namespace Smart_Trucks_Kft.Repository
                 MySqlCommand cmdCreateTable = new MySqlCommand(queryCreateTable, connection);
                 cmdCreateTable.ExecuteNonQuery();
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
+                MySqlCommand cmdQueryKeys = new MySqlCommand(queryKeys, connection);
+                cmdQueryKeys.ExecuteNonQuery();
                 cmdPrimaryKey.ExecuteNonQuery();
                 connection.Close();
             }
@@ -63,6 +74,7 @@ namespace Smart_Trucks_Kft.Repository
                 Debug.WriteLine(e.Message);
                 throw new RepositoryException("Tábla lérehozása sikertelen.");
             }
+
 
         }
 
