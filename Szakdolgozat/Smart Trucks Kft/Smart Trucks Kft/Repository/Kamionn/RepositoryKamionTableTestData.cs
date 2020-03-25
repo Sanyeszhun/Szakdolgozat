@@ -7,7 +7,9 @@ using System.Diagnostics;
 namespace Smart_Trucks_Kft.Repository
 {
     partial class RepositoryKamionDatabaseTable
-    {
+    { /// <summary>
+      /// Teszt adatokkal tölti fel a Kamion Táblát
+      /// </summary>
         public void fillKamionWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

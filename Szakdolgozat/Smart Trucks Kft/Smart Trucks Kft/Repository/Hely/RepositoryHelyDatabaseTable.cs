@@ -25,7 +25,9 @@ namespace Smart_Trucks_Kft.Repository
             connectionString = cs.getConnectionString();
 
         }
-
+        /// <summary>
+        /// Táblák létrehozása a Helyek tesztadatoknak
+        /// </summary>
         public void createTableHelyek()
         {
             string queryUSE = "USE kamion;";
@@ -40,6 +42,9 @@ namespace Smart_Trucks_Kft.Repository
             string queryPrimaryKey =
                 "ALTER TABLE `hely`  ADD PRIMARY KEY(`hid`); ";
 
+           
+          
+
             MySqlConnection connection =
                new MySqlConnection(connectionString);
             try
@@ -51,6 +56,9 @@ namespace Smart_Trucks_Kft.Repository
                 cmdCreateTable.ExecuteNonQuery();
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
                 cmdPrimaryKey.ExecuteNonQuery();
+              
+
+
                 connection.Close();
             }
             catch (Exception e)
@@ -63,7 +71,9 @@ namespace Smart_Trucks_Kft.Repository
         }
 
 
-
+        /// <summary>
+        /// Helyek Tábla törlése az adatbázisból
+        /// </summary>
         public void deleteTableHely()
         {
             string query =
@@ -86,6 +96,10 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
+        
+        /// <summary>
+          /// Teszt adatok törlése
+          /// </summary>
 
         public void deleteDataFromHelyTable()
         {

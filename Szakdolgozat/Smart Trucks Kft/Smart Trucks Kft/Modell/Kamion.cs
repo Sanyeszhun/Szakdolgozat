@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smart_Trucks_Kft.myExeception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Modell
 {
+
+    /// <summary>
+    /// Kamion Osztály
+    /// </summary>
    partial class Kamion
     {
 
@@ -16,7 +21,16 @@ namespace Smart_Trucks_Kft.Modell
         private string uzemanyag;
         private string suly;
         private string hajtas;
-
+        /// <summary>
+        /// Konstruktorok es validálásuk;
+        /// </summary>
+        /// <param name="tid"></param>
+        /// <param name="date"></param>
+        /// <param name="rendszam"></param>
+        /// <param name="motor"></param>
+        /// <param name="uzemanyag"></param>
+        /// <param name="suly"></param>
+        /// <param name="hajtas"></param>
         public Kamion(int tid, string date, string rendszam, string motor, string uzemanyag, string suly, string hajtas)
         {
             this.tid = tid;
@@ -43,7 +57,11 @@ namespace Smart_Trucks_Kft.Modell
 
 
         }
-
+        /// <summary>
+        /// A Suly validációja
+        /// </summary>
+        /// <param name="suly"></param>
+        /// <returns>Vissza tér hibával ha suly nem 4 karakter ha a suly 4 karakter nem dob hibat</returns>
         private bool isValidSuly(string suly)
         {
             if (suly.Length !=4)
@@ -57,7 +75,11 @@ namespace Smart_Trucks_Kft.Modell
                 return true;
             }
         }
-
+        /// <summary>
+        /// Uzemanyag validálása
+        /// </summary>
+        /// <param name="uzemanyag"></param>
+        /// <returns>Hiibát dob ha szöveg amit a felhasznaló be írt nem egyezik Az uzemanyag típusával ha jól irta beigaz ágra fut és nem dob hibát</returns>
         private bool isValidUzemanyag(string uzemanyag)
         {
             if (uzemanyag == "Benzin" || uzemanyag == "Dízel")
@@ -69,7 +91,11 @@ namespace Smart_Trucks_Kft.Modell
                 return false;
             }
         }
-
+        /// <summary>
+        /// Motor lóerejének validálása
+        /// </summary>
+        /// <param name="motor"></param>
+        /// <returns>Hibét dob ha nem 3 karakter van meg adva es ha többet ad meg a felhasznaló ha jól adta meg akkor igaz ágra futt es nem dob hibát</returns>
         private bool isValidMotor(string motor)
         {
             if (motor.Length != 3)
@@ -89,7 +115,11 @@ namespace Smart_Trucks_Kft.Modell
           
             
         
-
+        /// <summary>
+        /// Rendszám validálása
+        /// </summary>
+        /// <param name="rendszam"></param>
+        /// <returns>Hibát dob ha az első 3 karakter nem nagy betüvel kezdödik ha a felhasznaló jól irta be igaz ágra futt és nem dob hibát</returns>
         private bool isValidRendszam(string rendszam)
         {
             if (char.IsLetter(rendszam[0]) && char.IsUpper(rendszam.ElementAt(0)))
@@ -116,7 +146,11 @@ namespace Smart_Trucks_Kft.Modell
             { return false;
             }
         }
-
+        /// <summary>
+        /// Kamion Hajtásának validálása
+        /// </summary>
+        /// <param name="hajtas"></param>
+        /// <returns>Hiibát dob ha szöveg amit a felhasznaló be írt nem egyezik A hajtás típusával ha jól irta be igaz ágra futf és nem dob hibát</returns>
         private bool isValidHajtas(string hajtas)
         {
             if (hajtas == "Negykerek" || hajtas=="Hatkerék")
@@ -128,6 +162,8 @@ namespace Smart_Trucks_Kft.Modell
                 return false;
             } 
         }
+
+        //Setterek létrehozása és beállítása
 
         public void setTid(int tid) 
         {
@@ -170,7 +206,7 @@ namespace Smart_Trucks_Kft.Modell
             this.hajtas =hajtas;
 
         }
-
+        //Getterek létrehozása és beállítása
         public int getId() 
         {
             return tid;

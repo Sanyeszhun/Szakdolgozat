@@ -8,33 +8,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Smart_Trucks_Kft.Repository
-{
+{/// <summary>
+/// A kamion lista deklarálása
+/// </summary>
     partial class Repository1
     {
         List<Kamion> kamionok;
 
+        /// <summary>
+        /// A kamion lista visszadása
+        /// </summary>
+        /// <returns></returns>
         public List<Kamion> GetKamions()
         {
             return kamionok;
         
         
         }
-        //public List<string> getKamionsName()
-        //{
-        //    List<string> kamionNames = new List<string>();
-        //    foreach (Kamion k in kamionok)
-        //    {
-        //        kamionNames.Add(k.getRend());
-        //    }
-        //    return kamionNames;
-        //}
-
+       
+        /// <summary>
+        /// Kamion beállítása
+        /// </summary>
+        /// <param name="kamionok"></param>
         public void setKamionok(List<Kamion> kamionok) 
         {
 
             this.kamionok = kamionok;
         }
 
+
+        // <summary>
+        /// Listából készítünk egy táblát
+        /// </summary>
+        /// <returns>A legyártott táblát kapjuk vissza.</returns>
         public DataTable getKamionDataTableFromList() 
         {
             DataTable kamionDT = new DataTable();
@@ -54,6 +60,11 @@ namespace Smart_Trucks_Kft.Repository
             return kamionDT;
         }
 
+
+        /// <summary>
+        /// A listát feltöltjük a téblában lévő adatokkal
+        /// </summary>
+        /// <param name="kamiondt">Maga a táblázat</param>
         private void fillKamionListFromDataTable(DataTable kamiondt) 
         {
             foreach (DataRow row in kamiondt.Rows) 
@@ -86,6 +97,12 @@ namespace Smart_Trucks_Kft.Repository
             return kamionid;
         }
 
+
+        /// <summary>
+        /// Frissiti a lista adott id-jű elemét
+        /// </summary>
+        /// <param name="tid"> A dkamionak adott azzonosító</param>
+        /// <param name="modified">A modosítás ami máshol van deklarálva</param>
         public void updateKamionInList(int tid, Kamion modified)
         {
             Kamion k = kamionok.Find(x => x.getId() == tid);
@@ -99,6 +116,10 @@ namespace Smart_Trucks_Kft.Repository
             }
         }
 
+        /// <summary>
+        /// Uj Kamion hozzá adása
+        /// </summary>
+        /// <param name="ujKamion">Az uj Kamion</param>
         public void addKamionToList(Kamion ujkamion) 
         {
 
@@ -112,11 +133,20 @@ namespace Smart_Trucks_Kft.Repository
             }
                 
         }
-
+        /// <summary>
+        /// Visszaadja az azzonosítót
+        /// </summary>
+        /// <param name="tid">Azzonosító értéke</param>
+        /// <returns></returns>
         public Kamion GetKamion(int tid) 
         {
             return kamionok.Find(x => x.getId() == tid);
         }
+
+        /// <summary>
+        ///  Új azonosított hozz létre és  mindig 1-el növeli az utolsó azonosító számát
+        /// </summary>
+        /// <returns>A megnövelt azzonósítóval tér vissza</returns>
 
         public int getNextKamionId() 
         {
@@ -132,6 +162,10 @@ namespace Smart_Trucks_Kft.Repository
         
         }
 
+        /// <summary>
+        /// Kamion Törlése a listából id alapján ha nem jó hibát dob
+        /// </summary>
+        /// <param name="tid">A kamion azzonosítója</param>
         public void deleteKamionFromList(int tid)
         {
             Kamion k = kamionok.Find(x => x.getId() == tid);

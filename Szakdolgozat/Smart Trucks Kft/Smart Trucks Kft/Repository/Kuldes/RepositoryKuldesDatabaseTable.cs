@@ -25,7 +25,9 @@ namespace Smart_Trucks_Kft.Repository
             connectionString = cs.getConnectionString();
 
         }
-
+        /// <summary>
+        /// Táblák létrehozása a kuldés tesztadatoknak
+        /// </summary>
         public void createTableKuldes()
         {
             string queryUSE = "USE kamion;";
@@ -36,18 +38,18 @@ namespace Smart_Trucks_Kft.Repository
                     "   `heid` int(60) NOT NULL, " +
                       "   `teid` int(60) NOT NULL, " +
                         "   `did` int(60) NOT NULL, " +
-                        "KEY `kid` (`kid`), " +
                    "   `Kikuldes` varchar(60) COLLATE utf8_hungarian_ci NOT NULL, " +
                        "   `Viszaerkezes` varchar(60) COLLATE utf8_hungarian_ci NOT NULL) " +
                         " ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_hungarian_ci;";
             string queryPrimaryKey =
                 "ALTER TABLE `kuldes`  ADD PRIMARY KEY(`sid`); ";
-          
 
 
+            string queryKeys = "ALTER TABLE `kuldes`);" ; 
+                 
+               
 
-
-             MySqlConnection connection =
+            MySqlConnection connection =
                new MySqlConnection(connectionString);
             try
             {
@@ -57,8 +59,8 @@ namespace Smart_Trucks_Kft.Repository
                 MySqlCommand cmdCreateTable = new MySqlCommand(queryCreateTable, connection);
                 cmdCreateTable.ExecuteNonQuery();
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
-              
-                
+                MySqlCommand cmdQueryKeys = new MySqlCommand(queryKeys, connection);
+                cmdQueryKeys.ExecuteNonQuery();
                 cmdPrimaryKey.ExecuteNonQuery();
                 connection.Close();
             }
@@ -69,10 +71,13 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla lérehozása sikertelen.");
             }
 
+
         }
 
 
-
+        /// <summary>
+        /// Kuldes Tábla törlése az adatbázisból
+        /// </summary>
         public void deleteTableKuldes()
         {
             string query =
@@ -95,7 +100,9 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Tábla törlése nem sikerült.");
             }
         }
-
+        /// <summary>
+        /// Teszt adatok törlése
+        /// </summary>
         public void deleteDataFromTermekTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

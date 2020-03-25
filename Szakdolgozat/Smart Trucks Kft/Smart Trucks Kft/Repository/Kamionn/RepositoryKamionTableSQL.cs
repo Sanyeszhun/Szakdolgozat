@@ -9,7 +9,10 @@ namespace Smart_Trucks_Kft.Repository
     partial class RepositoryKamionDatabaseTable
     {
 
-
+        /// <summary>
+        /// Visszadja a adatbázisban lévő Kamionokat
+        /// </summary>
+        /// <returns>Visszatér a Kamion adatokal</returns>
         public List<Kamion> getKamionFromDatabaseTable()
         {
             List<Kamion> kamionok = new List<Kamion>();
@@ -56,6 +59,13 @@ namespace Smart_Trucks_Kft.Repository
             }
             return kamionok;
         }
+
+        /// <summary>
+        /// Törli a kamiont az adatbázisból
+        /// </summary>
+        /// <param name="tid">Adott ID törli</param>
+
+
         public void deleteKamionFromDatabase(int tid)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -76,6 +86,13 @@ namespace Smart_Trucks_Kft.Repository
             }
         }
 
+
+        /// <summary>
+        /// Módosítja a kamiont az adatbázisban
+        /// </summary>
+        /// <param name="tid">Adott ID modosítja</param>
+        /// <param name="modified">Maga a módosítás</param>
+
         public void updateInDatabase(int tid, Kamion modified)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -95,7 +112,10 @@ namespace Smart_Trucks_Kft.Repository
                 throw new RepositoryException("Sikertelen módosítás az adatbázisból.");
             }
         }
-
+        /// <summary>
+        /// Új kamiont beszúr az adatbázisba
+        /// </summary>
+        /// <param name="UjKamion">Az új kamion</param>
         public void insertKamionToDatabase(Kamion ujKamion)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
