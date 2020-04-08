@@ -62,9 +62,9 @@ namespace Smart_Trucks_Kft
         }
         private void frissitAdatokkalDataGriedViewt()
         {
-            //Adattáblát feltölti a repoba lévő pizza listából
+            //Adattáblát feltölti a repoba lévő dolgozó listából
             dolgozDT = repo.getDolgozoDataTableFromList();
-            //Pizza DataGridView-nak a forrása a pizza adattábla
+            //Dolgozo DataGridView-nak a forrása a dolgozó adattábla
             dataGridViewDolgozok.DataSource = null;
            dataGridViewDolgozok.DataSource = dolgozDT;
         }
@@ -96,7 +96,7 @@ namespace Smart_Trucks_Kft
                 catch (RepositoryExceptionCantDelete recd)
                 {
                     kiirHibauzenetet(recd.Message);
-                    Debug.WriteLine("A pizza törlés nem sikerült, nincs a listába!");
+                    Debug.WriteLine("A dolgozo törlés nem sikerült, nincs a listába!");
                 }
                 //2. törölni kell az adatbázisból
                RepositoryDatabaseTableDolgozo rdtd = new RepositoryDatabaseTableDolgozo();
@@ -177,7 +177,7 @@ namespace Smart_Trucks_Kft
             catch (RepositoryExceptionCantModified recm)
             {
                 kiirHibauzenetet(recm.Message);
-                Debug.WriteLine("Módosítás nem sikerült, a pizza nincs a listába!");
+                Debug.WriteLine("Módosítás nem sikerült, a dolgozó nincs a listába!");
             }
             catch (Exception ex)
             { }
@@ -239,14 +239,14 @@ namespace Smart_Trucks_Kft
         private void buttonUjDolgozo_Click(object sender, EventArgs e)
         {
             ujAdatfelvitel = true;
-            beallitGombokatTextboxokatUjPizzanal();
+            beallitGombokatTextboxokatUjDolgozonal();
             int ujDolgozoAzonosito = repo.getNextDolgozoId();
             textBoxDolgozoID.Text = ujDolgozoAzonosito.ToString();
         }
 
 
 
-        private void beallitGombokatTextboxokatUjPizzanal()
+        private void beallitGombokatTextboxokatUjDolgozonal()
         {
             panel1.Visible = true;
        

@@ -31,9 +31,9 @@ namespace Smart_Trucks_Kft
         }
         private void frissitAdatokkalDataGriedViewtKamiont()
         {
-            //Adattáblát feltölti a repoba lévő pizza listából
+            //Adattáblát feltölti a repoba lévő kamiont listából
             kamionDT = repo.getKamionDataTableFromList();
-            //Pizza DataGridView-nak a forrása a pizza adattábla
+            //Kamion DataGridView-nak a forrása a kamiont adattábla
             dataGridViewKamionok.DataSource = null;
             dataGridViewKamionok.DataSource = kamionDT;
         }
@@ -153,7 +153,7 @@ namespace Smart_Trucks_Kft
                 catch (RepositoryExceptionCantDelete recd)
                 {
                     kiirHibauzenetet(recd.Message);
-                    Debug.WriteLine("A pizza törlés nem sikerült, nincs a listába!");
+                    Debug.WriteLine("A kamion törlés nem sikerült, nincs a listába!");
                 }
                 //2. törölni kell az adatbázisból
                 RepositoryKamionDatabaseTable rdtk = new RepositoryKamionDatabaseTable();
