@@ -1,0 +1,1 @@
+Elõször importálni kell az adatbázist az Adatbázis mappából utána indítható a program a Smart truck kft/bin/Debug/Smart truck kft.exe segítségével
