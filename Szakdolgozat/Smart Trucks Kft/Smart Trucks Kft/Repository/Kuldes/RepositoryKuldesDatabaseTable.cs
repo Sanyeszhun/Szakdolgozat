@@ -32,7 +32,7 @@ namespace Smart_Trucks_Kft.Repository
         {
             string queryUSE = "USE kamion;";
             string queryCreateTable =
-                "Create TABLE IF NOT EXISTS `kuldes` (" +
+                "Create TABLE `kuldes` (" +
                 "   `sid` int(60) NOT NULL, " +
                   "   `kid` int(60) NOT NULL, " +
                     "   `heid` int(60) NOT NULL, " +
@@ -45,9 +45,9 @@ namespace Smart_Trucks_Kft.Repository
                 "ALTER TABLE `kuldes`  ADD PRIMARY KEY(`sid`); ";
 
 
-            string queryKeys = "ALTER TABLE `kuldes`);" ; 
-                 
-               
+
+
+
 
             MySqlConnection connection =
                new MySqlConnection(connectionString);
@@ -59,9 +59,9 @@ namespace Smart_Trucks_Kft.Repository
                 MySqlCommand cmdCreateTable = new MySqlCommand(queryCreateTable, connection);
                 cmdCreateTable.ExecuteNonQuery();
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
-                MySqlCommand cmdQueryKeys = new MySqlCommand(queryKeys, connection);
-                cmdQueryKeys.ExecuteNonQuery();
+
                 cmdPrimaryKey.ExecuteNonQuery();
+            
                 connection.Close();
             }
             catch (Exception e)

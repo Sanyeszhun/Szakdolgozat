@@ -25,11 +25,11 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `hely` (`hid`, `Felvetelezohely`, `Tavolsag`, `Ido`, `Lerakohely`) VALUES " +
-                            " (1, 'Makó', '300', '4:00:00', 'Szeged'), " +
-                           " (2, 'Makó', '300', '4:00:00', 'Szeged'), " +
-                            " (3, 'Makó', '300', '4:00:00', 'Szeged'), " +
-                            " (4, 'Makó', '300', '4:00:00', 'Szeged'); ";
+                    "INSERT  INTO  `hely` (`hid`, `Felvetelezohely`, `Tavolsag`, `Ido`, `Lerakohely`) VALUES " +
+                            " (1, 'Makó', '330', '1:34:00', 'Budapest'), " +
+                           " (2, 'Szeged', '367', '4:23:00', 'Debrecen'), " +
+                            " (3, 'Budapest', '150', '1:30:00', 'Kecskemét'), " +
+                            " (4, 'Kiszombor', '10', '0:15:00', 'Makó'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

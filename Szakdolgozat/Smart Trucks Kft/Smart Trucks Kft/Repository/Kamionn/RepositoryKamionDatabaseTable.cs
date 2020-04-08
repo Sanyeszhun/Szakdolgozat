@@ -31,8 +31,9 @@ namespace Smart_Trucks_Kft.Repository
         /// </summary>
         public void createTableKamion()
         {
+
             string queryUSE = "USE kamion;";
-            string queryCreateTable=
+            string queryCreateTable =
                 "Create TABLE `kamionok` (" +
                 "   `tid` int(60) NOT NULL DEFAULT '0', " +
                  "`Muszakierv` date NOT NULL DEFAULT '2017-01-01'," +
@@ -44,7 +45,7 @@ namespace Smart_Trucks_Kft.Repository
                         " ENGINE = InnoDB;";
             string queryPrimaryKey =
                 "ALTER TABLE `kamionok`  ADD PRIMARY KEY(`tid`); ";
-          
+
             MySqlConnection connection =
                new MySqlConnection(connectionString);
             try
@@ -57,6 +58,7 @@ namespace Smart_Trucks_Kft.Repository
                 MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
                 cmdPrimaryKey.ExecuteNonQuery();
                 connection.Close();
+            
             }
             catch (Exception e)
             {

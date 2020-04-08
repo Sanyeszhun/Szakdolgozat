@@ -34,14 +34,13 @@ namespace Smart_Trucks_Kft.Repository
             string queryUSE = "USE kamion;";
             string queryCreateTable=
                 "Create TABLE `dolgozok` (" +
-                "   `id` int(60) NOT NULL DEFAULT '0', " +                
+                "   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                   "   `nev` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                    "   `telefonszam` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                     "   `email` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
                     "   `jelszo` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +                     
                         " ENGINE = InnoDB;";
-            string queryPrimaryKey =
-                "ALTER TABLE `dolgozok`  ADD PRIMARY KEY(`id`); ";
+          
 
             MySqlConnection connection =
                 new MySqlConnection(connectionString);
@@ -52,8 +51,8 @@ namespace Smart_Trucks_Kft.Repository
                 cmdUSE.ExecuteNonQuery();
                 MySqlCommand cmdCreateTable = new MySqlCommand(queryCreateTable, connection);
                 cmdCreateTable.ExecuteNonQuery();
-                MySqlCommand cmdPrimaryKey = new MySqlCommand(queryPrimaryKey, connection);
-                cmdPrimaryKey.ExecuteNonQuery();
+              
+
                 connection.Close();
             }
             catch (Exception e)

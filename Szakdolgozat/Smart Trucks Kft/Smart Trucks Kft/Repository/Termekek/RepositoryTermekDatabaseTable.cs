@@ -33,12 +33,12 @@ namespace Smart_Trucks_Kft.Repository
         {
             string queryUSE = "USE kamion;";
             string queryCreateTable =
-                "Create TABLE `termekek` (" +
-                "   `teid` int(60) NOT NULL DEFAULT '0', " +
-                   "   `Mennyiseg` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
-                   "   `Termeksuly` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
-                       "   `TermekNev` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +
-                        " ENGINE = InnoDB;";
+                   "Create TABLE `termekek` (" +
+                   "   `teid` int(60) NOT NULL DEFAULT '0', " +
+                      "   `Mennyiseg` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
+                      "   `Termeksuly` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '', " +
+                          "   `TermekNev` varchar(60) COLLATE latin2_hungarian_ci NOT NULL DEFAULT '') " +
+                           " ENGINE = InnoDB;";
             string queryPrimaryKey =
                 "ALTER TABLE `termekek`  ADD PRIMARY KEY(`teid`); ";
 

@@ -49,11 +49,22 @@ namespace Smart_Trucks_Kft.Modell
             {
                 throw new ModelDolgozoNotValidEmailExeption("Az email nem megfelelő (pl: vasarlo@emailem.hu)!");
             }
+
             this.jelszo = jelszo;
-           
+            if (!isValidJelszo(jelszo))
+            {
+                throw new ModelDolgozoNotValidjelszoExeption("Az email nem megfelelő (pl: vasarlo@emailem.hu)!");
+            }
+
         }
 
-     
+        private bool isValidJelszo(string email)
+        {
+            var regjelsz = new Regex(@"(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@#!%*?&])[A-Za-z\d$@$!%*?&]{8,32}");
+            return regjelsz.IsMatch(jelszo);
+        }
+
+
         /// <summary>
         /// Azemail cím Validációja
         /// </summary>

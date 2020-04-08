@@ -21,11 +21,11 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `dolgozok` (`id`, `nev`, `telefonszam`, `email`, `jelszo`) VALUES " +
-                            " (1, 'Makkos Máté', '+36205887205', 'valamik@gmail.com', '1234'), " +
-                            " (2, 'Patka Attila', '+36205887204', 'valami@gmail.com', '12456'), " +
-                            " (3, 'Nyul Péter', '+36205887203', 'valam@gmail.com', '12341'), " +
-                            " (4, 'Bán Norbert', '+36205887202', 'val@gmail.com', 'abc'); ";
+                    "INSERT  INTO  `dolgozok` (`id`, `nev`, `telefonszam`, `email`, `jelszo`) VALUES " +
+                            " (1, 'Teszt Elek', '+36205887205', 'teszt@gmail.com', 'Jelszo123!'), " +
+                            " (2, 'Teszt Attila', '+36205887204', 'teszt2@gmail.com', 'Jelszo123!'), " +
+                            " (3, 'Nyúl Péter', '+36205887203', 'valamik@gmail.com', 'Jelszo123!'), " +
+                            " (4, 'Makkos Péter', '+36205887202', 'makker@gmail.com', 'Jelszo123!'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

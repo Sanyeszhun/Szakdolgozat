@@ -18,7 +18,7 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `kamionok` (`tid`, `Muszakierv`, `Rendszam`, `Motor`, `Uzemanyag`, `Suly`, `Hajtas`) VALUES " +
+                    "INSERT  INTO  `kamionok` (`tid`, `Muszakierv`, `Rendszam`, `Motor`, `Uzemanyag`, `Suly`, `Hajtas`) VALUES " +
                             " (1, '2020-02-27', 'AAA-123', '570', 'Dízel', '7450', 'Negykerek'), " +
                             " (2, '2020-03-27', 'AAB-123', '770', 'Dízel', '8600', 'Negykerek'), " +
                             " (3, '2020-06-27', 'CAS-123', '200', 'Dízel', '6730', 'Negykerek'), " +

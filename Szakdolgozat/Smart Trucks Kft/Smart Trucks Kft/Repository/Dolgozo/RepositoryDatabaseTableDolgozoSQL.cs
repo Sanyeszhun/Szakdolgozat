@@ -52,7 +52,7 @@ namespace Smart_Trucks_Kft.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new RepositoryException("Pizzaadatok beolvasása az adatbázisból nem sikerült!");
+                throw new RepositoryException("Dolgozók beolvasása az adatbázisból nem sikerült!");
             }
             return dologzok;
         }

@@ -25,11 +25,11 @@ namespace Smart_Trucks_Kft.Repository
                 connection.Open();
 
                 string query =
-                    "INSERT INTO `termekek` (`teid`, `Mennyiseg`, `Termeksuly`, `TermekNev`) VALUES " +
+                    " INSERT  INTO  `termekek` (`teid`, `Mennyiseg`, `Termeksuly`, `TermekNev`) VALUES " +
                             " (1, '200', '400', 'Chips'), " +
-                             " (2, '200', '600', 'Zsebkendo'), " +
+                             " (2, '200', '600', 'Zsebkendő'), " +
                               " (3, '20', '100', 'Konzerv'), " +
-                            " (4, '200', '800', 'Fa'); ";
+                            " (4, '200', '800', 'Sportcipő'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
