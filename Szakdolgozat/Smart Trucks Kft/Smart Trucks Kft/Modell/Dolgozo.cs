@@ -53,7 +53,7 @@ namespace Smart_Trucks_Kft.Modell
             this.jelszo = jelszo;
             if (!isValidJelszo(jelszo))
             {
-                throw new ModelDolgozoNotValidjelszoExeption("Az email nem megfelelő (pl: vasarlo@emailem.hu)!");
+                throw new ModelDolgozoNotValidjelszoExeption("A jelszo nem megfelelő 8 karaktert kel ltartalmazni amiben van egy speciális karakter kis és nagy betű és szám !");
             }
 
         }
